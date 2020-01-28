@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" href="/Users/amybrucker/Documents/Travel Website/Documents/script.js"></script>
     <title>Beijing</title>
 </head>
 <body>
@@ -46,7 +47,7 @@
 
              <section class="jumbotron" id="beijing-view">
                 <div>
-                    <div class="container">
+                    <div>
                       <h1 class="beijingTitle">Beijing</h1>
                       </div>
                   </div>
@@ -54,27 +55,35 @@
     
               <section>
                 <div class="row aboutRow">
-                  <div>
+                  <div class="column col-sm-12 col-md-6">
                       <h3>About</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex voluptatibus hic suscipit id eaque eveniet mollitia ut enim voluptates numquam. Reiciendis obcaecati enim quibusdam veniam earum quisquam nobis, odit sunt? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente atque sunt nisi at vero a inventore labore. Nobis, et nostrum? Eveniet quaerat deserunt quae facilis, a animi explicabo dicta aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nemo, labore, quidem temporibus quia eligendi, omnis blanditiis magni saepe non obcaecati distinctio consequuntur consectetur debitis fuga quaerat similique. Aspernatur, necessitatibus!</p>
+                      <p>Welcome to Beijing! Beijing is the capital city of China and is also one of the buisiest cities in the world. Home to many classic and modern chinese sights, Beijing is one of the most popular cities to visit in China. On a tour to Beijing, you will be able to see the famous Forbidden City, Summer Palace, Tian'anmen Square, and even take a day trip to see the Great Wall of China. Join one of our tours today!</p>
                   </div>
+                   <!--Maps API-->
+                   <div class="column col-sm-12 col-md-6">
+                        <div id="map" class="mapBeijing"></div>
+                    </div>
+                </div>
+                  <div class="row">
                     <div class="column col-sm-12 col-md-6 col-lg-3 beijingPageTour">
+                        <a href="/Users/amybrucker/Documents/Travel Website/Documents/tourOne.html">
                       <img src="/Users/amybrucker/Documents/Travel Website/Pictures/beijingTwo.jpg" href="tour1.html" class="circleTour">
                       <h4 class="tourName">Cities</h4>
+                    </a>
                     </div>
                     <div class="column col-sm-12 col-md-6 col-lg-3 beijingPageTour">
+                    <a href="/Users/amybrucker/Documents/Travel Website/Documents/tourOne.html">
                       <img src="/Users/amybrucker/Documents/Travel Website/Pictures/historicOne.JPG" href="tour2.html" class="circleTour">
                       <h4 class="tourName">Historic China</h4>
+                    </a>
                     </div>
                 </div>
               </section>
 
-              <!--Maps API-->
-
-
-
+<section class="destinations-card">
               <div class="row">
                   <div class="column md-col-4">
+                      <div><h4>Explore Beijing</h4></div>
                         <div class="accordion" id="accordionExample">
                             <div class="card">
                                 <div class="card-header" id="headingOne">
@@ -125,7 +134,7 @@
                                     <div class="card-header" id="headingFour">
                                         <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Item Four
+                                        Food
                                         </button>
                                         </h2>
                                     </div>
@@ -138,6 +147,7 @@
                             </div>
                        </div>
                 </div>
+            </section>
       
          <section>
              <div class="row moreInfo">
@@ -145,15 +155,16 @@
                  <h4>Where to Stay</h4>
                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tenetur porro libero sed minima temporibus assumenda eligendi dicta quo sapiente, quae quasi iste quod eum. Ratione omnis ab earum obcaecati.</p>
              </div>
+            </div>
 
                 <div class="row whenVisit">
                     <div class="column col-sm-8">
                         <h4>When to Visit</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente possimus, nam consequatur delectus maiores dolores. Cupiditate nemo iure perferendis aliquid! Ipsam, itaque! Quam fugit cum consectetur hic voluptatum, vitae odit!</p>
+                        <p>Beijing is a wonderful city to visit most times of the year. However, the winter can be a difficult time to visit with temperatures around the freezing point. To avoid large crowds and busy travel days, plan your trip carefully and not at the time of China's major holidays: Chinese New Year (Late Winter/Early spring) and National Week (The first week in October.)  </p>
                     </div>
                     <!--Chart will take up col-sm-4-->
+                    <div id="chartdiv"></div>
                 </div>
-            </div>
          </section>
 
          <section>
@@ -164,9 +175,50 @@
              </div>
          </section>
 
-         
+         <!--Footer-->
+         <footer class="container">
+            <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
+
+                <!-- Social buttons -->
+                <div class="row">
+                <div class="col-sm-6 contact-follow">
+                    <ul class="list-inline social-links">
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com/">
+                              <ion-icon name="logo-facebook"></ion-icon>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://twitter.com/">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.google.com/">
+                              <ion-icon name="logo-googleplus"></ion-icon>
+                                <span class="sr-only">Google Plus</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com/">
+                              <ion-icon name="logo-instagram"></ion-icon>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+                <!-- Copyright -->
+                  <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
+           
+        </footer>
+
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://www.gstatic.com/charts/loader.js"></script>
+   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>
 </html>
