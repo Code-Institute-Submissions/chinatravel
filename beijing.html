@@ -214,6 +214,84 @@
                   <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
            
         </footer>
+        
+        <!--Map-->
+<script>
+    function initMap() {
+
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 8,
+  center: {lat: 39.9042, lng: 116.0474}
+});
+
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+// Add some markers to the map. Several popular tourist locations in Beijing
+var markers = locations.map(function(location, i) {
+  return new google.maps.Marker({
+    position: location,
+    label: labels[i % labels.length]
+  });
+});
+
+// Add a marker clusterer to manage the markers.
+var markerCluster = new MarkerClusterer(map, markers,
+    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+}
+var locations = [
+                {lat: 39.9169, lng: 116.3907},
+                {lat: 40.0000, lng: 116.2755},
+                {lat: 39.9055, lng: 116.3976},
+                {lat: 40.4361, lng: 116.5571}
+]
+</script>
+     
+     
+     <script>
+         //chart with avererage high and low temperatures
+     google.charts.load('current', {packages: ['bar']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+      var data = new google.visualization.BarChart();
+      data.addColumn('timeofday', 'Time of Day');
+      data.addColumn('number', 'Motivation Level');
+      data.addColumn('number', 'Energy Level');
+
+      data.addRows([
+        [{v: [1, 0, 0], f: 'January'}, 53, 40],
+        [{v: [2, 0, 0], f: 'Febuary'}, 55, 42],
+        [{v: [3, 0, 0], f:'March'}, 59, 45],
+        [{v: [4, 0, 0], f: 'April'}, 66, 50],
+        [{v: [5, 0, 0], f: 'May'}, 74, 56],
+        [{v: [6, 0, 0], f: 'June'}, 82, 63],
+        [{v: [7, 0, 0], f: 'July'}, 87, 67],
+        [{v: [8, 0, 0], f: 'August'}, 86, 67],
+        [{v: [9, 0, 0], f: 'September'}, 79, 62],
+        [{v: [10, 0, 0], f: 'October'}, 71, 55],
+        [{v: [11, 0, 0], f: 'November'}, 61, 49],
+        [{v: [12, 0, 0], f: 'December'}, 55, 44],
+      ]);
+
+      var options = {
+        title: 'Average temperatures',
+        width:400,
+        height:300
+      };
+
+      var chart = new google.visualization.Bar(
+        document.getElementById('chartdiv'));
+
+      chart.draw(data, options);
+    }
+     </script>
+
+     
+     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+     </script>
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
+   </script>
 
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
