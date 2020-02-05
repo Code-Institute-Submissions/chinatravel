@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" href="/Users/amybrucker/Documents/Travel Website/Documents/script.js"></script>
+    <title>Shanghai</title>
+</head>
+<body>
+    <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
+                   <a class="navbar-brand" href="/Users/amybrucker/Documents/Travel Website/Documents/home.html">
+                   <img src="/Users/amybrucker/Documents/Travel Website/Pictures/logo.JPG" width="70" height="70" alt="logo" class="logo">
+                   </a>
+                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                       <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
+                                       <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
+                                       <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
+                                       <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
+                                       <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
+                                       <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
+                                    </div>
+                                 </li>
+                         <li class="nav-item">
+                            <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
+                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link uppercase" href="contact.html">Contact Us</a>
+                         </li>
+                      </ul>
+                   </div>
+                </nav>
+             </header>
+
+
+             <section class="jumbotron" id="shanghai-view">
+                <div>
+                    <div>
+                      <h1 class="shanghaiTitle">Shanghai</h1>
+                      </div>
+                  </div>
+             </section>
+    
+              <section>
+                <div class="row aboutRow">
+                  <div class="column col-sm-12 col-md-6">
+                      <h3>About</h3>
+                      <p>Welcome to China's largest city, Shanghai. Shanghai offers many sightseeing destinations for any kind of traveler. This city has many famous gardens and museums as well as innovative architecture. Some visitors come to Shanghai for the food, as Shanghai cuisine is considered to be one of China's top cuisines.</p>
+                  </div>
+                   <!--Maps API-->
+                   <div class="column col-sm-12 col-md-6">
+                        <div id="map" class="mapshanghai"></div>
+                    </div>
+                </div>
+                  <div class="row">
+                    <div class="column col-sm-12 col-md-6 col-lg-3 shanghaiPageTour">
+                        <a href="/Users/amybrucker/Documents/Travel Website/Documents/tourOne.html">
+                      <img src="/Users/amybrucker/Documents/Travel Website/Pictures/beijingTwo.jpg" href="tour1.html" class="circleTour">
+                      <h4 class="tourName">Cities</h4>
+                    </a>
+                    </div>
+                    <div class="column col-sm-12 col-md-6 col-lg-3 beijingPageTour">
+                    <a href="/Users/amybrucker/Documents/Travel Website/Documents/tourOne.html">
+                      <img src="/Users/amybrucker/Documents/Travel Website/Pictures/historicOne.JPG" href="tour2.html" class="circleTour">
+                      <h4 class="tourName">Historic China</h4>
+                    </a>
+                    </div>
+                </div>
+              </section>
+
+      
+         <section>
+             <div class="row moreInfo">
+             <div class="column col-sm-12">
+                 <h4>Where to Stay</h4>
+                 <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one of our favorite search engines for locating the best deals on hotels. The best areas to stay in Shanghai:</p>
+                 <ul>
+                     <li>The Bund/ People's Square: If you want to stay in "downtown" Shanghai and in the middle of the action, this is the best place to stay.</li>
+                     <li>Pudong: The high end, luxury area of Shanghai with high rises and skyscrapers</li>
+                     <li>French Concession: A cultural experience </li>
+                     <li>Jing'an: A newer area that has many international convieniences and shops</li>
+                 </ul>
+             </div>
+            </div>
+
+                <div class="row whenVisit">
+                    <div class="column col-sm-8">
+                        <h4>When to Visit</h4>
+                        <p>Shanghai has a humid tropical climate and winters are cold, sometimes dropping below zero. Summer temperatures can reach as high as 32°C (90°F) in the month of July. Winter temperatures have an average low around 1°C (34°F). To avoid the hotest and coldest temperatures, the best time to visit would be in the spring (March-May) or in the fall (September-November).</p>
+                    </div>
+                    <!--Chart will take up col-sm-4-->
+                    <div id="chartdiv"></div>
+                </div>
+         </section>
+
+         <section>
+             <div class="questions">
+                 <h3>Questions?</h3>
+                 <h5>Contact Us Today!</h5>
+                 <button type="submit" class="btn btn-secondary contactButton" href="/Users/amybrucker/Documents/Travel Website/Documents/contact.html">See More...</button>
+             </div>
+         </section>
+
+         <!--Footer-->
+         <footer class="container">
+            <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
+
+                <!-- Social buttons -->
+                <div class="contact-follow">
+                    <ul class="list-inline social-links">
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com/">
+                              <ion-icon name="logo-facebook"></ion-icon>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://twitter.com/">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.google.com/">
+                              <ion-icon name="logo-googleplus"></ion-icon>
+                                <span class="sr-only">Google Plus</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com/">
+                              <ion-icon name="logo-instagram"></ion-icon>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Copyright -->
+                  <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
+           
+        </footer>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     
+    
+
+
+     
+     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+     </script>
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
+   </script>
+   <script src="https://www.gstatic.com/charts/loader.js"></script>
+   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </body>
+</html>
