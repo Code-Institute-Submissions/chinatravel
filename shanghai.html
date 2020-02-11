@@ -80,7 +80,6 @@
                 </div>
               </section>
 
-      
 <section class="destinations-card">
               <div class="row">
                   <div class="column md-col-4">
@@ -203,7 +202,7 @@
                        </div>
                 </div>
             </section>
-            
+      
          <section>
              <div class="row moreInfo">
              <div class="column col-sm-12">
@@ -280,14 +279,59 @@
      
     
 
+<!--Map-->
+<script>
+    function initMap() {
 
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 10,
+  center: {lat: 31.2304, lng: 121.4737}
+});
+
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+// Add some markers to the map. Several popular tourist locations in Shanghai
+var markers = locations.map(function(location, i) {
+  return new google.maps.Marker({
+    position: location,
+    label: labels[i % labels.length]
+  });
+});
+
+// Add a marker clusterer to manage the markers.
+var markerCluster = new MarkerClusterer(map, markers,
+    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+}
+var locations = [
+                {lat: 31.2403, lng: 121.4906},//the bund
+                {lat: 31.1738, lng: 121.4519},//Longhua Temple
+                {lat: 31.2079, lng: 121.4690},//French concession
+                {lat: 31.2235, lng: 121.4453},//Jingan temple
+                {lat: 31.2088, lng: 121.4689},//old city
+                {lat: 31.2283, lng: 121.4755},//Shanghai Museum
+                {lat: 31.2232, lng: 121.4437},//Huxinting Teahouse
+                {lat: 31.2154, lng: 121.5522},//Shiji Gongyuan
+                {lat: 31.2272, lng: 121.4921},//Yu yuan
+                {lat: 31.2348, lng: 121.4748},//Nanjing Rd
+                {lat: 31.2297, lng: 121.4762},//People's Square
+                {lat: 31.1434, lng: 121.4906},//Shanghai Disney
+                {lat: 31.2403, lng: 121.6579},//Shanghai Ocean Aquarium 
+                {lat: 31.2397, lng: 121.4998}//Oriental Pearl
+               
+]
+</script>
+     
+     
+    
      
      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
      </script>
      <script async defer
      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
    </script>
-   <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript" src="/Users/amybrucker/Documents/Travel Website/Documents/script.js"></script>
+
    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>
 </html>

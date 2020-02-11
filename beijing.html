@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" href="/Users/amybrucker/Documents/Travel Website/Documents/script.js"></script>
     <title>Beijing</title>
@@ -59,10 +59,11 @@
                       <h3>About</h3>
                       <p>Welcome to Beijing! Beijing is the capital city of China and is also one of the buisiest cities in the world. Home to many classic and modern chinese sights, Beijing is one of the most popular cities to visit in China. On a tour to Beijing, you will be able to see the famous Forbidden City, Summer Palace, Tian'anmen Square, and even take a day trip to see the Great Wall of China. Join one of our tours today!</p>
                   </div>
-                   <!--Maps API-->
-                   <div class="column col-sm-12 col-md-6">
-                        <div id="map" class="mapBeijing"></div>
-                    </div>
+                   
+                  <!--Skyscanner API-->
+                  
+
+
                 </div>
                   <div class="row">
                     <div class="column col-sm-12 col-md-6 col-lg-3 beijingPageTour">
@@ -82,7 +83,12 @@
 
 <section class="destinations-card">
               <div class="row">
-                  <div class="column md-col-4">
+<!--Maps API-->
+<div class="column col-sm-12 col-md-6">
+    <div id="map" class="mapBeijing"></div>
+</div>
+
+                  <div class="column col-md-6">
                       <div><h4>Explore Beijing</h4></div>
                         <div class="accordion" id="accordionExample">
                             <div class="card">
@@ -301,52 +307,17 @@ var locations = [
 </script>
      
      
-     <script>
-         //chart with avererage high and low temperatures
-     google.charts.load('current', {packages: ['bar']});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-      var data = new google.visualization.BarChart();
-      data.addColumn('timeofday', 'Time of Day');
-      data.addColumn('number', 'Motivation Level');
-      data.addColumn('number', 'Energy Level');
-
-      data.addRows([
-        [{v: [1, 0, 0], f: 'January'}, 53, 40],
-        [{v: [2, 0, 0], f: 'Febuary'}, 55, 42],
-        [{v: [3, 0, 0], f:'March'}, 59, 45],
-        [{v: [4, 0, 0], f: 'April'}, 66, 50],
-        [{v: [5, 0, 0], f: 'May'}, 74, 56],
-        [{v: [6, 0, 0], f: 'June'}, 82, 63],
-        [{v: [7, 0, 0], f: 'July'}, 87, 67],
-        [{v: [8, 0, 0], f: 'August'}, 86, 67],
-        [{v: [9, 0, 0], f: 'September'}, 79, 62],
-        [{v: [10, 0, 0], f: 'October'}, 71, 55],
-        [{v: [11, 0, 0], f: 'November'}, 61, 49],
-        [{v: [12, 0, 0], f: 'December'}, 55, 44],
-      ]);
-
-      var options = {
-        title: 'Average temperatures',
-        width:400,
-        height:300
-      };
-
-      var chart = new google.visualization.Bar(
-        document.getElementById('chartdiv'));
-
-      chart.draw(data, options);
-    }
-     </script>
-
+    
      
      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
      </script>
      <script async defer
      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
    </script>
-   <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript" src="/Users/amybrucker/Documents/Travel Website/Documents/script.js"></script>
+
+
    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>
 </html>
