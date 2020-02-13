@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script type="text/javascript" href="Javascript/script.js"></script>
+    <title>Guilin</title>
+</head>
+<body>
+    <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
+                   <a class="navbar-brand" href="index.html">
+                   <img src="img/logo.JPG" width="70" height="70" alt="logo" class="logo">
+                   </a>
+                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                       <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
+                                       <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
+                                       <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
+                                       <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
+                                       <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
+                                       <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
+                                    </div>
+                                 </li>
+                         <li class="nav-item">
+                            <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
+                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link uppercase" href="contact.html">Contact Us</a>
+                         </li>
+                      </ul>
+                   </div>
+                </nav>
+             </header>
+
+
+             <section class="jumbotron" id="guilin-view">
+                <div>
+                    <div>
+                      <h1 class="guilinTitle">Guilin</h1>
+                      </div>
+                  </div>
+             </section>
+    
+              <section>
+                <div class="row aboutRow">
+                  <div class="column col-sm-12 col-md-6">
+                      <h3>About</h3>
+                      <p>The Chinese claim that Guilin has the finest landscape under heaven. There is a famous phrase that means "East or west, Guilin's scenery is best". This beautiful city has inspired centuries of Chinese poems and landscape pantings. There are several towns that make up the area called Guilin: Guilin City, Yangshuo Town, Xingping Old Town, and Longsheng Town. Guilin's main features are karst landforms, a mirror like river, and caves filled with stunning stalagmites. Guilin is also home to many ethnic minorities, so it is a great chance to see unique customs of the local people. </p>
+                  </div>
+                   <!--Maps API-->
+                   <div class="column col-sm-12 col-md-6">
+                        <div id="map" class="mapguilin"></div>
+                    </div>
+                </div>
+                  <div class="row">
+                    <div class="column col-sm-12 col-md-6 col-lg-3 guilinPageTour">
+                        <a href="tourTwo.html">
+                      <img src="img/guilinTwo.jpg" href="tourTwo.html" class="circleTour">
+                      <h4 class="tourName">Nature Tour</h4>
+                    </a>
+                    </div>
+                </div>
+              </section>
+
+<section class="destinations-card">
+              <div class="row">
+                  <div class="column md-col-4">
+                      <div><h4>Explore Guilin</h4></div>
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Nature
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <h4>1) Li River</h4>
+                                    <p>(Map location: A)</p>
+                                    <p>Taking a cruise along the Li River, you gently glide past an endless view of spectacular karst mountains shrouded in mist.</p>
+                                    <h4>2) Yangshuo</h4>
+                                    <p>(Map location: B)</p>
+                                    <p>Yangshuo is a county under the jurisdiction Guilin and is often considered to be the most beautiful part of Guilin. There are so many interesting sights and attractions here. You can take a cruise on the Li River or Yulong River, visit the ancient West Street, see big Banyan trees, and enjoy the unique mountains.</p>
+                                    <h4>3) Longsheng Rice Terraces</h4>
+                                    <p>(Map location: C)</p>
+                                    <p>These are the world's most incredible rice terraces. They were built around 650 years ago and cover several villages near the city of Guilin. The landscape changes colors due to harvesting, so the best time to visit is May - October when they are a lush green color.</p>
+                                    <h4>4) Elephant Trunk Hill</h4>
+                                    <p>(Map location: D)</p>
+                                    <p>Elephant Trunk Hill (Xiangbishan) is an iconic spot in Guilin. This famous hill resembles an elephant drinking water from the river. </p>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Culture & History
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <h4>1) Huashan Rock Art</h4>
+                                        <p>(Map location: E)</p>
+                                        <p>Huashan Rock Art Cultural Landscape was listed as a World Heritage Site in 2016. It is an extensive assembly of historical rock art painted on cliffs several hundred years ago. The cliff is about 221 meters (725 feet) long and 140 meters (459 feet) high. They have 1,900 images aranged around the cliff and many of them are unsolved puzzles.</p>
+                                        <h4>2) Reed Flute Cave</h4>
+                                        <p>(Map location: F)</p>
+                                        <p>The cave got its name from the reeds that grow just outside the cave, that people use to make flutes. The cave has many rock formations, stalactites, and stone pillars that are lit up with many colorful lights.</p>
+                                        <h4>3) Zhengyang Night Market</h4>
+                                        <p>(Map location: G)</p>
+                                        <p>Night markets are an interesting cultural experience. On the street, you can find many local food, drinks, and souviners.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Food
+                                        </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <h3>Traditional Guilin cuisine is usually a combination of Hunanese and Cantonese flavors. Many foods have a sour or slightly spicy taste. Stir-frying and steaming are the most common cooking methods of Guilin cuisine.</h3>
+                                           <ul>
+                                            <li>Lipu Taro and Pork Loaf</li>
+                                           <li>Li River Snails</li>
+                                           <li>Yangshuo Beer Fish</li>
+                                           <li>Guilin Rice Noodles</li>
+                                           <li>Fa Gao Sponge Cake</li>
+                                           <li>Oil Tea</li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                       </div>
+                </div>
+            </section>
+      
+         <section>
+             <div class="row moreInfo">
+             <div class="column col-sm-12">
+                 <h4>Where to Stay</h4>
+                 <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one of our favorite search engines for locating the best deals on hotels. The best areas to stay in Guilin:</p>
+                 <ul>
+                     <li>Guilin City Center: The city center area in Guilin is a major transportation hub and has many landmarks to see. It's also a great place to catch a Li river cruise. </li>
+                     <li>Yangshuo: Staying in Yangshuo is a convenient place to explore the countryside scenery.</li>
+                     <li>Longsheng: If you want the full experience of the Longji Rice Terraces, it would be fun to stay in Longsheng for one or two nights.</li>
+                 </ul>
+             </div>
+            </div>
+
+                <div class="row whenVisit">
+                    <div class="column col-sm-8">
+                        <h4>When to Visit</h4>
+                        <p>The Guangxi Zhuang Autonomous Region, where Guilin is located has a subtropical climate. Temperatures in winter are mild and rarely go below freezing. The best time to visit Guilin are March-May and September-November when the weather is mild and the days are sunny.</p>
+                    </div>
+                    <!--Chart will take up col-sm-4-->
+                    <div id="chartdiv"></div>
+                </div>
+         </section>
+
+         <section>
+             <div class="questions">
+                 <h3>Questions?</h3>
+                 <h5>Contact Us Today!</h5>
+                 <button type="submit" class="btn btn-secondary contactButton" href="contact.html">See More...</button>
+             </div>
+         </section>
+
+         <!--Footer-->
+         <footer class="container">
+            <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
+
+                <!-- Social buttons -->
+                <div class="contact-follow">
+                    <ul class="list-inline social-links">
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com/">
+                              <ion-icon name="logo-facebook"></ion-icon>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://twitter.com/">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.google.com/">
+                              <ion-icon name="logo-googleplus"></ion-icon>
+                                <span class="sr-only">Google Plus</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com/">
+                              <ion-icon name="logo-instagram"></ion-icon>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Copyright -->
+                  <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
+           
+        </footer>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     
+    
+
+<!--Map-->
+<script>
+    function initMap() {
+
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 8,
+  center: {lat: 25.2345, lng: 110.1800}
+});
+
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+// Add some markers to the map. Several popular tourist locations in Guilin
+var markers = locations.map(function(location, i) {
+  return new google.maps.Marker({
+    position: location,
+    label: labels[i % labels.length]
+  });
+});
+
+// Add a marker clusterer to manage the markers.
+var markerCluster = new MarkerClusterer(map, markers,
+    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+}
+var locations = [
+                {lat: 24.4025, lng: 110.0511},//Li River
+                {lat: 24.7785, lng: 110.4966},//Yangshuo
+                {lat: 25.7585, lng: 110.1202},//Longsheng Rice Terraces
+                {lat: 25.2669, lng: 110.2933},//Elephant Trunk Hill
+                {lat: 22.1520, lng: 110.0123},//Huashan Rock Art
+                {lat: 25.3044, lng: 110.2736},//Reed Flute Cave
+                {lat: 25.2779088, lng: 110.29337347}//Zhengyang night market
+               
+]
+</script>
+     
+     
+     
+     
+     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+     </script>
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
+   </script>
+
+   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </body>
+</html>
