@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <script type="text/javascript" href="Javascript/script.js"></script>
-    <title>Beijing</title>
+    <title>Shanghai</title>
 </head>
 <body>
     <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
@@ -45,10 +45,10 @@
              </header>
 
 
-             <section class="jumbotron" id="beijing-view">
+             <section class="jumbotron" id="shanghai-view">
                 <div>
                     <div>
-                      <h1 class="beijingTitle">Beijing</h1>
+                      <h1 class="shanghaiTitle">Shanghai</h1>
                       </div>
                   </div>
              </section>
@@ -57,25 +57,24 @@
                 <div class="row aboutRow">
                   <div class="column col-sm-12 col-md-6">
                       <h3>About</h3>
-                      <p>Welcome to Beijing! Beijing is the capital city of China and is also one of the buisiest cities in the world. Home to many classic and modern chinese sights, Beijing is one of the most popular cities to visit in China. On a tour to Beijing, you will be able to see the famous Forbidden City, Summer Palace, Tian'anmen Square, and even take a day trip to see the Great Wall of China. Join one of our tours today!</p>
+                      <p>Welcome to China's largest city, Shanghai. Shanghai offers many sightseeing destinations for any kind of traveler. This city has many famous gardens and museums as well as innovative architecture. Some visitors come to Shanghai for the food, as Shanghai cuisine is considered to be one of China's top cuisines.</p>
                   </div>
-                   
-                  <!--Skyscanner API-->
-                  
-
-
+                   <!--Maps API-->
+                   <div class="column col-sm-12 col-md-6">
+                        <div id="map" class="mapshanghai"></div>
+                    </div>
                 </div>
                   <div class="row">
-                    <div class="column col-sm-12 col-md-6 col-lg-3 beijingPageTour">
+                    <div class="column col-sm-12 col-md-6 col-lg-3 shanghaiPageTour">
                         <a href="tourOne.html">
-                      <img src="img/beijingTwo.jpg" href="tourOne.html" class="circleTour">
-                      <h4 class="tourName">Cities Tour</h4>
+                      <img src="img/shanghaiFour.JPG" href="tourThree.html" class="circleTour">
+                      <h4 class="tourName">Historic China</h4>
                     </a>
                     </div>
                     <div class="column col-sm-12 col-md-6 col-lg-3 beijingPageTour">
-                    <a href="tourThree.html">
-                      <img src="img/historicOne.JPG" href="tourThree.html" class="circleTour">
-                      <h4 class="tourName">Historic China</h4>
+                    <a href="tourOne.html">
+                      <img src="img/shanghaiFive.JPG" href="tourOne.html" class="circleTour">
+                      <h4 class="tourName">Cities Tour</h4>
                     </a>
                     </div>
                 </div>
@@ -83,13 +82,8 @@
 
 <section class="destinations-card">
               <div class="row">
-<!--Maps API-->
-<div class="column col-sm-12 col-md-6">
-    <div id="map" class="mapBeijing"></div>
-</div>
-
-                  <div class="column col-md-6">
-                      <div><h4>Explore Beijing</h4></div>
+                  <div class="column md-col-4">
+                      <div><h4>Explore Shanghai</h4></div>
                         <div class="accordion" id="accordionExample">
                             <div class="card">
                                 <div class="card-header" id="headingOne">
@@ -101,20 +95,27 @@
                                 </div>
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
-                                    <h4>1) The Great Wall</h4>
-                                    <p>(Map locations: A-C)</p>
-                                    <p>A trip to Beijing would not be complete without a visit to The Great Wall. There are several sections that are easy to access, including Mutianyu (A), Badaling (B), and Simatai (C).</p>
-                                    <h4>2) The Temple of Heaven</h4>
+                                    <h4>1) The Bund</h4>
+                                    <p>(Map location: A)</p>
+                                    <p>Strolling along The Bund is a must do while in Shanghai. It's home to amazing views of Pudong and its magnificent skyscrapers. </p>
+                                    <h4>2) Longhua Temple</h4>
+                                    <p>(Map location: B)</p>
+                                    <p>This Buddhist temple is one of the most beautiful ancient temples in the city. </p>
+                                    <h4>3) French Concession</h4>
+                                    <p>(Map location: C)</p>
+                                    <p>The French Concession is an interesting area that looks European, but is also Chinese. Its tree-lined avenues have hip cafes, restaurants, and boutiques.</p>
+                                    <h4>4) Jing'an Temple</h4>
                                     <p>(Map location: D)</p>
-                                    <p>Long ago at this cultural wonder, the Emperor used to come to pray for a good harvest season.</p>
-                                    <h4>3) Tiananmen Square</h4>
+                                    <p>Jing'an means temple of peace and tranquility. This temple with interesting architecture is surrounded by shops and cafes.</p>
+                                    <h4>5) Shanghai Old City</h4>
                                     <p>(Map location: E)</p>
-                                    <p>Tiananmen, or the Gate of Heavenly Peace, lies right in the heart of Beijing. It is famously decorated with Chairman Mao's portrait.</p>
-                                    <h4>4) The Forbidden City</h4>
+                                    <p>The Old City in Shanghai is everything you'd expect an old Chinese city to be like. It is definitely a great place to go to experience the history and culture of Shanghai. Within the ancient walled city, you can explore the buildings, temples, markets, and tea houses.</p>
+                                    <h4>6) Shanghai Museum</h4>
                                     <p>(Map location: F)</p>
-                                    <p>Also known as the imperial palace, The Forbidden City is one of the most famous landmarks in China. This massive complex of palaces covers over 180 acres and contains more than 90 palaces and courtyards, 980 buildings, and over 8,000 rooms.</p>
-                                    <h4>5) Wander the Hutongs</h4>
-                                    <p>Hutongs are traditional narrow streets full of shops, cafes, and residences. You can get a little taste of what life in China is like here.</p>
+                                    <p>The Shanghai Museum was founded in 1952 and is one of the most important museums of Chinese classical art. The museum is filled with ancient Chinese historical artifacts and is divided into eleven galleries.</p>
+                                    <h4>7) Huxinting Teahouse</h4>
+                                    <p>(Map location: G)</p>
+                                    <p>Just outside of the Yu Garden is the Huxinting Teahouse. This is an old and very famous teahouse in Shanghai, perfect for an afternoon tea. </p>
                                 </div>
                                 </div>
                             </div>
@@ -129,16 +130,13 @@
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                     <div class="card-body">
-                                    <h4>1) Summer Palace</h4>
-                                    <p>(Map location: G)</p>
-                                    <p>This famous landmark is one of the most popular places to go in Beijing because of its beautiful structures and natural scenery. Kunming lake and Longevity hill are two of the essential landscape features of the gardens here.</p>
-                                    <h4>2) Beihai Park</h4>
+                                    <h4>1)Shiji Gongyuan/ Century Park</h4>
                                     <p>(Map location: H)</p>
-                                    <p>In this ancient garden, you will see the White Jade Pagoda which was built to honor the visit of the fifth Dalai Lama in the 1600s. Beihai bridge, Changfu temple, and Yong'an Temple are also found within the park and are well worth a visit.</p>
-                                    <h4>3) Jingshan Park</h4>
+                                    <p>Century park is one of the biggest parks in Shanghai and is a nice place to find some peace in the busy city.</p>
+                                    <h4>2) Yu Yuan/ Yu Garden</h4>
                                     <p>(Map location: I)</p>
-                                    <p>Locared just across the road from the noth gate of the Forbidden City, this garden offers one of the most outstanding views of the city.</p>
-                                </div>
+                                    <p>Filled with rockeries, pavillions, and magnificent pagodas, the Yu Garden is known to be one of the most famous classical chinese gardens. The garden was built in 1559 during the Ming dynasty and contains an impressive Jade Rock.</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -153,13 +151,21 @@
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <div class="card-body">
                                     <h3>Traveling with kids? Here are a few extra fun things the whole family can enjoy together.</h3>
-                                    <h4>1) See the Great Wall at Mutianyu</h4>
-                                    <p>This destination may already be on our list of things to do, but visiting the section at Mutianyu is a must for anyone visiting China. You can take a cable car up to the top of the wall and ride a toboggan down!</p>
-                                    <h4>2) Beijing Chaoyang Theater Acrobats</h4>
+                                    <h4>1) Nanjing Road</h4>
                                     <p>(Map location: J)</p>
-                                    <p>The acrobat show at Chaoyang theater is particularly impressive! Shows filled with stunning costumes and incredible stunts are truly mind-boggling.</p>
-                                    <h4>3) Seasonal Activities</h4>
-                                    <p>During the winter months, the lakes in Beijing often freeze over which provide places for ice skating and sledding. When the lakes warm up, boating or playing by the side of the lakes are wonderful ways to spend the day.</p>
+                                    <p>Nanjing Road is the main shopping street in Shanghai and can be a wonderful place to purchase souvineers. It is one of the world's largest and most famous shopping streets, attracting about one million shoppers each day.</p>
+                                    <h4>2) People's Square & People's Park</h4>
+                                    <p>(Map location: K)</p>
+                                    <p>People's Square and People's Park are located just south of Nanjing Road. There are always interesting activities here including; dancing lessons, Tai Chi, the famous marriage market, calligraphy, and small amusement park attractions.</p>
+                                    <h4>3) Shanghai Disney</h4>
+                                    <p>(Map location: L)</p>
+                                    <p>Shanghai Disney has many amusing attractions and is definitely something the kids will enjoy. This Disney may be smaller than the other Disney parks, but contains unique attractions that the whole family can enjoy.</p>
+                                    <h4>4) Shanghai Ocean Aquarium</h4>
+                                    <p>(Map location: M)</p>
+                                    <p>This aquarium has several exhibits featuring sea life from around the world. One of the most outstanding sections of the aquarium is the glass viewing tunnel, which is currently the world's longest!</p>
+                                    <h4>5) The Oriental Pearl</h4>
+                                    <p>(Map location: N)</p>
+                                    <p>The 468-meter tall Oriental Pearl Tower can be seen at the famous Bund skyline. The pearls contain sightseeing floors with a rotating restaurant, the Shanghai history museum, as well as other attractions.</p>
                                 </div>
                                 </div>
                             </div>
@@ -174,17 +180,21 @@
                                     </div>
                                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <h3>Beijing style dishes are classic and some of the most loved throughout China. Listed below are some of the most popular foods.</h3>
+                                            <h3>Shanghai cuisine is famous throughout the world. Shanghainese food is considered to be sweeter than other kinds of cuisine. Below is our list of must try dishes while in Shanghai.</h3>
                                            <ul>
-                                            <li>Peking Duck</li>
-                                           <li>Zhajiang mian- Beijing noodles in fried bean sauce</li>
-                                           <li>Jiaozi- Chinese dumplings</li>
-                                           <li>Huoguo- Hotpot</li>
-                                           <li>Jing Jiang Rousi- Shredded pork in a sweet brown sauce</li>
-                                           <li>Wangfujing Snack Street</li>
-                                           <p>(Map location: K)</p>
-                                           <p>Are you interested in trying some different and bizzare snacks? Wangfujing street is the place to visit!</p>
-                                        </ul>
+                                            <li>Xiaolongbao- Soup Dumplings</li>
+                                           <li>Braised Pork</li>
+                                           <li>Dazhaxie- Shanghai Steamed Crab</li>
+                                           <li>Braised Eggplant</li>
+                                           <li>Mapo doufu</li>
+                                           <li>Shengjian bao- Fried pork dumplings</li>
+                                           <li>Lamb Kebabs</li>
+                                           <li>Congee</li>
+                                           <li>Lion Head Meatballs</li>
+                                           <li>Green Onion Pancakes</li>
+                                           <li>Dry Fried Green beans</li>
+                                           <li>Shanghai style fried noodles</li>
+                                           </ul>
                                         </div>
                                     </div>
                                  </div>
@@ -197,11 +207,12 @@
              <div class="row moreInfo">
              <div class="column col-sm-12">
                  <h4>Where to Stay</h4>
-                 <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one of our favorite search engines for locating the best deals on hotels. The best areas to stay in Beijing</p>
+                 <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one of our favorite search engines for locating the best deals on hotels. The best areas to stay in Shanghai:</p>
                  <ul>
-                     <li>Wangfujing: If you want to stay in a centeral part of the city, Wangfujing is a great place to stay. It is well located for visiting sights such as Tiananmen Square and The Forbidden City.</li>
-                     <li>Qianmen: Located just south of Tiananmen Square, Qianmen is a convienent place to stay. Foodies will especially love this part of the city as there are many restauraunts and street markets.</li>
-                     <li>Gulou/ Nanluguoxiang: These areas are trendy areas that offer everything you need, especially if you'd like to avoid a touristy area. You will enjoy getting lost and exploring the many cafes, shops, and alleys.</li>
+                     <li>The Bund/ People's Square: If you want to stay in "downtown" Shanghai and in the middle of the action, this is the best place to stay.</li>
+                     <li>Pudong: The high end, luxury area of Shanghai with high rises and skyscrapers</li>
+                     <li>French Concession: A cultural experience </li>
+                     <li>Jing'an: A newer area that has many international convieniences and shops</li>
                  </ul>
              </div>
             </div>
@@ -209,7 +220,7 @@
                 <div class="row whenVisit">
                     <div class="column col-sm-8">
                         <h4>When to Visit</h4>
-                        <p>Beijing is a wonderful city to visit most times of the year. However, the winter can be a difficult time to visit with temperatures around the freezing point. To avoid large crowds and busy travel days, plan your trip carefully and not at the time of China's major holidays: Chinese New Year (Late Winter/Early spring) and National Week (The first week in October.)  </p>
+                        <p>Shanghai has a humid tropical climate and winters are cold, sometimes dropping below zero. Summer temperatures can reach as high as 32°C (90°F) in the month of July. Winter temperatures have an average low around 1°C (34°F). To avoid the hotest and coldest temperatures, the best time to visit would be in the spring (March-May) or in the fall (September-November).</p>
                     </div>
                     <!--Chart will take up col-sm-4-->
                     <div id="chartdiv"></div>
@@ -220,7 +231,7 @@
              <div class="questions">
                  <h3>Questions?</h3>
                  <h5>Contact Us Today!</h5>
-                 <button type="submit" class="btn btn-secondary contactButton" href="/Users/amybrucker/Documents/Travel Website/Documents/contact.html">See More...</button>
+                 <button type="submit" class="btn btn-secondary contactButton" href="contact.html">See More...</button>
              </div>
          </section>
 
@@ -273,13 +284,13 @@
     function initMap() {
 
 var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 8,
-  center: {lat: 39.9042, lng: 116.0474}
+  zoom: 10,
+  center: {lat: 31.2304, lng: 121.4737}
 });
 
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-// Add some markers to the map. Several popular tourist locations in Beijing
+// Add some markers to the map. Several popular tourist locations in Shanghai
 var markers = locations.map(function(location, i) {
   return new google.maps.Marker({
     position: location,
@@ -292,17 +303,21 @@ var markerCluster = new MarkerClusterer(map, markers,
     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 }
 var locations = [
-                {lat: 40.4326, lng: 116.5698},
-                {lat: 40.3598, lng: 116.0200},
-                {lat: 40.6631, lng: 117.2831},
-                {lat: 39.8822, lng: 116.4066},
-                {lat: 39.9055, lng: 116.3976},
-                {lat: 39.9169, lng: 116.3907},
-                {lat: 40.0000, lng: 116.2755},
-                {lat: 39.9254, lng: 116.3893},
-                {lat: 39.9251, lng: 116.3968},
-                {lat: 39.9224, lng: 116.4625},
-                {lat: 39.9111556, lng: 116.4052750},
+                {lat: 31.2403, lng: 121.4906},//the bund
+                {lat: 31.1738, lng: 121.4519},//Longhua Temple
+                {lat: 31.2079, lng: 121.4690},//French concession
+                {lat: 31.2235, lng: 121.4453},//Jingan temple
+                {lat: 31.2088, lng: 121.4689},//old city
+                {lat: 31.2283, lng: 121.4755},//Shanghai Museum
+                {lat: 31.2232, lng: 121.4437},//Huxinting Teahouse
+                {lat: 31.2154, lng: 121.5522},//Shiji Gongyuan
+                {lat: 31.2272, lng: 121.4921},//Yu yuan
+                {lat: 31.2348, lng: 121.4748},//Nanjing Rd
+                {lat: 31.2297, lng: 121.4762},//People's Square
+                {lat: 31.1434, lng: 121.4906},//Shanghai Disney
+                {lat: 31.2403, lng: 121.6579},//Shanghai Ocean Aquarium 
+                {lat: 31.2397, lng: 121.4998}//Oriental Pearl
+               
 ]
 </script>
      
@@ -316,7 +331,6 @@ var locations = [
    </script>
 
 <script type="text/javascript" src="/Users/amybrucker/Documents/Travel Website/Documents/script.js"></script>
-
 
    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>

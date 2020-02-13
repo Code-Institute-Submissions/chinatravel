@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_KG1EmIIX6AGYKV3CSfODm");
-   })();
-</script>
+ 
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <title>Cities Tour</title>
+    <title>Historic China</title>
 </head>
 <body>
     <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
@@ -55,20 +51,37 @@
                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                        </ol>
                    <div class="carousel-inner">
                      <div class="carousel-item active">
-                       <img src="img/beijingTwo.jpg" class="d-block w-100" href="adventure.html" alt="Beijing Palace">
-                       <div class="carousel-caption d-none d-md-block"></div>
+                       <img src="img/historicOne.JPG" class="d-block w-100"  alt="Beijing Palace">
+                       <div class="carousel-caption">
+                           <h2>Historic China</h2>
+                           <h5>Qingdao</h5>
+                       </div>
                      </div>
                      <div class="carousel-item">
-                       <img src="img/beijingOne.jpg" class="d-block w-100" href="adventure.html" alt="The Great Wall">
-                       <div class="carousel-caption d-none d-md-block"></div>
+                       <img src="img/historicTwo.JPG" class="d-block w-100" alt="The Great Wall">
+                       <div class="carousel-caption">
+                           <h2>Historic China</h2>
+                           <h5>Suzhou</h5>
+                       </div>
                      </div>
                      <div class="carousel-item">
-                       <img src="img/shanghaiFour.JPG" class="d-block w-100" href="adventure.html" alt="Old Shanghai">
-                       <div class="carousel-caption d-none d-md-block"></div>
+                       <img src="img/historicThree.JPG" class="d-block w-100" alt="Old Shanghai">
+                       <div class="carousel-caption">
+                           <h2>Historic China</h2>
+                           <h5>Beijing</h5>
+                       </div>
                      </div>
+                     <div class="carousel-item">
+                        <img src="img/shanghaiFour.JPG" class="d-block w-100" alt="Old Shanghai">
+                        <div class="carousel-caption">
+                            <h2>Historic China</h2>
+                            <h5>Shanghai</h5>
+                        </div>
+                      </div>
                    </div>
                        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -88,22 +101,22 @@
                     <div class="column col-sm-12 col-md-6 tour-left">
                         <h2>Tour Highlights</h2>
                     <div>
-                        <p>Capture the essence of China's two major cities. See Beijing- the imperial and modern capital of China. Discover Shanghai, an evergrowing city blending the cultures of the east and the west. Our tours are typically private and tailor made to create beautiful and unique experiences. </p>
+                        <p>If you want to learn about the history of China and see some of the most famous cultural sights in the country, this 10-day tour is for you! </p>
                         <ul>
-                            <li>Skip the lines at the major attractions</li>
-                            <li>Visit the world's largest famous square- Tian'anmen Square</li>
-                            <li>Explore the most beautiful section of the Great Wall</li>
-                            <li>Visit the Bund and it's historic buildings</li>
-                            <li>Enjoy authentic local cuisine</li>
+                            <li></li>
+                            <li>See some of the old and famous gardens of Suzhou</li>
+                            <li>Explore the Forbidden City</li>
+                            <li>Try out a handpicked cultural activity</li>
+                            <li>Listen to stories you won't find in any guide book from locals </li>
+                            <li>Eat like a local and try some interesting and unique dishes</li>
                         </ul>
-                        <p>This itinerary is only one possibility to spark your imagination. You can customize your trip to suit your interests and budget!</p>
                     </div>
                     <div class="row tourPictures">
-                        <div class="column col-sm-3 col-md-2">
-                            <img src="img/shanghaiThree.JPG" class="itineraryPicture">
+                        <div class="column col-sm-3">
+                            <img src="img/qingdaoTwo.JPG" class="itineraryPicture">
                         </div>
-                        <div class="column col-sm-3 col-md-2">
-                            <img src="img/shanghaiFive.JPG" class="itineraryPicture">
+                        <div class="column col-sm-3">
+                            <img src="img/gardenOne.jpg" class="itineraryPicture">
                         </div>
                     </div>
                 </div>
@@ -117,13 +130,14 @@
                 <input type="text" name="name" id="inquiryforminput" class="form-control" placeholder="Full Name" required />
                 <label class="sr-only" for="email">Email</label>  
                 <input type="email" name="email" id="inquiryforminput" class="form-control" placeholder="Email" required />
-                <!--add date picker-->
                     <label class="mr-sm-2 sr-only" for="Select">Choose your tour</label>
                         <select class="custom-select mr-sm-2" id="inquiryforminput">
                           <option selected id="inquiryforminput">Choose your tour</option>
-                          <option value="1" id="inquiryforminput">One</option>
-                          <option value="2" id="inquiryforminput">Two</option>
-                          <option value="3" id="inquiryforminput">Three</option>
+                          <option value="1" id="inquiryforminput">One Day in Beijing</option>
+                          <option value="2" id="inquiryforminput">One Day in Shanghai</option>
+                          <option value="3" id="inquiryforminput">Cities Tour</option>
+                          <option value="4" id="inquiryforminput">Nature Tour</option>
+                          <option value="5" id="inquiryforminput">Historic China</option>
                         </select>
                     <label class="sr-only" for="comment">Comment</label>  
                     <textarea rows="5" name="comment" id="inquiryforminput" class="form-control" placeholder="Leave us a comment" required></textarea>
@@ -150,28 +164,8 @@
                         <h3>Itinerary</h3>
                     </div>
                     <div class="itineraryDay">
-                        <h4>Day 1: Arrival in Beijing</h4>
-                        <p>Welcome to Beijing! Your tour guide will be waiting for you at either the airport of train station. A private car will transfer you to your hotel.</p>
-                    </div>
-
-                    <div class="itineraryDay">
-                        <h4>Day 2: The Great Wall</h4>
-                        <p>A visit to Beijing would not be complete without a trip to the Great Wall. Your guide will pick you up from your hotel and take you to the Mutianyu section. Here, you can take a chairlift up to the top to save time and energy. You may chose to take the lift back down or to ride the toboggans. On the wall, you will have free time to walk around and explore.</p>
-                    </div>
-
-                    <div class="itineraryDay">
-                        <h4>Day 3: Summer Palace & Boat Ride</h4>
-                        <p>After a traditional Chinese breakfast, go see the Summer Palace. It is a beautiful imperial garden divided into three main areas: the lake area, the palace area, and the mountain area. In warmer months, enjoy a boat ride to view all of the palaces around the lake. </p>
-                    </div>
-
-                    <div class="itineraryDay">
-                        <h4>Day 4: The Forbidden City</h4>
-                        <p>Your guide will first take you to Tian'anmen Square and will give you information about the history and architecture of the area. Then, you will be able to walk to The Forbidden City, the main sight of the day. Your guide will help you to see several carefully selected palaces allowing you to admire some of the famous buildings and famous figures. Enjoy some local Beijing style cuisine with your guide. After a Chinese lunch, explore the old Hutong area to see old houses and shops.</p>
-                    </div>
-
-                    <div class="itineraryDay">
-                        <h4>Day 5: Transfer to Shanghai</h4>
-                        <p>To transfer to your next destination, make your way to the railway station and ride the high-speed train It will take about 4.5 hours to get from Beijing to Shanghai.</p>
+                        <h4>Day 1: Arrival in Shanghai</h4>
+                        <p>Welcome to Shanghai! Your tour guide will be waiting for you at either the airport of train station. A private car will transfer you to your hotel.</p>
                     </div>
 
                     <div class="itineraryDay">
@@ -185,24 +179,48 @@
                     </div>
 
                     <div class="itineraryDay">
-                        <h4>Day 8: Explore Zhujiajiao Water Town</h4>
-                        <p>Enjoy a relaxing day in Zhujiajiao Water Town. Take a stroll by the river and forget how close you are to the busy city.</p>
+                        <h4>Day 4: Day Trip to Suzhou</h4>
+                        <p>Suzhou is just half an hour away from Shanghai by train. Your guide will take you to the famous Humble Administrator's Garden- Suzhou's largest and most famous garden. After, visit the Suzhou Museum and see ancient ceramics and woodcarvings. Make your way down Pingjiang Road, a famous canal street filled with shops and snack stalls. Return to Shanghai in the evening.</p>
                     </div>
 
                     <div class="itineraryDay">
-                        <h4>Day 9: Depart from Shanghai</h4>
+                        <h4>Day 5: Transfer to Qingdao</h4>
+                        <p>To transfer to your next destination, make your way to the railway station and ride the high-speed train It will take about 4 hours to get from Shanghai to Qingdao. You can also choose to take a plane to Qingdao. There are usually several flights each day and take 1 1/2 hours.</p>
+                    </div>
+
+                    <div class="itineraryDay">
+                        <h4>Day 6: Qingdao</h4>
+                        <p>Choose to visit the Beach ar Huangdao or climb Laoshan Mountain. Whatever place you choose to visit, experience the beauty and hear stories about the local area.</p>
+                    </div>
+
+                    <div class="itineraryDay">
+                        <h4>Day 7: Afternoon transfer to Beijing </h4>
+                        <p>In the morning, visit Zhanqiao Pier and Jimo Lu market. After lunch, go to the railway station to catch a highspeed train to Beijing.</p>
+                    </div>
+
+                    <div class="itineraryDay">
+                        <h4>Day 8: The Great Wall</h4>
+                        <p>A visit to Beijing would not be complete without a trip to the Great Wall. Your guide will pick you up from your hotel and take you to the Mutianyu section. Here, you can take a chairlift up to the top to save time and energy. You may chose to take the lift back down or to ride the toboggans. On the wall, you will have free time to walk around and explore.</p>
+                    </div>
+
+                    <div class="itineraryDay">
+                        <h4>Day 9: Ancient Beijing</h4>
+                        <p>Go see The Forbidden City Tian'anmen Square. Your guide will help you to see several carefully selected palaces allowing you to admire some of the famous buildings and famous figures. They will also be able to share interesting stories about the area. After a Chinese lunch, explore the old Hutong area to see old houses and shops.</p>
+                    </div>
+
+                    <div class="itineraryDay">
+                        <h4>Day 10: Depart from Beijing</h4>
                         <p>Your personal guide will help you to get to the airport or train station and will assist with check-in.</p>
                     </div>
 
                     <div>
-                        <p>From $900 per person, based on 2 people and a 4-star hotel</p>
+                        <p>From $1100 per person, based on 2 people and a 4-star hotel</p>
             
-                        <p>Although this itinerary is made for a 9-day trip, we can customize your tour to fit your needs. You can alter the itinerary and extend or shorten it to fit your schedule. If there are any special activities you'd like to do, please let us know!</p>
+                        <p>Although this itinerary is made for a 10-day trip, we can customize your tour to fit your needs. You can alter the itinerary and extend or shorten it to fit your schedule. If there are any special activities you'd like to do, please let us know!</p>
 
                         <p>Interested in this tour? Fill out the inquiry form!</p>
                     </div>
                 </div>
-                
 
         <div class="col col-sm-12 col-md-4">
         <div id="map" class="tourOneMap"></div>
@@ -215,8 +233,7 @@
             <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
 
                 <!-- Social buttons -->
-                <div class="row">
-                <div class="col-sm-6 contact-follow">
+                <div class="contact-follow">
                     <ul class="list-inline social-links">
                         <li class="footer-nav-item list-inline-item">
                             <a target="_blank" href="https://www.facebook.com/">
@@ -244,28 +261,29 @@
                         </li>
                     </ul>
                 </div>
-              </div>
                 <!-- Copyright -->
                   <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
            
         </footer>
 
          <script>
-         
+
         //Map with a line showing each of the cities this itinerary will go to
       
             function initMap() {
               var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4.5,
-                center: {lat: 39.9042, lng: 116.0474},
+                center: {lat: 36.0671, lng: 120.3826},
                 mapTypeId: 'terrain'
               });
       
               var flightPlanCoordinates = [
-                {lat: 39.9169, lng: 116.3907},
-                {lat: 21.291, lng: -157.821},
-                {lat: -18.142, lng: 178.431},
-                {lat: -27.467, lng: 153.027}
+                {lat: 31.1443, lng: 121.8083}, //Shanghai
+                {lat: 31.2990, lng: 120.5853}, //Suzhou
+                {lat: 36.2667, lng: 120.3831}, //Qingdao
+                {lat: 40.0799, lng: 116.6031}, //Beijing
+                {lat: 40.4361, lng: 116.5571}, //Mutianyu
+                {lat: 39.9169, lng: 116.3907} //Forbidden City
               ];
               var flightPath = new google.maps.Polyline({
                 path: flightPlanCoordinates,
@@ -279,11 +297,21 @@
             }
           </script>
 
-
          <script async defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
          </script>
 
+<!--Email JS-->
+<script src="Javascript/sendEmail.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_KG1EmIIX6AGYKV3CSfODm");
+   })();
+</script>
+<script type="text/javascript" src="Javascript/script.js"></script>
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
