@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/amybru/chinatravel) 
+
 # China Travel
 This website was created for my second milestone project (Interactive Frontend Development) at Code Institute.
 
