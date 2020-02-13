@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script type="text/javascript" href="Javascript/script.js"></script>
+    <title>Qingdao</title>
+</head>
+<body>
+    <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
+                   <a class="navbar-brand" href="index.html">
+                   <img src="img/logo.JPG" width="70" height="70" alt="logo" class="logo">
+                   </a>
+                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                       <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
+                                       <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
+                                       <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
+                                       <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
+                                       <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
+                                       <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
+                                    </div>
+                                 </li>
+                         <li class="nav-item">
+                            <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
+                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link uppercase" href="contact.html">Contact Us</a>
+                         </li>
+                      </ul>
+                   </div>
+                </nav>
+             </header>
+
+
+             <section class="jumbotron" id="qingdao-view">
+                <div>
+                    <div>
+                      <h1 class="qingdaoTitle">Qingdao</h1>
+                      </div>
+                  </div>
+             </section>
+    
+              <section>
+                <div class="row aboutRow">
+                  <div class="column col-sm-12 col-md-6">
+                      <h3>About</h3>
+                      <p>Welcome to the beautuful coastal city of Qingdao! The olympic sailing events of the 2008 Beijing Games were held here as well as the 2013 Yachting World Cup. Qingdao is also the hometown of the famous Tsingtao Beer. The city's construction is a unique combination of European and traditional Chinese styles. Overall, Qingdao is a beautiful city to see seascapes, climb mountains, and visit carnivals. There are many interesting places to visit!</p>
+                  </div>
+                   <!--Maps API-->
+                   <div class="column col-sm-12 col-md-6">
+                        <div id="map" class="mapqingdao"></div>
+                    </div>
+                </div>
+                  <div class="row">
+                    <div class="column col-sm-12 col-md-6 col-lg-3 qingdaoPageTour">
+                        <a href="tourThree.html">
+                      <img src="qingdaoTwo.jpg" href="tourThree.html" class="circleTour">
+                      <h4 class="tourName">Cities</h4>
+                    </a>
+                    </div>
+                  </div>
+              </section>
+
+<section class="destinations-card">
+              <div class="row">
+                  <div class="column md-col-4">
+                      <div><h4>Explore Qingdao</h4></div>
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Culture & History
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                    <h4>1) Zhanqiao Pier</h4>
+                                    <p>(Map location: A)</p>
+                                    <p>Zhanqior Pier is one of the most famous landmarks in Qingdao and is right beside a beach. Fun fact: This pagoda is the inspiration for the Tsingtao Beer logo!</p>
+                                    <h4>2) May Fourth Square</h4>
+                                    <p>(Map location: B)</p>
+                                    <p>This square is the symbol of Qingdao. There are great views of the sea here and if you visit at night, you have the chance to see a light show.</p>
+                                    <h4>3) Jimo Lu Market</h4>
+                                    <p>(Map location: C)</p>
+                                    <p>This indoor market is an interesting "fake market" and well worth the experience. There are bargains to be found and haggleing is commonplace. The market is a maze of clothing, jewellery, and all kinds of souvenirs.</p>
+                                    <h4>4) Qingdao Beer Museum</h4>
+                                    <p>(Map location: D)</p>
+                                    <p>Learn about Tsingdao Beer, how it's made, and taste the different varieties.</p>
+                                    <h4>5) Olympic Sailing Center</h4>
+                                    <p>(Map location: E)</p>
+                                    <p>All of the water sports during the 2008 Olympics in Beijing were held here. Now, it is a nice waterfront area with piers, a marina, a lighthouse, and a museum. There are several nice restaurants and shops nearby.</p>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Nature
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                    <h4>1) Laoshan</h4>
+                                    <p>(Map location: F)</p>
+                                    <p>If you love hiking, Laoshan is a must visit! Laoshan has the highest peak (1132.7 meters) that rises by the Chinese coast. This mountain park is located right by the ocean, so it offers some incredible views of the beautiful sea, majestic peaks, and interesting clouds. Legend has it that it is here on Laoshan that Taoism was created. You can still see the ancient Taiqing temple today.</p>
+                                    <h4>2) Fushan</h4>
+                                    <p>(Map location: G)</p>
+                                    <p>A great way to start the morning in Qingdao is to hike up the mountain, Fushan. If you are up for an early morning hike, the sunrise and view of the city from the top are spectacular!</p>
+                                    <h4>3) Golden Island Beach/ Huangdao</h4>
+                                    <p>(Map location: H)</p>
+                                    <p>Often called the "Premier Beach in Asia", Golden Island Beach is a must visit for a nice relaxing afternoon.</p>
+                                    <h4>4) Zhongshan Park</h4>
+                                    <p>(Map location: I)</p>
+                                    <p>If you are visiting Qingdao in the spring, you cannot miss the cherry and tulip blossoms here. There are more than 170 varieties of trees and flowers, many imported from Japan. In summer, you can see the lanterns exhibit. In autumn, there is a spactacular chrysanthemum exhibit. Any time of year you visit, there will be something beautiful and interesting to see!</p>
+                                </div>
+                                </div>
+                            </div>
+
+
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Food
+                                        </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <h3>When tourists think of Qingdao, they think of Tsingdao Beer. However, many people don't know about the local Qingdao foods. The mineral water from Laoshan is a high quality water used in making many beverages. Since Qingdao is located by the coast, the local cuisine is abundant in seafood!</h3>
+                                           <ul>
+                                            <li>Qingdao Cool Vermicelli</li>
+                                           <li>Seafood Noodles</li>
+                                           <li>Roast Squid</li>
+                                           <li>Wonton Soup</li>
+                                           <li>Chili Sautéed Clams</li>
+                                           <li>Braised Pig Feet</li>
+                                           <li>Tsingdao Beer</li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                       </div>
+                </div>
+            </section>
+      
+         <section>
+             <div class="row moreInfo">
+             <div class="column col-sm-12"> 
+                 <h4>Where to Stay</h4>
+                 <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one of our favorite search engines for locating the best deals on hotels. The best areas to stay in Qingdao:</p>
+                 <ul>
+                     <li>Shinan District: This is the most popular neighborhood to stay in Qingdao for sightseeing. It is also the core downtown area with many hotels and restaurants.</li>
+                     <li>Shibei: This area is just north of Shinan. It has many good places for shopping and is close to the old part of town.</li>
+                     <li>Laoshan District: Laoshan district is named for the famous Laoshan mountain in the area. It is also close by to some beaches and beautiful views. </li>
+                     <li>Huangdao: Located just across the bay, Huangdao is the best place to stay if you are planning to visit the beach.</li>
+                 </ul>
+             </div>
+            </div>
+
+                <div class="row whenVisit">
+                    <div class="column col-sm-8">
+                        <h4>When to Visit</h4>
+                        <p>Located on the coast, Qingdao has a clear oceanic climate. The weather is usually quite agreeable, with spring and summer being hot and humid. Evenings are usually a little chilly, so tourists are advised to bring some warm layers.</p>
+                    </div>
+                    <!--Chart will take up col-sm-4-->
+                    <div id="chartdiv"></div>
+                </div>
+         </section>
+
+         <section>
+             <div class="questions">
+                 <h3>Questions?</h3>
+                 <h5>Contact Us Today!</h5>
+                 <button type="submit" class="btn btn-secondary contactButton" href="contact.html">See More...</button>
+             </div>
+         </section>
+
+         <!--Footer-->
+         <footer class="container">
+            <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
+
+                <!-- Social buttons -->
+                <div class="contact-follow">
+                    <ul class="list-inline social-links">
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com/">
+                              <ion-icon name="logo-facebook"></ion-icon>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://twitter.com/">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.google.com/">
+                              <ion-icon name="logo-googleplus"></ion-icon>
+                                <span class="sr-only">Google Plus</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com/">
+                              <ion-icon name="logo-instagram"></ion-icon>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Copyright -->
+                  <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
+           
+        </footer>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     
+    
+
+<!--Map-->
+<script>
+    function initMap() {
+
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 10,
+  center: {lat: 36.0671, lng: 120.3826}
+});
+
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+// Add some markers to the map. Several popular tourist locations in Qingdao
+var markers = locations.map(function(location, i) {
+  return new google.maps.Marker({
+    position: location,
+    label: labels[i % labels.length]
+  });
+});
+
+// Add a marker clusterer to manage the markers.
+var markerCluster = new MarkerClusterer(map, markers,
+    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+}
+var locations = [
+                {lat: 36.0833, lng: 120.3170},//Zhanqiao Pier
+                {lat: 36.0401, lng: 120.2258},//May Fourth Square
+                {lat: 36.0746, lng: 120.3243},//Jimo Lu Market
+                {lat: 36.07998692, lng: 120.34201104},//Qingdao Beer Museum
+                {lat: 36.0601, lng: 120.3904},//Olympic Sailing Center
+                {lat: 36.1075, lng: 120.4690},//Laoshan
+                {lat: 36.1468, lng: 120.4230},//Fushan
+                {lat: 35.96287269, lng: 120.24783634},//Huangdao
+                {lat: 36.08872314, lng: 120.43445539} //Zhongshan Park
+               
+]
+</script>
+     
+     
+     
+     
+     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+     </script>
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
+   </script>
+
+  
+   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </body>
+</html>
