@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    
 
     <title>Contact Us</title>
 </head>
@@ -54,7 +55,7 @@
              <h4>Please fill out the form below</h4>
          </div>
          <!--A contact form including a place for the user to write their name, email, select a reason for filling out the form, a comments box, and a button to submit the form to the admin's email-->
-         <form onsubmit="return sendMail(this);" method="POST" class="contactForm">
+         <form id="contact-form">
             <div>
                <label class="sr-only" for="fullname">Full Name</label>
                <input type="text" name="name" class="forminput form-control" placeholder="Full Name" required />
@@ -67,9 +68,10 @@
                <label class="mr-sm-2 sr-only" for="Select">Choose an inquiry</label>
                      <select class="custom-select select mr-sm-2" class="forminput form-control">
                         <option selected>Subject...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">Cities Tour</option>
+                        <option value="2">Nature Tour</option>
+                        <option value="3">Historic China Tour</option>
+                        <option value="4">Other Question</option>
                      </select>
             </div>
             <div>
@@ -89,8 +91,7 @@
             
 
                 <!-- Social buttons -->
-                <div class="row">
-                <div class="col-sm-6 contact-follow">
+                <div class="contact-follow">
                     <ul class="list-inline social-links">
                         <li class="footer-nav-item list-inline-item">
                             <a target="_blank" href="https://www.facebook.com/">
@@ -118,28 +119,38 @@
                         </li>
                     </ul>
                 </div>
-              </div>
                 <!-- Copyright -->
                   <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
            
         </footer>
 
         <!--Email JS-->
-        <script type="text/javascript"
-src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+        <script>
+var templateParams = {
+    name: 'China Travel',
+    notes: 'I would like to inquire about...'
+};
+ 
+emailjs.send('gmail', 'inquiry', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
 </script>
 
+<!--EmailJS Library-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 <script type="text/javascript">
-(function(){
-emailjs.init("user_KG1EmIIX6AGYKV3CSfODm");
-})();
+   (function(){
+      emailjs.init("user_KG1EmIIX6AGYKV3CSfODm");
+   })();
 </script>
-
-<script src="/Users/amybrucker/Documents/Travel Website/Documents/sendEmail.js"></script>
 
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
    </body>
 </html>
