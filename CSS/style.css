@@ -1,12 +1,11 @@
 /* ----------------------------------------General */
 body {
   padding-top: 80px;
+  font-family: 'Dosis', sans-serif;
 }
 .row {
   margin: 0;
 }
-/* ----------------------------------main headers */
-
 /* ----------------------------------------Navbar*/
 
 nav {
@@ -94,11 +93,14 @@ nav {
 .carousel-caption{
   text-align: center;
   position: absolute;
-  bottom: 10%;
-  left: 5%;
-  z-index: 30;
+  margin-bottom: 30%;
   color: white;
   text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  font-family: 'Permanent Marker', cursive;
+}
+
+.carousel-caption h2 {
+  font-size: 5em;
 }
 
 .centered{
@@ -146,6 +148,7 @@ nav {
   text-decoration: none;
   color: #ffffff;
   font-size: 70px;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .tourTitleHome {
@@ -186,9 +189,9 @@ nav {
     color: #c80000;
   }
 
-/*-------------------------------------Beijing page--*/
+/*-------------------------------------Destination pages--*/
 #beijing-view {
-  background-image: ("/Users/amybrucker/Documents/Travel Website/Pictures/beijingThree.jpg");     
+  background-image: ("img/beijingThree.jpg");     
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -200,6 +203,7 @@ nav {
   color: #ffffff;
   font-size: 100px;
   padding-top: 60px;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .aboutRow {
@@ -268,24 +272,40 @@ width: 100%;
   padding: 40px;
 }
 
-/*-------------------------------------Shanghai page--*/
+.accordion {
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0 0 1px rgba(0,0,0,0.1);
+  border: none;
+}
+ 
+ 
+.accordion .card-header {
+  border-bottom-color: #ffce7f;
+  background: #79081c;
+  font-family: 'Permanent Marker', cursive;
+}
+ 
+.accordion .btn {
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  padding: 0;
+}
 
+.accordion .card-body {
+  background-color: #ffce7f;
+}
 
-/*-------------------------------------Chengdu page--*/
-
-
-/*-------------------------------------Qingdao page--*/
-
-
-/*-------------------------------------Suzhou page--*/
-
-
-/*-------------------------------------Guilin page--*/
-
+.explore-name {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+}
+ 
 
 /*-------------------------------------Book an Adventure page--*/
 #adventure-view {
-  background-image: url("/Users/amybrucker/Documents/Travel Website/Pictures/beijingFour.jpg");
+  background-image: url("img/beijingFour.jpg");
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -330,7 +350,7 @@ padding-top: 60px;
 
 
 
-/*-----------------------------------Tour 1 Page --*/
+/*-----------------------------------Tour Page --*/
 .highlights {
   padding: 25px 10px 25px;
   margin-right: 20px;
@@ -419,7 +439,7 @@ padding-top: 60px;
   .contact-view {
     padding-top: 100px;
     padding-bottom: 0;
-    background-image: ("/Users/amybrucker/Documents/Travel Website/Pictures/contact.jpg");     
+    background-image: ("img/contact.jpg");     
     max-width: 100%;
     height: 100%;
     background-position: center;
@@ -481,10 +501,10 @@ padding-top: 60px;
   border-radius: 50%;
 }
 
-  .container {
+  footer {
     background-color: #525252;
     color: #ffffff;
-    padding: 0;
+    min-width: 100%;
 }
 
 .social-links {
