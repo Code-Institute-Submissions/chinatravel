@@ -191,7 +191,7 @@ nav {
 
 /*-------------------------------------Destination pages--*/
 #beijing-view {
-  background-image: ("/Users/amybrucker/Documents/Travel Website/Pictures/beijingThree.jpg");     
+  background-image: ("img/beijingThree.jpg");     
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -305,7 +305,7 @@ width: 100%;
 
 /*-------------------------------------Book an Adventure page--*/
 #adventure-view {
-  background-image: url("/Users/amybrucker/Documents/Travel Website/Pictures/beijingFour.jpg");
+  background-image: url("img/beijingFour.jpg");
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -439,7 +439,7 @@ padding-top: 60px;
   .contact-view {
     padding-top: 100px;
     padding-bottom: 0;
-    background-image: ("/Users/amybrucker/Documents/Travel Website/Pictures/contact.jpg");     
+    background-image: ("img/contact.jpg");     
     max-width: 100%;
     height: 100%;
     background-position: center;
