@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/amybru/chinatravel) 
+
 # China Travel
 This website was created for my second milestone project (Interactive Frontend Development) at Code Institute.
 
@@ -28,14 +30,7 @@ As the site owner, I would like users to be able to choose a tour package that b
 #### Wireframes
 All wireframes were created on the website https://balsamiq.com.
 
-Desktop:
 
-
-Mobile:
-
-
-The color palate chosen was based on colors that are found to be auspicious in the Chinese culture. The color palate below was found on Pinterest and looks to belong to Sarah Renae Clarks. 
-![](Assets/Wireframes/colorPalate.JPG)
 
 ## Features
 A navigation bar that is fixed to the top of the screen for easy access. 
@@ -77,23 +72,29 @@ https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)
 
 #### Javascript
 This site uses some Javascript to help thr website become more interactive for the user.
+https://en.wikipedia.org/wiki/JavaScript
 
 #### Git & Git Hub
 Git and Git Hub were used for version control.
+https://en.wikipedia.org/wiki/GitHub
 
 #### GoogleMaps API
 The GoogleMaps API was used in two different ways on this website:
 1) The six destination pages use the Marker Cluster to show where several top attractions are located in the city.
 2) The three tour pages use the map with a polyline to show the suggested itinerary.
+https://developers.google.com/maps/documentation
 
 #### Skyscanner API
 This API was used on the destination pages to allow the user to search for a flight to the respective city.
+https://rapidapi.com/skyscanner/api/skyscanner-flight-search
 
 #### Google Fonts
 The fonts Dosis and Permanent Marker were used throughout the website.
+https://fonts.google.com/
 
 #### Balsamiq
 Balsamiq was used to create wireframes.
+https://balsamiq.com/
 
 
 ## Testing
