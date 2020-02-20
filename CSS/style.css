@@ -6,6 +6,8 @@ body {
 .row {
   margin: 0;
 }
+/* ----------------------------------main headers */
+
 /* ----------------------------------------Navbar*/
 
 nav {
@@ -14,7 +16,6 @@ nav {
     padding: 90px 10px; 
     font-size: 90px;
     transition: 0.3s; 
-    position: fixed; 
     width: 100%;
     top: 0; 
 }
@@ -114,7 +115,8 @@ nav {
   }
 
  .home-Image {
-   height: 300px;
+   height: 200px;
+   width: 300px;
  }
   
   /* Create equal columns that sit next to each other */
@@ -122,7 +124,6 @@ nav {
     text-align: center;
     padding: 20px;
     position: relative;
-    text-align: center;
     z-index: 4;
 }
   .citiesColumn {
@@ -147,7 +148,7 @@ nav {
 .home-image-title {
   text-decoration: none;
   color: #ffffff;
-  font-size: 70px;
+  font-size: 3em;
   font-family: 'Permanent Marker', cursive;
 }
 
@@ -206,6 +207,91 @@ nav {
   font-family: 'Permanent Marker', cursive;
 }
 
+#shanghai-view {
+  background-image: ("img/beijingThree.jpg");     
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shanghaiTitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 100px;
+  padding-top: 60px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#qingdao-view {
+  background-image: ("img/beijingThree.jpg");     
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.qingdaoTitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 100px;
+  padding-top: 60px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#suzhou-view {
+  background-image: ("img/beijingThree.jpg");     
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.suzhouTitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 100px;
+  padding-top: 60px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#chengdu-view {
+  background-image: ("img/beijingThree.jpg");     
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chengduTitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 100px;
+  padding-top: 60px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#guilin-view {
+  background-image: ("img/beijingThree.jpg");     
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.guilinTitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 100px;
+  padding-top: 60px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+
+
+
+
 .aboutRow {
   padding: 15px 10px 20px;
   margin-right: 50px;
@@ -216,7 +302,6 @@ nav {
   text-align: center;
     padding: 20px;
     position: relative;
-    text-align: center;
     color: #ffffff;
     margin-right: 20px;
 }
@@ -302,6 +387,9 @@ width: 100%;
   font-size: 40px;
 }
  
+.moreInfo {
+  color: #fff;
+}
 
 /*-------------------------------------Book an Adventure page--*/
 #adventure-view {
@@ -351,6 +439,15 @@ padding-top: 60px;
 
 
 /*-----------------------------------Tour Page --*/
+.tourCarousel {
+ max-height: 2em;
+}
+
+.carousel-caption-tour h2{
+  padding-top: 1em;
+  font-size: 3em;
+}
+
 .highlights {
   padding: 25px 10px 25px;
   margin-right: 20px;
@@ -364,8 +461,9 @@ padding-top: 60px;
 }
 
 .itineraryPicture {
-  width: 150px;
-  height: 200px;
+  width: 100px;
+  height: 150px;
+  margin: 10px;
 }
 
 .circleTour {
@@ -375,10 +473,11 @@ padding-top: 60px;
 }
 
 
-.inquiryform {
+.form {
   margin-left: 15px;
   margin-top: 40px;
   background-color: #ffce7f;
+  padding: 20px;
 }
 
 #inquiryforminput  {
@@ -388,8 +487,7 @@ padding-top: 60px;
   padding: 3px;
   color: #0b0100; 
   height: 45px;
-  margin-top: 5px;
-  text-transform: uppercase;
+  margin: 5px;
 }
 
 .custom-select {
@@ -432,11 +530,9 @@ padding-top: 60px;
 .tour-right {
   width: 40%;
 }
-
-#inquiryforminput 
   
 /*-----------------------------------Contact Page --*/
-  .contact-view {
+  #contact-view {
     padding-top: 100px;
     padding-bottom: 0;
     background-image: ("img/contact.jpg");     
@@ -509,6 +605,7 @@ padding-top: 60px;
 
 .social-links {
   text-align: center;
+  padding-top: 10px;
 }
 
 .logo-footer{
