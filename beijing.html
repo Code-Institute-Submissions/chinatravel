@@ -71,7 +71,17 @@
                    
                   <!--Skyscanner API-->
                   <div class="column col-sm-12 col-md-6">
-                    <div id="beijingSkyscanner" class="skyscanner"></div>
+                    <div id="beijingSkyscanner" class="skyscanner">
+                        <h3>Search Flights to Beijing</h3>
+                        <input type="text" id="ss-origin-name" value="SFO"></input> <span>To</span>
+                        <input type="text" id="ss-dest-name" value="PEK" oninput="fetchSkyscannerData()"></input>
+                        <div id="range">
+                        <input type="text" name="start">
+                        <span>to</span>
+                        <input type="text" name="end">
+                        </div>
+                        <button id="ss-submit">Submit</button>
+                    </div>
                 </div>
             
                 <script>
