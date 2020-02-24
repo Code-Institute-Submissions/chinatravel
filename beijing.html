@@ -253,34 +253,30 @@
                     <div class="column col-sm-4">
                     <div id="chartdiv">
                         <script type="text/javascript">
+                             
 
-                            var chart = new dc.BarChart("#bar");
-                            d3.cvc("assets/beijingTemp.csv").then(function(beijingTemp) {
-                            
-                                beijingTemp.forEach(function(x) {
-                                x.Speed = +x.Speed;
-                              });
-                            
-                              var tempDimension = crossfilter(beijingTemp),
-                                  runDimension = ndx.dimension(function(d) {return +d.Run;}),
-                                  tempSumGroup = runDimension.group().reduceSum(function(d) {return d.Temp * d.Run / 1000;});
-                            
-                              chart
-                                .width(500)
-                                .height(200)
-                                .x(d3.scaleLinear().domain([6,20]))
-                                .brushOn(false)
-                                .yAxisLabel("Temperatures (°F)")
-                                .xAxisLabel("Month")
-                                .dimension(runDimension)
-                                .group(tempSumGroup)
-                                .on('renderlet', function(chart) {
-                                    chart.selectAll('rect').on("click", function(d) {
-                                        console.log("click!", d);
-                                    });
-                                });
-                                chart.render();
-                            });
+		queue().defer(d3.csv, "/Users/amybrucker/Documents/Travel Website/Documents/beijingTemp.csv").await(moreGraphs);
+
+		function moreGraphs(error, beijingTemp) {
+   		var ndx = crossfilter(beijingTemp);
+
+    		console.log(beijingTemp) 
+
+		var high_dim = ndx.dimension(dc.pluck("highs"));
+   		var low_dim = ndx.dimension(dc.pluck("lows"));
+
+    		dc.barChart("#beijingTemp")
+        		.height(300)
+      			.margins({ top: 10, right: 50, bottom: 30, left: 50 })
+        		.ordinalColors(["blue", "red"])
+        		.dimension(high_dim)
+        		.group(beijing)
+        		.transitionDuration(500)
+        		.x(d3.scale.ordinal())
+        		.yAxisLabel("Temperatures (°F)")
+        		.xAxisLabel("Month")
+   			dc.renderAll();
+		};
                             
                             </script>
                             
