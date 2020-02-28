@@ -30,3 +30,26 @@ emailjs.send('gmail', 'inquiry', templateParams)
      });
  });
  
+//If the email has been send with no errors then create and
+      //display modal with message.
+      var modal = document.getElementById('myModal');
+      var closeCross = document.getElementsByClassName("close-cross")[0];
+      var closeBtn  = document.getElementById('close');
+      
+      modal.style.display = "block";
+    
+      //Hide the modal when the x is clicked
+      closeCross.onclick = function() {
+        modal.style.display = "none";
+      };
+      //Hide the modal when the close button is clicked
+      closeBtn.onclick = function() {
+        modal.style.display = "none";
+      };
+      //Close when the user clicks anywhere outside the modal
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+   
