@@ -6,10 +6,8 @@ body {
 .row {
   margin: 0;
 }
-/* ----------------------------------main headers */
 
 /* ----------------------------------------Navbar*/
-
 nav {
     background-color: #c80000 ;
     position: fixed;
@@ -80,10 +78,7 @@ nav {
   border-radius: 50px;
 }
 
-
-
 /* ----------------------------------------home page styles*/
-
 .carousel-inner {
   max-height: 470px;
   background-position: center;
@@ -119,7 +114,6 @@ nav {
    width: 300px;
  }
   
-  /* Create equal columns that sit next to each other */
   .cities {
     text-align: center;
     padding: 20px;
@@ -131,17 +125,13 @@ nav {
     padding: 0px;
   }
 
-  /* Zoom Container */
 .img-hover-zoom {
   height: 230px;
   overflow: hidden; 
-}
-
-.img-hover-zoom img {
   transition: transform .5s ease;
 }
 
-.img-hover-zoom:hover img {
+.img-hover-zoom:hover {
   transform: scale(1.25);
 }
 
@@ -192,105 +182,54 @@ nav {
 
 /*-------------------------------------Destination pages--*/
 #beijing-view {
-  background-image: ("img/beijingThree.jpg");     
-  height: 50vh;
+  background-image: url("img/beijingTwo.jpg");     
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.beijingTitle {
-  text-align: center;
-  color: #ffffff;
-  font-size: 100px;
-  padding-top: 60px;
-  font-family: 'Permanent Marker', cursive;
-}
-
-#shanghai-view {
-  background-image: ("img/beijingThree.jpg");     
-  height: 50vh;
+.shanghai-view {
+  background-image: url("img/shanghaiOne.jpg");     
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.shanghaiTitle {
-  text-align: center;
-  color: #ffffff;
-  font-size: 100px;
-  padding-top: 60px;
-  font-family: 'Permanent Marker', cursive;
-}
-
-#qingdao-view {
-  background-image: ("img/beijingThree.jpg");     
-  height: 50vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.qingdaoTitle {
-  text-align: center;
-  color: #ffffff;
-  font-size: 100px;
-  padding-top: 60px;
-  font-family: 'Permanent Marker', cursive;
-}
-
-#suzhou-view {
-  background-image: ("img/beijingThree.jpg");     
-  height: 50vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.suzhouTitle {
-  text-align: center;
-  color: #ffffff;
-  font-size: 100px;
-  padding-top: 60px;
-  font-family: 'Permanent Marker', cursive;
 }
 
 #chengdu-view {
-  background-image: ("img/beijingThree.jpg");     
-  height: 50vh;
+  background-image: url("img/shanghaiOne.jpg");     
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.chengduTitle {
-  text-align: center;
-  color: #ffffff;
-  font-size: 100px;
-  padding-top: 60px;
-  font-family: 'Permanent Marker', cursive;
+#suzhou-view {
+  background-image: url("img/shanghaiOne.jpg");     
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#qingdao-view {
+  background-image: url("img/shanghaiOne.jpg");     
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #guilin-view {
-  background-image: ("img/beijingThree.jpg");     
-  height: 50vh;
+  background-image: url("img/shanghaiOne.jpg");     
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.guilinTitle {
+.cityTitle {
   text-align: center;
   color: #ffffff;
-  font-size: 100px;
+  font-size: 2em;
   padding-top: 60px;
   font-family: 'Permanent Marker', cursive;
 }
-
-
-
-
-
 
 .aboutRow {
   padding: 15px 10px 20px;
@@ -298,8 +237,8 @@ nav {
   margin-left: 50px;
 }
 
-.beijingPageTour {
-  text-align: center;
+.pageTour {
+    text-align: center;
     padding: 20px;
     position: relative;
     color: #ffffff;
@@ -311,10 +250,11 @@ nav {
   height: 200px;
   border-radius: 100px;
 }
+
 .tourName {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   transform: translate(-50%, -50%);
   text-decoration: none;
   color: #ffffff;
@@ -351,6 +291,11 @@ nav {
 #map {
 min-height: 360px;
 width: 100%;
+}
+
+.explore-name {
+  padding-top: 20px;
+  font-size: 40px;
 }
 
 .destinations-card {
@@ -391,6 +336,11 @@ width: 100%;
   color: #fff;
 }
 
+.destPic {
+    height: 100px;
+    width: 100px;
+}
+
 /*-------------------------------------Book an Adventure page--*/
 #adventure-view {
   background-image: url("img/beijingFour.jpg");
@@ -403,8 +353,9 @@ width: 100%;
 .adventureTitle {
 text-align: center;
 color: #ffffff;
-font-size: 80px;
 padding-top: 60px;
+font-family: 'Permanent Marker', cursive;
+font-size: 40px;
 }
 
 .adventureTour {
@@ -415,6 +366,8 @@ padding-top: 60px;
 .bookTour {
   text-decoration: none;
   color: #ffffff;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
 }
 
 .tourColumn {  
@@ -436,22 +389,18 @@ padding-top: 60px;
   padding: 20px;
 }
 
-
-
 /*-----------------------------------Tour Page --*/
-.tourCarousel {
- max-height: 2em;
-}
-
 .carousel-caption-tour h2{
   padding-top: 1em;
   font-size: 3em;
 }
 
+.carousel-tour-pic {
+  max-height: 100%;
+}
+
 .highlights {
-  padding: 25px 10px 25px;
-  margin-right: 20px;
-  margin-left: 20px;
+  padding: 10px 25px;
 }
 
 .tourPictures {
@@ -461,9 +410,10 @@ padding-top: 60px;
 }
 
 .itineraryPicture {
-  width: 100px;
-  height: 150px;
+  height: 200px;
+  width: 200px;
   margin: 10px;
+  padding: 20px;
 }
 
 .circleTour {
@@ -474,10 +424,15 @@ padding-top: 60px;
 
 
 .form {
-  margin-left: 15px;
   margin-top: 40px;
   background-color: #ffce7f;
   padding: 20px;
+}
+
+.formTitle h4 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+  padding-bottom: 10px;
 }
 
 #inquiryforminput  {
@@ -501,6 +456,17 @@ padding-top: 60px;
 
 .custom-select select {
   display: none;
+  width: 100%;
+}
+
+.btn-contact {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.btn-contact:hover {
+  background-color: #79081c;
 }
 
 .itineraryText {
@@ -522,20 +488,11 @@ padding-top: 60px;
 .questionButton:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
-
-.tour-left {
-  width: 60%;
-}
-
-.tour-right {
-  width: 40%;
-}
-  
 /*-----------------------------------Contact Page --*/
   #contact-view {
     padding-top: 100px;
     padding-bottom: 0;
-    background-image: ("img/contact.jpg");     
+    background-image: ("/Users/amybrucker/Documents/Travel Website/Pictures/contact.jpg");     
     max-width: 100%;
     height: 100%;
     background-position: center;
