@@ -1,353 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="/Users/amybrucker/Documents/Travel Website/Documents/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/dc-style.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.1.9/dc.js"></script>
+
+    <script type="text/javascript" src="Javascript/script.js"></script>
 
     <title>Beijing</title>
-</head>
-<body>
-    <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
-        <header>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
-                   <a class="navbar-brand" href="/Users/amybrucker/Documents/Travel Website/Documents/home.html">
-                   <img src="/Users/amybrucker/Documents/Travel Website/Pictures/logo.JPG" width="70" height="70" alt="logo" class="logo">
-                   </a>
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
-                   </button>
-                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                      <ul class="navbar-nav ml-auto">
-                            <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                       <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
-                                       <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
-                                       <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
-                                       <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
-                                       <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
-                                       <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
-                                    </div>
-                                 </li>
-                         <li class="nav-item">
-                            <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
-                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link uppercase" href="contact.html">Contact Us</a>
-                         </li>
-                      </ul>
-                   </div>
-                </nav>
-             </header>
 
+    <script type="text/javascript">
+        var chart = dc.barChart('#beijingTemp');
 
-             <section class="jumbotron" id="beijing-view">
-                <div>
-                    <div>
-                      <h1 class="beijingTitle">Beijing</h1>
-                      </div>
-                  </div>
-             </section>
-    
-              <section>
-                <div class="row aboutRow">
-                  <div class="column col-sm-12 col-md-6">
-                      <h3>About</h3>
-                      <p>Welcome to Beijing! Beijing is the capital city of China and is also one of the buisiest cities in the world. Home to many classic and modern chinese sights, Beijing is one of the most popular cities to visit in China. On a tour to Beijing, you will be able to see the famous Forbidden City, Summer Palace, Tian'anmen Square, and even take a day trip to see the Great Wall of China. Join one of our tours today!</p>
-                  </div>
-                   
-                  <!--Skyscanner API-->
-                  <div class="column col-sm-12 col-md-6">
-                    <div id="beijingSkyscanner" class="skyscanner"></div>
-                </div>
+        function renderBarChart() {
             
-                <script>
-                    var settings = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url": "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/PEK-sky/2019-09-01?inboundpartialdate=2019-12-01",
-                    "method": "GET",
-                    "headers": {
-                        "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-                        "x-rapidapi-key": "26a6f77e30mshe1ff5bda4d6bf9bp17962fjsnfc37f5300966"
-                    }
-                }
-                
-                $.ajax(settings).done(function (response) {
-                    console.log(response);
-                });
-                  </script>
+            d3.csv("Assets/beijingTemp.csv", function (errors, temperatures) {
+                var ndx = crossfilter(temperatures);
 
-                </div>
-                  <div class="row">
-                    <div class="column col-sm-12 col-md-6 col-lg-3 beijingPageTour">
-                        <a href="/Users/amybrucker/Documents/Travel Website/Documents/tourOne.html">
-                      <img src="/Users/amybrucker/Documents/Travel Website/Pictures/beijingTwo.jpg" href="tour1.html" class="circleTour">
-                      <h4 class="tourName">Cities</h4>
-                    </a>
-                    </div>
-                    <div class="column col-sm-12 col-md-6 col-lg-3 beijingPageTour">
-                    <a href="/Users/amybrucker/Documents/Travel Website/Documents/tourOne.html">
-                      <img src="/Users/amybrucker/Documents/Travel Website/Pictures/historicOne.JPG" href="tour2.html" class="circleTour">
-                      <h4 class="tourName">Historic China</h4>
-                    </a>
-                    </div>
-                </div>
-              </section>
+                var tempDimension = ndx.dimension(function (d) { return d.id; });
+                var tempGroup = tempDimension.group().reduce(
+                    function (p, v) {
+                        p[v.temp] = (p[v.temp] || 0) + +v.high;
+                        return p;
+                    },
+                    function (p, v) {
+                        p[v.temp] = (p[v.temp] || 0) + +v.low;
+                        return p;
+                    },
+                    function () { return {}; }
+                );
 
-<section class="destinations-card">
-              <div class="row">
-<!--Maps API-->
-<div class="column col-sm-12 col-md-6">
-    <div id="map" class="mapBeijing"></div>
-</div>
-
-                  <div class="column col-md-6">
-                      <div class="explore-name"><h4>Explore Beijing</h4></div>
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Culture & History
-                                    </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                    <h4>1) The Great Wall</h4>
-                                    <p>(Map locations: A-C)</p>
-                                    <p>A trip to Beijing would not be complete without a visit to The Great Wall. There are several sections that are easy to access, including Mutianyu (A), Badaling (B), and Simatai (C).</p>
-                                    <h4>2) The Temple of Heaven</h4>
-                                    <p>(Map location: D)</p>
-                                    <p>Long ago at this cultural wonder, the Emperor used to come to pray for a good harvest season.</p>
-                                    <h4>3) Tiananmen Square</h4>
-                                    <p>(Map location: E)</p>
-                                    <p>Tiananmen, or the Gate of Heavenly Peace, lies right in the heart of Beijing. It is famously decorated with Chairman Mao's portrait.</p>
-                                    <h4>4) The Forbidden City</h4>
-                                    <p>(Map location: F)</p>
-                                    <p>Also known as the imperial palace, The Forbidden City is one of the most famous landmarks in China. This massive complex of palaces covers over 180 acres and contains more than 90 palaces and courtyards, 980 buildings, and over 8,000 rooms.</p>
-                                    <h4>5) Wander the Hutongs</h4>
-                                    <p>Hutongs are traditional narrow streets full of shops, cafes, and residences. You can get a little taste of what life in China is like here.</p>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Nature
-                                    </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                    <h4>1) Summer Palace</h4>
-                                    <p>(Map location: G)</p>
-                                    <p>This famous landmark is one of the most popular places to go in Beijing because of its beautiful structures and natural scenery. Kunming lake and Longevity hill are two of the essential landscape features of the gardens here.</p>
-                                    <h4>2) Beihai Park</h4>
-                                    <p>(Map location: H)</p>
-                                    <p>In this ancient garden, you will see the White Jade Pagoda which was built to honor the visit of the fifth Dalai Lama in the 1600s. Beihai bridge, Changfu temple, and Yong'an Temple are also found within the park and are well worth a visit.</p>
-                                    <h4>3) Jingshan Park</h4>
-                                    <p>(Map location: I)</p>
-                                    <p>Locared just across the road from the noth gate of the Forbidden City, this garden offers one of the most outstanding views of the city.</p>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Family
-                                    </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                    <h3>Traveling with kids? Here are a few extra fun things the whole family can enjoy together.</h3>
-                                    <h4>1) See the Great Wall at Mutianyu</h4>
-                                    <p>This destination may already be on our list of things to do, but visiting the section at Mutianyu is a must for anyone visiting China. You can take a cable car up to the top of the wall and ride a toboggan down!</p>
-                                    <h4>2) Beijing Chaoyang Theater Acrobats</h4>
-                                    <p>(Map location: J)</p>
-                                    <p>The acrobat show at Chaoyang theater is particularly impressive! Shows filled with stunning costumes and incredible stunts are truly mind-boggling.</p>
-                                    <h4>3) Seasonal Activities</h4>
-                                    <p>During the winter months, the lakes in Beijing often freeze over which provide places for ice skating and sledding. When the lakes warm up, boating or playing by the side of the lakes are wonderful ways to spend the day.</p>
-                                </div>
-                                </div>
-                            </div>
-
-                                <div class="card">
-                                    <div class="card-header" id="headingFour">
-                                        <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Food
-                                        </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <h3>Beijing style dishes are classic and some of the most loved throughout China. Listed below are some of the most popular foods.</h3>
-                                           <ul>
-                                            <li>Peking Duck</li>
-                                           <li>Zhajiang mian- Beijing noodles in fried bean sauce</li>
-                                           <li>Jiaozi- Chinese dumplings</li>
-                                           <li>Huoguo- Hotpot</li>
-                                           <li>Jing Jiang Rousi- Shredded pork in a sweet brown sauce</li>
-                                           <li>Wangfujing Snack Street</li>
-                                           <p>(Map location: K)</p>
-                                           <p>Are you interested in trying some different and bizzare snacks? Wangfujing street is the place to visit!</p>
-                                        </ul>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                       </div>
-                </div>
-            </section>
+                chart
+                    .width(500)
+                    .height(200)
+                    .x(d3.scaleLinear().domain([1, 12]))
+                    .brushOn(false)
+                    .yAxisLabel("Temp")
+                    .xAxisLabel("Month")
+                    .dimension(tempDimension)
+                    .group(tempGroup)
+                    .on('renderlet', function (chart) {
+                        chart.selectAll('rect').on('click', function (d) {
+                            console.log('click!', d);
+                        });
+                    });
+                chart.render();
+            });
+        }
 
         
-      
-         <section>
-             <div class="row moreInfo">
-             <div class="column col-sm-12">
-                 <h4>Where to Stay</h4>
-                 <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one of our favorite search engines for locating the best deals on hotels. The best areas to stay in Beijing</p>
-                 <ul>
-                     <li>Wangfujing: If you want to stay in a centeral part of the city, Wangfujing is a great place to stay. It is well located for visiting sights such as Tiananmen Square and The Forbidden City.</li>
-                     <li>Qianmen: Located just south of Tiananmen Square, Qianmen is a convienent place to stay. Foodies will especially love this part of the city as there are many restauraunts and street markets.</li>
-                     <li>Gulou/ Nanluguoxiang: These areas are trendy areas that offer everything you need, especially if you'd like to avoid a touristy area. You will enjoy getting lost and exploring the many cafes, shops, and alleys.</li>
-                 </ul>
-             </div>
+
+        function jpFetchFlightInformation() {
+            fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/PEK-sky/2020-09-01?inboundpartialdate=2020-12-01", {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
+                    "x-rapidapi-key": "26a6f77e30mshe1ff5bda4d6bf9bp17962fjsnfc37f5300966"
+                }
+            }).then(response => {
+                if(!response.ok){
+                    throw new Error("HTTP error, status = " + response.status);
+                }
+                return response.json();
+            }).then(json => {
+                var carriersList = document.createElement('ul');
+                $("#flightInformation").append(carriersList);
+                for(var i = 0; i < json.Carriers.length; i++) {
+                    var listItem = document.createElement('li');
+                    listItem.innerHTML = '<span> CarrierId: ' + json.Carriers[i].CarrierId + '</span>';
+                    listItem.innerHTML +='</span> Name: ' + json.Carriers[i].Name + '</span>';
+                    carriersList.appendChild(listItem);
+                }
+            }).catch(err => {
+                console.log(err);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.JPG" width="70" height="70" alt="logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
+                            <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
+                            <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
+                            <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
+                            <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
+                            <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link uppercase" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="jumbotron" id="beijing-view">
+        <div>
+            <div>
+                <h1 class="cityTitle">Beijing</h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row aboutRow">
+            <div class="column col-sm-12 col-md-6">
+                <h3>About</h3>
+                <p>Welcome to Beijing! Beijing is the capital city of China and is also one of the buisiest cities in
+                    the world. Home to many classic and modern chinese sights, Beijing is one of the most popular cities
+                    to visit in China. On a tour to Beijing, you will be able to see the famous Forbidden City, Summer
+                    Palace, Tian'anmen Square, and even take a day trip to see the Great Wall of China. Join one of our
+                    tours today!</p>
             </div>
 
-                <div class="row whenVisit">
-                    <div class="column col-sm-8">
-                        <h4>When to Visit</h4>
-                        <p>Beijing is a wonderful city to visit most times of the year. However, the winter can be a difficult time to visit with temperatures around the freezing point. To avoid large crowds and busy travel days, plan your trip carefully and not at the time of China's major holidays: Chinese New Year (Late Winter/Early spring) and National Week (The first week in October.)  </p>
+            <!--Skyscanner API-->
+            <div class="column col-sm-12 col-md-6">
+                <div id="beijingSkyscanner" class="skyscanner">
+                    <h3>Search Flights to Beijing</h3>
+                    <input type="text" id="ss-origin-name" value="SFO"></input> <span>To</span>
+                    <input type="text" id="ss-dest-name" value="PEK" oninput="fetchSkyscannerData()"></input>
+                    <div id="range">
+                        <label for="start">Start date:</label>
+                        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
+                            max="2020-09-01">
+                        <span>to</span>
+                        <label for="start">End date:</label>
+                        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
+                            max="2020-12-01">
                     </div>
-                    <!--Chart will take up col-sm-4-->
-                    <div class="column col-sm-4">
-                    <div id="chartdiv">
+                    <button id="ss-submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column col-sm-12 col-md-6 col-lg-3 pageTour">
+                <a href="tourOne.html">
+                    <img src="img/beijingTwo.jpg" href="tourOne.html" class="circleTour">
+                    <h4 class="tourName">Cities</h4>
+                </a>
+            </div>
+            <div class="column col-sm-12 col-md-6 col-lg-3 pageTour">
+                <a href="tourThree.html">
+                    <img src="img/historicOne.JPG" href="tourThree.html" class="circleTour">
+                    <h4 class="tourName">Historic China</h4>
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <section class="destinations-card">
+        <div class="row">
+            <!--Maps API-->
+            <div class="column col-sm-12 col-md-6">
+                <div id="map" class="mapBeijing"></div>
+            </div>
+
+            <div class="column col-md-6">
+                <div class="explore-name">
+                    <h4>Explore Beijing</h4>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Culture & History
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <h4>1) The Great Wall</h4>
+                                <p>(Map locations: A-C)</p>
+                                <p>A trip to Beijing would not be complete without a visit to The Great Wall. There are
+                                    several sections that are easy to access, including Mutianyu (A), Badaling (B), and
+                                    Simatai (C).</p>
+                                <h4>2) The Temple of Heaven</h4>
+                                <p>(Map location: D)</p>
+                                <p>Long ago at this cultural wonder, the Emperor used to come to pray for a good harvest
+                                    season.</p>
+                                <h4>3) Tiananmen Square</h4>
+                                <p>(Map location: E)</p>
+                                <p>Tiananmen, or the Gate of Heavenly Peace, lies right in the heart of Beijing. It is
+                                    famously decorated with Chairman Mao's portrait.</p>
+                                <h4>4) The Forbidden City</h4>
+                                <p>(Map location: F)</p>
+                                <p>Also known as the imperial palace, The Forbidden City is one of the most famous
+                                    landmarks in China. This massive complex of palaces covers over 180 acres and
+                                    contains more than 90 palaces and courtyards, 980 buildings, and over 8,000 rooms.
+                                </p>
+                                <h4>5) Wander the Hutongs</h4>
+                                <p>Hutongs are traditional narrow streets full of shops, cafes, and residences. You can
+                                    get a little taste of what life in China is like here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Nature
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <h4>1) Summer Palace</h4>
+                                <p>(Map location: G)</p>
+                                <p>This famous landmark is one of the most popular places to go in Beijing because of
+                                    its beautiful structures and natural scenery. Kunming lake and Longevity hill are
+                                    two of the essential landscape features of the gardens here.</p>
+                                <h4>2) Beihai Park</h4>
+                                <p>(Map location: H)</p>
+                                <p>In this ancient garden, you will see the White Jade Pagoda which was built to honor
+                                    the visit of the fifth Dalai Lama in the 1600s. Beihai bridge, Changfu temple, and
+                                    Yong'an Temple are also found within the park and are well worth a visit.</p>
+                                <h4>3) Jingshan Park</h4>
+                                <p>(Map location: I)</p>
+                                <p>Locared just across the road from the noth gate of the Forbidden City, this garden
+                                    offers one of the most outstanding views of the city.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Family
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <h3>Traveling with kids? Here are a few extra fun things the whole family can enjoy
+                                    together.</h3>
+                                <h4>1) See the Great Wall at Mutianyu</h4>
+                                <p>This destination may already be on our list of things to do, but visiting the section
+                                    at Mutianyu is a must for anyone visiting China. You can take a cable car up to the
+                                    top of the wall and ride a toboggan down!</p>
+                                <h4>2) Beijing Chaoyang Theater Acrobats</h4>
+                                <p>(Map location: J)</p>
+                                <p>The acrobat show at Chaoyang theater is particularly impressive! Shows filled with
+                                    stunning costumes and incredible stunts are truly mind-boggling.</p>
+                                <h4>3) Seasonal Activities</h4>
+                                <p>During the winter months, the lakes in Beijing often freeze over which provide places
+                                    for ice skating and sledding. When the lakes warm up, boating or playing by the side
+                                    of the lakes are wonderful ways to spend the day.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Food
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <h3>Beijing style dishes are classic and some of the most loved throughout China. Listed
+                                    below are some of the most popular foods.</h3>
+                                <ul>
+                                    <li>Peking Duck</li>
+                                    <li>Zhajiang mian- Beijing noodles in fried bean sauce</li>
+                                    <li>Jiaozi- Chinese dumplings</li>
+                                    <li>Huoguo- Hotpot</li>
+                                    <li>Jing Jiang Rousi- Shredded pork in a sweet brown sauce</li>
+                                    <li>Wangfujing Snack Street</li>
+                                    <p>(Map location: K)</p>
+                                    <p>Are you interested in trying some different and bizzare snacks? Wangfujing street
+                                        is the place to visit!</p>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-         </section>
-
-         <section>
-             <div class="questions">
-                 <h3>Questions?</h3>
-                 <h5>Contact Us Today!</h5>
-                 <button type="submit" class="btn btn-secondary contactButton" href="/Users/amybrucker/Documents/Travel Website/Documents/contact.html">See More...</button>
-             </div>
-         </section>
-
-         <!--Footer-->
-         <footer class="container">
-            <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
-
-                <!-- Social buttons -->
-                <div class="contact-follow">
-                    <ul class="list-inline social-links">
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://www.facebook.com/">
-                              <ion-icon name="logo-facebook"></ion-icon>
-                                <span class="sr-only">Facebook</span>
-                            </a>
-                        </li>
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://twitter.com/">
-                                <ion-icon name="logo-twitter"></ion-icon>
-                                <span class="sr-only">Twitter</span>
-                            </a>
-                        </li>
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://www.google.com/">
-                              <ion-icon name="logo-googleplus"></ion-icon>
-                                <span class="sr-only">Google Plus</span>
-                            </a>
-                        </li>
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://www.instagram.com/">
-                              <ion-icon name="logo-instagram"></ion-icon>
-                                <span class="sr-only">Instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                  <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
-           
-        </footer>
-
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-     
-    
-
-<!--Map-->
-<script>
-    function initMap() {
-
-var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 8,
-  center: {lat: 39.9042, lng: 116.0474}
-});
-
-var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-// Add some markers to the map. Several popular tourist locations in Beijing
-var markers = locations.map(function(location, i) {
-  return new google.maps.Marker({
-    position: location,
-    label: labels[i % labels.length]
-  });
-});
-
-// Add a marker clusterer to manage the markers.
-var markerCluster = new MarkerClusterer(map, markers,
-    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-}
-var locations = [
-                {lat: 40.4326, lng: 116.5698},
-                {lat: 40.3598, lng: 116.0200},
-                {lat: 40.6631, lng: 117.2831},
-                {lat: 39.8822, lng: 116.4066},
-                {lat: 39.9055, lng: 116.3976},
-                {lat: 39.9169, lng: 116.3907},
-                {lat: 40.0000, lng: 116.2755},
-                {lat: 39.9254, lng: 116.3893},
-                {lat: 39.9251, lng: 116.3968},
-                {lat: 39.9224, lng: 116.4625},
-                {lat: 39.9111556, lng: 116.4052750},
-]
-</script>
-     
-     
-<!-- Script Libraries & Files-->
-     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-     </script>
-     <script async defer
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
-   </script>
+            </div>
+        </div>
+    </section>
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <section>
+        <div class="row moreInfo">
+            <div class="column col-sm-12">
+                <h4>Where to Stay</h4>
+                <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one
+                    of our favorite search engines for locating the best deals on hotels. The best areas to stay in
+                    Beijing</p>
+                <ul>
+                    <li>Wangfujing: If you want to stay in a centeral part of the city, Wangfujing is a great place to
+                        stay. It is well located for visiting sights such as Tiananmen Square and The Forbidden City.
+                    </li>
+                    <li>Qianmen: Located just south of Tiananmen Square, Qianmen is a convienent place to stay. Foodies
+                        will especially love this part of the city as there are many restauraunts and street markets.
+                    </li>
+                    <li>Gulou/ Nanluguoxiang: These areas are trendy areas that offer everything you need, especially if
+                        you'd like to avoid a touristy area. You will enjoy getting lost and exploring the many cafes,
+                        shops, and alleys.</li>
+                </ul>
+            </div>
+        </div>
 
-<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
-    </body>
+        <div class="row whenVisit">
+            <div class="column col-sm-8">
+                <h4>When to Visit</h4>
+                <p>Beijing is a wonderful city to visit most times of the year. However, the winter can be a difficult
+                    time to visit with temperatures around the freezing point. To avoid large crowds and busy travel
+                    days, plan your trip carefully and not at the time of China's major holidays: Chinese New Year (Late
+                    Winter/Early spring) and National Week (The first week in October.) </p>
+            </div>
+            <!--Chart will take up col-sm-4-->
+            <div class="column col-sm-4">
+                <div id="beijingTemp"></div>
+                <div id="bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="flightInformation"></div>
+    </section>
+
+    <section>
+        <div class="questions">
+            <h3>Questions?</h3>
+            <h5>Contact Us Today!</h5>
+            <button type="submit" class="btn btn-secondary contactButton" href="contact.html">See More...</button>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="container">
+        <button onclick="topFunction()" id="toTopBtn" title="Go to top">
+            <ion-icon name="arrow-up"></ion-icon>
+        </button>
+
+        <!-- Social buttons -->
+        <div class="contact-follow">
+            <ul class="list-inline social-links">
+                <li class="footer-nav-item list-inline-item">
+                    <a target="_blank" href="https://www.facebook.com/">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                </li>
+                <li class="footer-nav-item list-inline-item">
+                    <a target="_blank" href="https://twitter.com/">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                </li>
+                <li class="footer-nav-item list-inline-item">
+                    <a target="_blank" href="https://www.google.com/">
+                        <ion-icon name="logo-googleplus"></ion-icon>
+                        <span class="sr-only">Google Plus</span>
+                    </a>
+                </li>
+                <li class="footer-nav-item list-inline-item">
+                    <a target="_blank" href="https://www.instagram.com/">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
+
+    </footer>
+
+
+    <!--Map-->
+    <script>
+        function initMap() {
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: { lat: 39.9042, lng: 116.0474 }
+            });
+
+            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+            // Add some markers to the map. Several popular tourist locations in Beijing
+            var markers = locations.map(function (location, i) {
+                return new google.maps.Marker({
+                    position: location,
+                    label: labels[i % labels.length]
+                });
+            });
+
+            // Add a marker clusterer to manage the markers.
+            var markerCluster = new MarkerClusterer(map, markers,
+                { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+        }
+        var locations = [
+            { lat: 40.4326, lng: 116.5698 },
+            { lat: 40.3598, lng: 116.0200 },
+            { lat: 40.6631, lng: 117.2831 },
+            { lat: 39.8822, lng: 116.4066 },
+            { lat: 39.9055, lng: 116.3976 },
+            { lat: 39.9169, lng: 116.3907 },
+            { lat: 40.0000, lng: 116.2755 },
+            { lat: 39.9254, lng: 116.3893 },
+            { lat: 39.9251, lng: 116.3968 },
+            { lat: 39.9224, lng: 116.4625 },
+            { lat: 39.9111556, lng: 116.4052750 },
+        ]
+    </script>
+
+
+    <!-- Script Libraries & Files-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+        </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
+        </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript">
+        renderBarChart();
+        jpFetchFlightInformation();
+    </script>
+</body>
+
 </html>
