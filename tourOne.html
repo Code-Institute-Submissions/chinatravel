@@ -6,14 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script type="text/javascript" src="Javascript/script.js"></script>
+
+<!--Email JS-->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+</script>
 <script type="text/javascript">
    (function(){
       emailjs.init("user_KG1EmIIX6AGYKV3CSfODm");
    })();
 </script>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+<script type="text/javascrit" src="Javascript/sendEmail.js"></script>
+
     <title>Cities Tour</title>
 </head>
+
 <body>
     <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
         <header>
@@ -48,6 +57,7 @@
                 </nav>
              </header>
     
+    <!--Main Carousel-->
              <section id="home" class="main">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -108,44 +118,39 @@
                     </div>
                 </div>
 
+            <!--Inquiry Form-->
                 <div class="column col-sm-12 col-md-4 inquiryform tour-right">
                     <div class="formTitle">
                         <h4>Inquire about this adventure</h4>
                     </div>
                     <form>
-                <label class="sr-only" for="fullname">Full Name</label>
-                <input type="text" name="name" id="inquiryforminput" class="form-control" placeholder="Full Name" required />
-                <label class="sr-only" for="email">Email</label>  
-                <input type="email" name="email" id="inquiryforminput" class="form-control" placeholder="Email" required />
-                <!--add date picker-->
-                    <label class="mr-sm-2 sr-only" for="Select">Choose your tour</label>
-                        <select class="custom-select mr-sm-2" id="inquiryforminput">
-                          <option selected id="inquiryforminput">Choose your tour</option>
-                          <option value="1" id="inquiryforminput">One</option>
-                          <option value="2" id="inquiryforminput">Two</option>
-                          <option value="3" id="inquiryforminput">Three</option>
-                        </select>
-                    <label class="sr-only" for="comment">Comment</label>  
-                    <textarea rows="5" name="comment" id="inquiryforminput" class="form-control" placeholder="Leave us a comment" required></textarea>
-                    <div class="form-row text-center">
-                       <div class="col">
-                          <button type="submit" class="btn btn-secondary btn-contact">Send My Inquiry</button>
-                       </div>
-                    </div>
-                 </form>
+                        <label class="sr-only" for="fullname">Full Name</label>
+                            <input type="text" name="name" id="inquiryforminput" class="form-control" placeholder="Full Name" required />
+                        <label class="sr-only" for="email">Email</label>  
+                            <input type="email" name="email" id="inquiryforminput" class="form-control" placeholder="Email" required />
+                        <label class="mr-sm-2 sr-only" for="Select">Choose your tour</label>
+                            <select class="custom-select mr-sm-2" id="inquiryforminput">
+                                <option selected id="inquiryforminput">Choose your tour</option>
+                                <option value="1" id="inquiryforminput">One</option>
+                                <option value="2" id="inquiryforminput">Two</option>
+                                <option value="3" id="inquiryforminput">Three</option>
+                            </select>
+                        <label class="sr-only" for="comment">Comment</label>  
+                            <textarea rows="5" name="comment" id="inquiryforminput" class="form-control" placeholder="Leave us a comment" required></textarea>
+                        <div class="form-row text-center">
+                            <div class="col">
+                                <button type="submit" class="btn btn-secondary btn-contact">Send My Inquiry</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
              </div>
-
-                
          </section>
         
-         
-
-
          <!--Itinerary-->
          <section class="itinerary">
              <div class="row">
-                 <div class="col col-sm-12 col-md-8 itineraryText">
+                 <div class="col col-sm-12 col-lg-8 itineraryText">
                      <div>
                         <h3>Itinerary</h3>
                     </div>
@@ -203,17 +208,16 @@
                     </div>
                 </div>
                 
-
-        <div class="col col-sm-12 col-md-4">
-        <div id="map" class="tourOneMap"></div>
-    </div>
-</div>
-         </section>
+        <!--Google Maps-->
+                <div class="col col-sm-12 col-lg-4">
+                    <div id="map" class="tourOneMap"></div>
+                </div>
+            </div>
+        </section>
 
          <!--Footer-->
          <footer class="container">
             <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
-
                 <!-- Social buttons -->
                 <div class="row">
                 <div class="col-sm-6 contact-follow">
@@ -246,14 +250,11 @@
                 </div>
               </div>
                 <!-- Copyright -->
-                  <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
-           
+                <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
         </footer>
 
          <script>
-         
         //Map with a line showing each of the cities this itinerary will go to
-      
             function initMap() {
               var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4.5,
@@ -278,12 +279,11 @@
               flightPath.setMap(map);
             }
           </script>
-
-
          <script async defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
          </script>
 
+          <!--References-->
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

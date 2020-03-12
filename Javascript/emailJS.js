@@ -1,8 +1,38 @@
-var templateParams = {
-    name: 'China Travel',
-    notes: 'I would like to inquire about...'
+
+//Form Validation to make sure inputs are correctly filled out
+function validateForm (){
+  
+    var name = document.forms["contact-form"]["fromName"].value;
+    var email = document.forms["contact-form"]["emailAddress"].value;
+    var select = document.forms["contact-form"]["select"].value;
+    var msg = document.forms["contact-form"]["message"].value;
+    
+    if (name == "") {
+        alert("The name field cannot be empty.");
+        return false;
+    }
+     if (email == "") {
+        alert("The email field must not be empty.")
+        return false;
+    }
+    if (email !== "") {
+        if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email))) {
+            alert("Incorrect format. Email should be eg. 'example@domain.com'")
+            return false;
+        }
+    }
+    
+ //Now that the form is valid, use EmailJS to submit an email to a real email address
+
+ var templateParams = {
+    "from_name": name,
+    "from email": email,
+    "select": select,
+    "comment": message
+
 };
  
+
 emailjs.send('gmail', 'inquiry', templateParams)
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
@@ -29,7 +59,9 @@ emailjs.send('gmail', 'inquiry', templateParams)
          alert('Oops... ' + JSON.stringify(error));
      });
  });
- 
+
+}
+
 //If the email has been send with no errors then create and
       //display modal with message.
       var modal = document.getElementById('myModal');
@@ -52,4 +84,4 @@ emailjs.send('gmail', 'inquiry', templateParams)
           modal.style.display = "none";
         }
       };
-   
+

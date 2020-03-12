@@ -84,18 +84,17 @@
                 </div>
                </div>
             </form>
-          
-          <div id="myModal" class="modal">
-          
+
+
+        <!--Modal that will appear when form is sent-->
+            <div id="myModal" class="modal">
                <div class="modal-content">
                    <div class="row">
-                       
                        <span class="close-cross col-1">&times;</span>
-                       
                        <div class="text-center col-11">
                            <p>Thank you!</p>
-                           <p>We look forward to discussing your adventure to China.</p>
-               
+                         <p>We look forward to discussing your adventure to China.</p>
+
                            <button id="close" class="btn" type="button">Close</button>
                        </div>
                    </div>
@@ -105,8 +104,6 @@
 
          <!--Footer-->
          <footer class="container">
-            
-
                 <!-- Social buttons -->
                 <div class="contact-follow">
                     <ul class="list-inline social-links">
@@ -141,6 +138,13 @@
            
         </footer>
 
+
+       
+<!--EmailJS Library-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+<script src="Javascript/emailJS.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+
         <!--Email JS-->
         <script>
 var templateParams = {
@@ -155,14 +159,6 @@ emailjs.send('gmail', 'inquiry', templateParams)
        console.log('FAILED...', error);
     });
 
-</script>
-
-<!--EmailJS Library-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_KG1EmIIX6AGYKV3CSfODm");
-   })();
 </script>
 
 
