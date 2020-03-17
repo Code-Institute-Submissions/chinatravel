@@ -196,28 +196,28 @@ nav {
 }
 
 #chengdu-view {
-  background-image: url("img/shanghaiOne.jpg");     
+  background-image: url("img/chengduOne.jpg");     
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #suzhou-view {
-  background-image: url("img/shanghaiOne.jpg");     
+  background-image: url("img/suzhouOne.jpg");     
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #qingdao-view {
-  background-image: url("img/shanghaiOne.jpg");     
+  background-image: url("img/qingdaoThree.jpg");     
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #guilin-view {
-  background-image: url("img/shanghaiOne.jpg");     
+  background-image: url("img/guilinOne.jpg");     
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -337,8 +337,8 @@ width: 100%;
 }
 
 .destPic {
-    height: 100px;
     width: 100px;
+    padding: 10px;
 }
 
 /*-------------------------------------Book an Adventure page--*/
@@ -489,10 +489,10 @@ font-size: 40px;
   background-color: #555; /* Add a dark-grey background on hover */
 }
 /*-----------------------------------Contact Page --*/
-  #contact-view {
+  #contactView {
     padding-top: 100px;
     padding-bottom: 0;
-    background-image: ("/Users/amybrucker/Documents/Travel Website/Pictures/contact.jpg");     
+    background-image: ("img/contact.jpg");     
     max-width: 100%;
     height: 100%;
     background-position: center;
@@ -528,8 +528,6 @@ font-size: 40px;
   .custom-select select {
     display: none;
   }
-
-
 
   .contactButton {
     border: none; 

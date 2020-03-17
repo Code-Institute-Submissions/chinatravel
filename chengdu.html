@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" href="Javascript/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script type="text/javascript" src="Javascript/script.js"></script>
     <title>Chengdu</title>
 </head>
 <body>
@@ -48,7 +48,7 @@
              <section class="jumbotron" id="chengdu-view">
                 <div>
                     <div>
-                      <h1 class="chengduTitle">Chengdu</h1>
+                      <h1 class="cityTitle">Chengdu</h1>
                       </div>
                   </div>
              </section>
@@ -67,7 +67,7 @@
                   <div class="row">
                     <div class="column col-sm-12 col-md-6 col-lg-3 chengduPageTour">
                         <a href="tourTwo.html">
-                      <img src="gardenOne.jpg" href="tourTwo.html" class="circleTour">
+                      <img src="img/gardenOne.jpg" class="circleTour">
                       <h4 class="tourName">Nature Tour</h4>
                     </a>
                     </div>
@@ -156,6 +156,10 @@
                                  </div>
                             </div>
                        </div>
+                        <div class="column md-col-4 extraPics">
+                            <img src="img/chengduTwo.jpg" class="destPic w-50">
+                            <img src="img/chengduThree.jpg" class="destPic w-50">
+                       </div>
                 </div>
             </section>
       
@@ -185,7 +189,9 @@
              <div class="questions">
                  <h3>Questions?</h3>
                  <h5>Contact Us Today!</h5>
-                 <button type="submit" class="btn btn-secondary contactButton" href="contact.html">See More...</button>
+                 <a href="contact.html">
+                 <button type="submit" class="btn btn-secondary contactButton">See More...</button>
+                 </a>
              </div>
          </section>
 
@@ -226,16 +232,10 @@
                   <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
            
         </footer>
-
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
      
-    
-
-<!--Map-->
-<script>
-    function initMap() {
+    <script>
+            //Map for the Chengdu page with cluster markers to show the top destinations
+function initMap() {
 
 var map = new google.maps.Map(document.getElementById('map'), {
   zoom: 8.5,
@@ -265,17 +265,17 @@ var locations = [
                 {lat: 30.6600, lng: 104.0411} //Qingyang Palace
                
 ]
-</script>
+    </script>
      
-     
-    
-     
-     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-     </script>
+     <!--References-->
+     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
      <script async defer
      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
-   </script>
+     </script>
 
-   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>
 </html>
