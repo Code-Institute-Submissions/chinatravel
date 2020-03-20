@@ -144,21 +144,10 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 <script src="Javascript/emailJS.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-
-        <!--Email JS-->
-        <script>
-var templateParams = {
-    name: 'China Travel',
-    notes: 'I would like to inquire about...'
-};
- 
-emailjs.send('gmail', 'inquiry', templateParams)
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-       console.log('FAILED...', error);
-    });
-
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_KG1EmIIX6AGYKV3CSfODm");
+   })();
 </script>
 
 
