@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/dc-style.css">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
@@ -23,35 +19,25 @@
 
     <script type="text/javascript" src="Javascript/script.js"></script>
 
-    <title>Beijing</title>
-
-    <script type="text/javascript">
+<script type="text/javascript">
+//Bar Chart
         var chart = dc.barChart('#beijingTemp');
 
         function renderBarChart() {
-            
-            d3.csv("Assets/beijingTemp.csv", function (errors, temperatures) {
-                var ndx = crossfilter(temperatures);
+            d3.csv("Assets/beijingTemp.csv", function (month, temp) {
+                var ndx = crossfilter(temperature);
 
-                var tempDimension = ndx.dimension(function (d) { return d.id; });
-                var tempGroup = tempDimension.group().reduce(
-                    function (p, v) {
-                        p[v.temp] = (p[v.temp] || 0) + +v.high;
-                        return p;
-                    },
-                    function (p, v) {
-                        p[v.temp] = (p[v.temp] || 0) + +v.low;
-                        return p;
-                    },
-                    function () { return {}; }
-                );
+                var tempDimension = ndx.dimension(function (data) { 
+                    return ~~((month.now() - new temp(data.temp)) 
+                    });
+                var ageGroup = ageDimension.group().reduceCount();
 
                 chart
                     .width(500)
                     .height(200)
                     .x(d3.scaleLinear().domain([1, 12]))
                     .brushOn(false)
-                    .yAxisLabel("Temp")
+                    .yAxisLabel("Average Temperature")
                     .xAxisLabel("Month")
                     .dimension(tempDimension)
                     .group(tempGroup)
@@ -63,138 +49,92 @@
                 chart.render();
             });
         }
-
         
-
-        function jpFetchFlightInformation() {
-            fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/PEK-sky/2020-09-01?inboundpartialdate=2020-12-01", {
-                "method": "GET",
-                "headers": {
-                    "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-                    "x-rapidapi-key": "26a6f77e30mshe1ff5bda4d6bf9bp17962fjsnfc37f5300966"
-                }
-            }).then(response => {
-                if(!response.ok){
-                    throw new Error("HTTP error, status = " + response.status);
-                }
-                return response.json();
-            }).then(json => {
-                var carriersList = document.createElement('ul');
-                $("#flightInformation").append(carriersList);
-                for(var i = 0; i < json.Carriers.length; i++) {
-                    var listItem = document.createElement('li');
-                    listItem.innerHTML = '<span> CarrierId: ' + json.Carriers[i].CarrierId + '</span>';
-                    listItem.innerHTML +='</span> Name: ' + json.Carriers[i].Name + '</span>';
-                    carriersList.appendChild(listItem);
-                }
-            }).catch(err => {
-                console.log(err);
-            });
-        }
     </script>
-</head>
 
+    <title>Beijing</title>
+</head>
 <body>
     <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.JPG" width="70" height="70" alt="logo" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
-                            <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
-                            <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
-                            <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
-                            <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
-                            <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link uppercase" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
+                   <a class="navbar-brand" href="index.html">
+                   <img src="img/logo.JPG" width="70" height="70" alt="logo" class="logo">
+                   </a>
+                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                       <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
+                                       <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
+                                       <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
+                                       <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
+                                       <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
+                                       <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
+                                    </div>
+                                 </li>
+                         <li class="nav-item">
+                            <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
+                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link uppercase" href="contact.html">Contact Us</a>
+                         </li>
+                      </ul>
+                   </div>
+                </nav>
+             </header>
 
 
-    <section class="jumbotron" id="beijing-view">
-        <div>
-            <div>
-                <h1 class="cityTitle">Beijing</h1>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="row aboutRow">
-            <div class="column col-sm-12 col-md-6">
-                <h3>About</h3>
-                <p>Welcome to Beijing! Beijing is the capital city of China and is also one of the buisiest cities in
-                    the world. Home to many classic and modern chinese sights, Beijing is one of the most popular cities
-                    to visit in China. On a tour to Beijing, you will be able to see the famous Forbidden City, Summer
-                    Palace, Tian'anmen Square, and even take a day trip to see the Great Wall of China. Join one of our
-                    tours today!</p>
-            </div>
-
-            <!--Skyscanner API-->
-            <div class="column col-sm-12 col-md-6">
-                <div id="beijingSkyscanner" class="skyscanner">
-                    <h3>Search Flights to Beijing</h3>
-                    <input type="text" id="ss-origin-name" value="SFO"></input> <span>To</span>
-                    <input type="text" id="ss-dest-name" value="PEK" oninput="fetchSkyscannerData()"></input>
-                    <div id="range">
-                        <label for="start">Start date:</label>
-                        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
-                            max="2020-09-01">
-                        <span>to</span>
-                        <label for="start">End date:</label>
-                        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
-                            max="2020-12-01">
+             <section class="jumbotron" id="beijing-view">
+                <div>
+                    <div>
+                      <h1 class="cityTitle">Beijing</h1>
+                      </div>
+                  </div>
+             </section>
+    
+    <!--Brief Intro-->
+            <section>
+                <div class="row aboutRow">
+                    <div class="column col-sm-12 col-md-6">
+                        <h3>About</h3>
+                        <p>Welcome to Beijing! Beijing is the capital city of China and is also one of the buisiest cities in
+                            the world. Home to many classic and modern chinese sights, Beijing is one of the most popular cities
+                            to visit in China. On a tour to Beijing, you will be able to see the famous Forbidden City, Summer
+                            Palace, Tian'anmen Square, and even take a day trip to see the Great Wall of China. Join one of our
+                            tours today!</p>
                     </div>
-                    <button id="ss-submit">Submit</button>
+<!--Maps API-->
+                    <div class="column col-sm-12 col-md-6">
+                        <div id="map" class="mapbeijing"></div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column col-sm-12 col-md-6 col-lg-3 pageTour">
-                <a href="tourOne.html">
-                    <img src="img/beijingTwo.jpg" href="tourOne.html" class="circleTour">
-                    <h4 class="tourName">Cities</h4>
-                </a>
-            </div>
-            <div class="column col-sm-12 col-md-6 col-lg-3 pageTour">
-                <a href="tourThree.html">
-                    <img src="img/historicOne.JPG" href="tourThree.html" class="circleTour">
-                    <h4 class="tourName">Historic China</h4>
-                </a>
-            </div>
-        </div>
-    </section>
+
+                <div class="row">
+                    <div class="column col-sm-12 col-md-6 pageTour">
+                        <a href="tourOne.html">
+                            <img src="img/beijingTwo.jpg" href="tourOne.html" class="circleTour">
+                            <h4 class="tourName">Cities</h4>
+                        </a>
+                    </div>
+                    <div class="column col-sm-12 col-md-6 pageTour">
+                        <a href="tourThree.html">
+                            <img src="img/historicOne.JPG" href="tourThree.html" class="circleTour">
+                            <h4 class="tourName">Historic China</h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
     <section class="destinations-card">
         <div class="row">
-            <!--Maps API-->
-            <div class="column col-sm-12 col-md-6">
-                <div id="map" class="mapBeijing"></div>
-            </div>
-
-            <div class="column col-md-6">
+            <div class="column col-md-7">
                 <div class="explore-name">
-                    <h4>Explore Beijing</h4>
+                    <h4 class="accordion-header">Explore Beijing</h4>
                 </div>
                 <div class="accordion" id="accordionExample">
                     <div class="card">
@@ -325,12 +265,15 @@
                     </div>
                 </div>
             </div>
+            <div class="column col-md-5 .offset-md-5 extraPics">
+                            <img src="img/beijingSix.jpg" class="destPic img-responsive">
+                            <img src="img/beijingFive.jpg" class="destPic img-responsive">
+                            <img src="img/beijingSeven.jpg" class="destPic img-responsive">
+                       </div>
         </div>
     </section>
 
-
-
-    <section>
+ <section>
         <div class="row moreInfo">
             <div class="column col-sm-12">
                 <h4>Where to Stay</h4>
@@ -349,8 +292,11 @@
                         shops, and alleys.</li>
                 </ul>
             </div>
+            
         </div>
+        </section>
 
+    <section>
         <div class="row whenVisit">
             <div class="column col-sm-8">
                 <h4>When to Visit</h4>
@@ -359,16 +305,12 @@
                     days, plan your trip carefully and not at the time of China's major holidays: Chinese New Year (Late
                     Winter/Early spring) and National Week (The first week in October.) </p>
             </div>
-            <!--Chart will take up col-sm-4-->
+            <!--Chart-->
             <div class="column col-sm-4">
                 <div id="beijingTemp"></div>
                 <div id="bar"></div>
             </div>
         </div>
-    </section>
-
-    <section>
-        <div id="flightInformation"></div>
     </section>
 
     <section>
@@ -379,108 +321,95 @@
         </div>
     </section>
 
-    <!--Footer-->
-    <footer class="container">
-        <button onclick="topFunction()" id="toTopBtn" title="Go to top">
-            <ion-icon name="arrow-up"></ion-icon>
-        </button>
+         <!--Footer-->
+         <footer class="container">
+            <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
 
-        <!-- Social buttons -->
-        <div class="contact-follow">
-            <ul class="list-inline social-links">
-                <li class="footer-nav-item list-inline-item">
-                    <a target="_blank" href="https://www.facebook.com/">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                        <span class="sr-only">Facebook</span>
-                    </a>
-                </li>
-                <li class="footer-nav-item list-inline-item">
-                    <a target="_blank" href="https://twitter.com/">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                        <span class="sr-only">Twitter</span>
-                    </a>
-                </li>
-                <li class="footer-nav-item list-inline-item">
-                    <a target="_blank" href="https://www.google.com/">
-                        <ion-icon name="logo-googleplus"></ion-icon>
-                        <span class="sr-only">Google Plus</span>
-                    </a>
-                </li>
-                <li class="footer-nav-item list-inline-item">
-                    <a target="_blank" href="https://www.instagram.com/">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                        <span class="sr-only">Instagram</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
+                <!-- Social buttons -->
+                <div class="contact-follow">
+                    <ul class="list-inline social-links">
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com/">
+                              <ion-icon name="logo-facebook"></ion-icon>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://twitter.com/">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.google.com/">
+                              <ion-icon name="logo-googleplus"></ion-icon>
+                                <span class="sr-only">Google Plus</span>
+                            </a>
+                        </li>
+                        <li class="footer-nav-item list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com/">
+                              <ion-icon name="logo-instagram"></ion-icon>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                  <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
+           
+        </footer>
 
-    </footer>
+<!--Map-->
+<script>
+    function initMap() {
 
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: {lat: 39.9042, lng: 116.0474}
+    });
 
-    <!--Map-->
-    <script>
-        function initMap() {
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 8,
-                center: { lat: 39.9042, lng: 116.0474 }
-            });
+// Add some markers to the map. Several popular tourist locations in Beijing
+    var markers = locations.map(function(location, i) {
+    return new google.maps.Marker({
+        position: location,
+        label: labels[i % labels.length]
+        });
+    });
 
-            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+// Add a marker clusterer to manage the markers.
+    var markerCluster = new MarkerClusterer(map, markers,
+        {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+    }
+    var locations = [
+                {lat: 40.4326, lng: 116.5698},
+                {lat: 40.3598, lng: 116.0200},
+                {lat: 40.6631, lng: 117.2831},
+                {lat: 39.8822, lng: 116.4066},
+                {lat: 39.9055, lng: 116.3976},
+                {lat: 39.9169, lng: 116.3907},
+                {lat: 40.0000, lng: 116.2755},
+                {lat: 39.9254, lng: 116.3893},
+                {lat: 39.9251, lng: 116.3968},
+                {lat: 39.9224, lng: 116.4625},
+                {lat: 39.9111556, lng: 116.4052750},
+    ]
+</script>
+     
+     
+<!-- Script Libraries & Files-->
+     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+     </script>
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
+   </script>
 
-            // Add some markers to the map. Several popular tourist locations in Beijing
-            var markers = locations.map(function (location, i) {
-                return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length]
-                });
-            });
-
-            // Add a marker clusterer to manage the markers.
-            var markerCluster = new MarkerClusterer(map, markers,
-                { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
-        }
-        var locations = [
-            { lat: 40.4326, lng: 116.5698 },
-            { lat: 40.3598, lng: 116.0200 },
-            { lat: 40.6631, lng: 117.2831 },
-            { lat: 39.8822, lng: 116.4066 },
-            { lat: 39.9055, lng: 116.3976 },
-            { lat: 39.9169, lng: 116.3907 },
-            { lat: 40.0000, lng: 116.2755 },
-            { lat: 39.9254, lng: 116.3893 },
-            { lat: 39.9251, lng: 116.3968 },
-            { lat: 39.9224, lng: 116.4625 },
-            { lat: 39.9111556, lng: 116.4052750 },
-        ]
-    </script>
-
-
-    <!-- Script Libraries & Files-->
-    <script
-        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-        </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
-        </script>
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script type="text/javascript">
-        renderBarChart();
-        jpFetchFlightInformation();
+        jpRenderBar();
     </script>
-</body>
-
+    </body>
 </html>
