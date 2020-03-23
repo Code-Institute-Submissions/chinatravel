@@ -24,28 +24,20 @@
         var chart = dc.barChart('#beijingTemp');
 
         function renderBarChart() {
-            d3.csv("Assets/beijingTemp.csv", function (errors, temperatures) {
-                var ndx = crossfilter(temperatures);
+            d3.csv("Assets/beijingTemp.csv", function (month, temp) {
+                var ndx = crossfilter(temperature);
 
-                var tempDimension = ndx.dimension(function (d) { return d.id; });
-                var tempGroup = tempDimension.group().reduce(
-                    function (p, v) {
-                        p[v.temp] = (p[v.temp] || 0) + +v.high;
-                        return p;
-                    },
-                    function (p, v) {
-                        p[v.temp] = (p[v.temp] || 0) + +v.low;
-                        return p;
-                    },
-                    function () { return {}; }
-                );
+                var tempDimension = ndx.dimension(function (data) { 
+                    return ~~((month.now() - new temp(data.temp)) 
+                    });
+                var ageGroup = ageDimension.group().reduceCount();
 
                 chart
                     .width(500)
                     .height(200)
                     .x(d3.scaleLinear().domain([1, 12]))
                     .brushOn(false)
-                    .yAxisLabel("Temp")
+                    .yAxisLabel("Average Temperature")
                     .xAxisLabel("Month")
                     .dimension(tempDimension)
                     .group(tempGroup)
@@ -313,7 +305,7 @@
                     days, plan your trip carefully and not at the time of China's major holidays: Chinese New Year (Late
                     Winter/Early spring) and National Week (The first week in October.) </p>
             </div>
-            <!--Chart will take up col-sm-4-->
+            <!--Chart-->
             <div class="column col-sm-4">
                 <div id="beijingTemp"></div>
                 <div id="bar"></div>
