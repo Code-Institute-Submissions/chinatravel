@@ -1,283 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <script type="text/javascript" src="Javascript/script.js"></script>
-    <title>Chengdu</title>
-</head>
-<body>
-    <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
-        <header>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
-                   <a class="navbar-brand" href="index.html">
-                   <img src="img/logo.JPG" width="70" height="70" alt="logo" class="logo">
-                   </a>
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
-                   </button>
-                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                      <ul class="navbar-nav ml-auto">
-                            <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                       <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
-                                       <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
-                                       <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
-                                       <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
-                                       <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
-                                       <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
-                                    </div>
-                                 </li>
-                         <li class="nav-item">
-                            <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
-                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link uppercase" href="contact.html">Contact Us</a>
-                         </li>
-                      </ul>
-                   </div>
-                </nav>
-             </header>
-
-
-             <section class="jumbotron" id="chengdu-view">
-                <div>
-                    <div>
-                      <h1 class="cityTitle">Chengdu</h1>
-                      </div>
-                  </div>
-             </section>
-    
-              <section>
-                <div class="row aboutRow">
-                  <div class="column col-sm-12 col-md-6">
-                      <h3>About</h3>
-                      <p>Chengdu is the capital of Sichuan Province in western China and is well known for its delicious Sichuan food. This is the place to come and see China's most adorable and beloved animal- the giant pandas. Chengdu may be a large city, but it has a small town laid-back feel. </p>
-                  </div>
-                   <!--Maps API-->
-                   <div class="column col-sm-12 col-md-6">
-                        <div id="map" class="mapchengdu"></div>
-                    </div>
-                </div>
-                  <div class="row">
-                    <div class="column col-sm-12 col-md-6 pageTour">
-                        <a href="tourTwo.html">
-                            <img src="img/gardenOne.jpg" class="circleTour">
-                            <h4 class="tourName">Nature Tour</h4>
-                        </a>
-                    </div>
-                </div>
-              </section>
-
-            <section class="destinations-card">
-                <div class="row">
-                    <div class="column col-md-7">
-                        <div class="explore-name">
-                            <h4 class="accordion-header">Explore Chengdu</h4>
-                        </div>
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Nature
-                                    </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                    <h4>1) The Giant Pandas</h4>
-                                    <p>(Map location: A)</p>
-                                    <p>See the famous Giant Pandas (and baby pandas) at the Chengdu Giant Panda Breeding and Research Base. You can tour the research center as well as learn about pandas and how to protect those still in the wild. This is something you don't want to miss while in Chengdu! You can even volunteer here. Help researchers record panda behavior, clean panda enclosures, and prepare a meal fit for a young panda. You can even have the opportunity to get up close and hold one of the black and white bears! The fee for volunteering helps ensure the preservation of these endangered animals.</p>
-                                    <h4>2) Qingcheng Shan</h4>
-                                    <p>(Map location: B)</p>
-                                    <p>Qingcheng Shan or Mount Qingchen is a UNESCO World Herritage sight and is known as one of the places Taoism originated. The natural scenery here is beautiful and magnificent. The Mount Qingcheng range has 36 peaks. Two of the peaks near the city, Front Mountain and Back Mountain, are definitely worth a visit.</p>
-                                    <h4>3) People's Park</h4>
-                                    <p>(Map location: C)</p>
-                                    <p>While this park may seem like a normal public park, it can be an interesting glimse into the lives of the locals. You can often see retired people playing cards, dancing, and socializing. It's quite fun and relaxing to come spend time here.</p>
-                                    
-                                </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Culture & History
-                                    </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                    <h4>1) Leshan Giant Buddah</h4>
-                                    <p>(Map location: D)</p>
-                                    <p>The Leshan Giant Buddah is a huge statue that is carved in the side of a mountain. This Buddah statue is 71 meters (233 feet) high and 24 meters (78 feet) wide. You can visit this destination on foot or on a sightseeing boat.</p>
-                                    <h4>2) Sichuan Opera</h4>
-                                    <p>The Sichuan Opera is one of China's oldest regional operas and originated about four hundred years ago. This kind of opera is different from western operas in they way that Sichuan opera has many circus like elements.</p>
-                                    <h4>3) Kuan Zhai Alley</h4>
-                                    <p>(Map location: E)</p>
-                                    <p>Kuan Zhai Alley is lined by ancient buildings and courtyards that are now converted into shops, tea houses, restaurants, and more! </p>
-                                    <h4>4) Qingyang Palace</h4>
-                                    <p>(Map location: F)</p>
-                                    <p>Built in the Tang Dynasty, Qingyang palace us a point of interest in Chengdu. It is one of the most famous palaces in China. </p>
-                                    <h4>5) Drink tea at a traditional teahouse</h4>
-                                    <p>Chengdu is one of the largest regions for producing tea in China. Visiting an old teahouse near the riverbanks or in the parks is truly an authentic experience. </p>
-                                </div>
-                                </div>
-                            </div>
-
-
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Food
-                                        </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <h3>You can't visit the Sichuan Province without trying some local dishes. Many local dishes are spicy and incredibly addictive. When ordering Sichuan style food, you can usually choose how spicy you would like your dish. Sentences like "要啦" (spicy) and "不要啦" (no spicy) will be useful! </h3>
-                                           <ul>
-                                            <li>Sichuan Hot Pot</li>
-                                           <li>Dry-fried Green Beans</li>
-                                           <li>Boiled Fish in spicy chili oil sauce</li>
-                                           <li>Kung Pao Chicken</li>
-                                           <li>Chuanchuan Xiang</li>
-                                           <li>Dandan Noodles</li>
-                                           <li>Mapo Doufu/ Grandma's Tofu</li>
-                                           </ul>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                       </div>
-                        <div class="column col-md-5 .offset-md-5 extraPics">
-                            <img src="img/chengduTwo.jpg" class="destPic img-responsive">
-                            <img src="img/chengduThree.jpg" class="destPic img-responsive">
-                       </div>
-                </div>
-            </section>
-      
-         <section>
-             <div class="row moreInfo">
-             <div class="column col-sm-12">
-                 <h4>Where to Stay</h4>
-                 <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one of our favorite search engines for locating the best deals on hotels. The best areas to stay in Chengdu:</p>
-                 <ul>
-                     <li>Tianfu Square: Located in the center of the city, Tianfu square is a convenient spot for tourists to stay.</li>
-                     <li>Chunxi Road: Chunxi Road is one of three on the list of China's top commercial streets. It's a great area for first time visitors to stay.</li>
-                 </ul>
-             </div>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+      <script type="text/javascript" src="assets/js/script.js"></script>
+      <script type="text/javascript" src="assets/js/bar_chart.js"></script>
+      <title>Chengdu</title>
+   </head>
+   <body>
+      <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
+            <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.JPG" width="70" height="70" alt="logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
+                        <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
+                        <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
+                        <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
+                        <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
+                        <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link uppercase" href="contact.html">Contact Us</a>
+                  </li>
+               </ul>
             </div>
-
-                <div class="row whenVisit">
-                    <div class="column col-sm-8">
-                        <h4>When to Visit</h4>
-                        <p>Chengdu has cold wet winters and sweltering hot summers, so it is highly reccomened to visit Chengdu in Spring and Fall. If you plan on seeing the pandas, visiting between August and December will give you a greater chance of seeing tiny newborns!</p>
-                    </div>
-                    <!--Chart will take up col-sm-4-->
-                    <div id="chartdiv"></div>
-                </div>
-         </section>
-
-         <section>
-             <div class="questions">
-                 <h3>Questions?</h3>
-                 <h5>Contact Us Today!</h5>
-                 <a href="contact.html">
-                 <button type="submit" class="btn btn-secondary contactButton">See More...</button>
-                 </a>
-             </div>
-         </section>
-
-         <!--Footer-->
-         <footer class="container">
-            <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
-
-                <!-- Social buttons -->
-                <div class="contact-follow">
-                    <ul class="list-inline social-links">
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://www.facebook.com/">
-                              <ion-icon name="logo-facebook"></ion-icon>
-                                <span class="sr-only">Facebook</span>
-                            </a>
-                        </li>
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://twitter.com/">
-                                <ion-icon name="logo-twitter"></ion-icon>
-                                <span class="sr-only">Twitter</span>
-                            </a>
-                        </li>
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://www.google.com/">
-                              <ion-icon name="logo-googleplus"></ion-icon>
-                                <span class="sr-only">Google Plus</span>
-                            </a>
-                        </li>
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://www.instagram.com/">
-                              <ion-icon name="logo-instagram"></ion-icon>
-                                <span class="sr-only">Instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Copyright -->
-                  <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
-           
-        </footer>
-     
-    <script>
-            //Map for the Chengdu page with cluster markers to show the top destinations
-function initMap() {
-
-var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 8.5,
-  center: {lat: 30.5728, lng: 104.0668}
-});
-
-var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-// Add some markers to the map. Several popular tourist locations in Chengdu
-var markers = locations.map(function(location, i) {
-  return new google.maps.Marker({
-    position: location,
-    label: labels[i % labels.length]
-  });
-});
-
-// Add a marker clusterer to manage the markers.
-var markerCluster = new MarkerClusterer(map, markers,
-    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-}
-var locations = [
-                {lat: 30.7330, lng: 104.1458},//Giant Panda research center
-                {lat: 30.9667, lng: 103.5167},//Qingcheng Shan
-                {lat: 30.6571, lng: 104.0573},//People's park
-                {lat: 29.5417, lng: 103.7682},//Leshan Giant Buddah
-                {lat: 30.3949, lng: 104.0311},//Kuan zhai alley
-                {lat: 30.6600, lng: 104.0411} //Qingyang Palace
-               
-]
-    </script>
-     
-     <!--References-->
-     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-     <script async defer
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
-     </script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    </body>
+         </nav>
+      </header>
+      <section class="jumbotron" id="chengdu-view">
+         <div class="container-fluid">
+            <div>
+               <h1 class="cityTitle">Chengdu</h1>
+            </div>
+         </div>
+      </section>
+      <!--Brief Intro-->
+      <section>
+         <div class="container-fluid">
+            <div class="row aboutRow">
+               <div class="col col-sm-12 col-md-6">
+                  <h3>About</h3>
+                  <p>Chengdu is the capital of Sichuan Province in western China and is well known for its delicious Sichuan food. This is the place to come and see China's most adorable and beloved animal- the giant pandas. Chengdu may be a large city, but it has a small town laid-back feel. 
+                  </p>
+                  <div class="row">
+                     <div class="col col-sm-6 text-center">
+                        <a href="tourOne.html">
+                        <img src="assets/img/gardenOne.jpg" class="circleTour" alt="Nature">
+                        </a>
+                        <h4>Nature Tour</h4>
+                     </div>
+                  </div>
+               </div>
+               <!--Maps API-->
+               <div class="col col-sm-12 col-md-6 no-gutters pl-0 pr-0">
+                  <div id="map" class="mapchengdu"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="destinations-card">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col col-md-7">
+                  <div class="explore-name">
+                     <h4 class="accordion-header">Explore Chengdu</h4>
+                  </div>
+                  <div class="accordion" id="accordionExample">
+                     <div class="card">
+                        <div class="card-header" id="headingOne">
+                           <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                 data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Nature
+                              </button>
+                           </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                           data-parent="#accordionExample">
+                           <div class="card-body" id="card-body-chengdu">
+                              <h4>1) The Giant Pandas</h4>
+                              <p>(Map location: A)</p>
+                              <p>See the famous Giant Pandas (and baby pandas) at the Chengdu Giant Panda Breeding and Research Base. You can tour the research center as well as learn about pandas and how to protect those still in the wild. This is something you don't want to miss while in Chengdu! You can even volunteer here. Help researchers record panda behavior, clean panda enclosures, and prepare a meal fit for a young panda. You can even have the opportunity to get up close and hold one of the black and white bears! The fee for volunteering helps ensure the preservation of these endangered animals.
+                              </p>
+                              <h4>2) Qingcheng Shan</h4>
+                              <p>(Map location: B)</p>
+                              <p>Qingcheng Shan or Mount Qingchen is a UNESCO World Heritage sight and is known as one of the places Taoism originated. The natural scenery here is beautiful and magnificent. The Mount Qingcheng range has 36 peaks. Two of the peaks near the city, Front Mountain and Back Mountain, are definitely worth a visit.
+                              </p>
+                              <h4>3) People's Park</h4>
+                              <p>(Map location: C)</p>
+                              <p>While this park may seem like a normal public park, it can be an interesting glimpse into the lives of the locals. You can often see retired people playing cards, dancing, and socializing. It's quite fun and relaxing to come spend time here.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" id="headingTwo">
+                           <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                 data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                               Culture & History
+                              </button>
+                           </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                           data-parent="#accordionExample">
+                           <div class="card-body" id="card-body-chengdu">
+                              <h4>1) Leshan Giant Buddha</h4>
+                              <p>(Map location: D)</p>
+                              <p>The Leshan Giant Buddha is a huge statue that is carved in the side of a mountain. This Buddaha statue is 71 meters (233 feet) high and 24 meters (78 feet) wide. You can visit this destination on foot or on a sightseeing boat.
+                              </p>
+                              <h4>2) Sichuan Opera</h4>
+                              <p>The Sichuan Opera is one of China's oldest regional operas and originated about four hundred years ago. This kind of opera is different from western operas in they way that Sichuan opera has many circus like elements.
+                              </p>
+                              <h4>3) Kuan Zhai Alley</h4>
+                              <p>(Map location: E)</p>
+                              <p>Kuan Zhai Alley is lined by ancient buildings and courtyards that are now converted into shops, tea houses, restaurants, and more! 
+                              </p>
+                              <h4>4) Qingyang Palace</h4>
+                              <p>(Map location: F)</p>
+                              <p>Built in the Tang Dynasty, Qingyang palace us a point of interest in Chengdu. It is one of the most famous palaces in China.
+                              </p>
+                              <h4>5) Drink tea at a traditional teahouse</h4>
+                              <p>Chengdu is one of the largest regions for producing tea in China. Visiting an old teahouse near the riverbanks or in the parks is truly an authentic experience.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" id="headingThree">
+                           <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                 data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Food
+                              </button>
+                           </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                           data-parent="#accordionExample">
+                           <div class="card-body" id="card-body-chengdu">
+                              <h3>You can't visit the Sichuan Province without trying some local dishes. Many local dishes are spicy and incredibly addictive. When ordering Sichuan style food, you can usually choose how spicy you would like your dish. Sentences like "要啦" (spicy) and "不要啦" (no spicy) will be useful!
+                              </h3>
+                              <ul>
+                                 <li>Sichuan Hot Pot</li>
+                                 <li>Dry-fried Green Beans</li>
+                                 <li>Boiled Fish in spicy chili oil sauce</li>
+                                 <li>Kung Pao Chicken</li>
+                                 <li>Chuanchuan Xiang</li>
+                                 <li>Dandan Noodles</li>
+                                 <li>Mapo Doufu/ Grandma's Tofu</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col col-md-5 .offset-md-5 extraPics">
+                  <img src="assets/img/chengduTwo.jpg" class="destPic img-responsive" alt="Chengdu City">
+                  <img src="assets/img/chengduThree.jpg" class="destPic img-responsive" alt="Sichuan Food">
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container-fluid">
+            <div class="row moreInfo">
+               <div class="col col-sm-12">
+                  <h4>Where to Stay</h4>
+                  <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one
+                     of our favorite search engines for locating the best deals on hotels. The best areas to stay in
+                     Chengdu:
+                  </p>
+                  <ul>
+                     <li>Tianfu Square: Located in the center of the city, Tianfu square is a convenient spot for tourists to stay.
+                     </li>
+                     <li>Chunxi Road: Chunxi Road is one of three on the list of China's top commercial streets. It's a great area for first time visitors to stay.
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container-fluid">
+            <div class="row whenVisit">
+               <div class="col col-sm-8">
+                  <h4>When to Visit</h4>
+                  <p>Chengdu has cold wet winters and sweltering hot summers, so it is highly reccomended to visit Chengdu in Spring and Fall. If you plan on seeing the pandas, visiting between August and December will give you a greater chance of seeing tiny newborns!
+                  </p>
+               </div>
+               <!--Chart-->
+               <div class="col col-sm-4">
+                  <div id="chengduTemp"></div>
+                  <div id="bar"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="questions">
+            <h3>Questions?</h3>
+            <h5>Contact Us Today!</h5>
+            <a class="btn btn-secondary contactButton" role="button" href="contact.html">See More...</a>
+         </div>
+      </section>
+      <!--Footer-->
+      <footer class="container">
+         <button onclick="topFunction()" id="toTopBtn" title="Go to top">
+            <ion-icon name="arrow-up"></ion-icon>
+         </button>
+         <!-- Social buttons -->
+         <div class="contact-follow">
+            <ul class="list-inline social-links">
+               <li class="footer-nav-item list-inline-item">
+                  <a target="_blank" href="https://www.facebook.com/">
+                     <ion-icon name="logo-facebook"></ion-icon>
+                     <span class="sr-only">Facebook</span>
+                  </a>
+               </li>
+               <li class="footer-nav-item list-inline-item">
+                  <a target="_blank" href="https://twitter.com/">
+                     <ion-icon name="logo-twitter"></ion-icon>
+                     <span class="sr-only">Twitter</span>
+                  </a>
+               </li>
+               <li class="footer-nav-item list-inline-item">
+                  <a target="_blank" href="https://www.google.com/">
+                     <ion-icon name="logo-googleplus"></ion-icon>
+                     <span class="sr-only">Google Plus</span>
+                  </a>
+               </li>
+               <li class="footer-nav-item list-inline-item">
+                  <a target="_blank" href="https://www.instagram.com/">
+                     <ion-icon name="logo-instagram"></ion-icon>
+                     <span class="sr-only">Instagram</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
+      </footer>
+      <!--Map-->
+        <script>
+                     //Map for the Chengdu page with cluster markers to show the top destinations
+         function initMap() {
+         
+         var map = new google.maps.Map(document.getElementById('map'), {
+           zoom: 8.5,
+           center: {lat: 30.5728, lng: 104.0668}
+         });
+         
+         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+         
+         // Add some markers to the map. Several popular tourist locations in Chengdu
+         var markers = locations.map(function(location, i) {
+           return new google.maps.Marker({
+             position: location,
+             label: labels[i % labels.length]
+           });
+         });
+         
+         // Add a marker clusterer to manage the markers.
+         var markerCluster = new MarkerClusterer(map, markers,
+             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+         }
+         var locations = [
+                         {lat: 30.7330, lng: 104.1458},//Giant Panda research center
+                         {lat: 30.9667, lng: 103.5167},//Qingcheng Shan
+                         {lat: 30.6571, lng: 104.0573},//People's park
+                         {lat: 29.5417, lng: 103.7682},//Leshan Giant Buddah
+                         {lat: 30.3949, lng: 104.0311},//Kuan zhai alley
+                         {lat: 30.6600, lng: 104.0411} //Qingyang Palace
+                        
+         ]
+             
+      </script>
+      <!-- Script Libraries & Files-->
+      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+      <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap"></script>
+   </body>
 </html>
