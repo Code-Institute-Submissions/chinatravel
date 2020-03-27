@@ -1,6 +1,13 @@
+
 //For scroll to top 
 $ ( document ).ready(function() {
   mybutton = document.getElementById("toTopBtn");
+
+
+//For scroll to top ::::Get the button:
+$( document ).ready(function() {
+mybutton = document.getElementById("myBtn");
+
 
 window.onscroll = function() {scrollFunction()};
 
@@ -18,3 +25,4 @@ function topFunction() {
   document.documentElement.scrollTop = 0;  //Chrome, Firefox, IE browsers
 }
 });
+}
