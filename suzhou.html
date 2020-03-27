@@ -1,316 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <script type="text/javascript" href="Javascript/script.js"></script>
-    <title>Suzhou</title>
-</head>
-<body>
-    <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
-        <header>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
-                   <a class="navbar-brand" href="index.html">
-                   <img src="/img/logo.JPG" width="70" height="70" alt="logo" class="logo">
-                   </a>
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
-                   </button>
-                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                      <ul class="navbar-nav ml-auto">
-                            <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                       <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
-                                       <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
-                                       <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
-                                       <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
-                                       <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
-                                       <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
-                                    </div>
-                                 </li>
-                         <li class="nav-item">
-                            <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
-                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link uppercase" href="contact.html">Contact Us</a>
-                         </li>
-                      </ul>
-                   </div>
-                </nav>
-             </header>
-
-
-             <section class="jumbotron" id="suzhou-view">
-                <div>
-                    <div>
-                      <h1 class="cityTitle">Suzhou</h1>
-                      </div>
-                  </div>
-             </section>
-    
-              <section>
-                <div class="row aboutRow">
-                  <div class="column col-sm-12 col-md-6">
-                      <h3>About</h3>
-                      <p>Affectionately called "the Venice of the East", Suzhou is known for its ancient gardens, pagodas, and water canals. Located just half an hour by train from Shanghai, Suzhou is a must visit while in China. See the ancient charm of old China in Suzhou!</p>
-                  </div>
-                   <!--Maps API-->
-                   <div class="column col-sm-12 col-md-6">
-                        <div id="map" class="mapSuzhou"></div>
-                    </div>
-                </div>
-                  <div class="row">
-                    <div class="column col-sm-12 col-md-6 pageTour">
-                        <a href="tourTwo.html">
-                      <img src="img/suzhouTwo.jpg" href="tourTwo.html" class="circleTour">
-                      <h4 class="tourName">Nature Tour</h4>
-                    </a>
-                    </div>
-                    <div class="column col-sm-12 col-md-6 pageTour">
-                    <a href="tourThree.html">
-                      <img src="img/historicTwo.JPG" href="tourThree.html" class="circleTour">
-                      <h4 class="tourName">Historic China</h4>
-                    </a>
-                    </div>
-                </div>
-              </section>
-
-<section class="destinations-card">
-              <div class="row">
-                  <div class="column col-md-7">
-                      <div class="explore-name">
-                            <h4 class="accordion-header">Explore Suzhou</h4>
-                        </div>
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Culture & History
-                                    </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                    <h4>1) Pingjiang Road</h4>
-                                    <p>(Map location: A)</p>
-                                    <p>Pingjiang Road is the perfect place to meander along the canals, enjoying the scenery, traditional music, and boutique shops.</p>
-                                    <h4>2) Dongshan & Taihu Lake</h4>
-                                    <p>(Map location: B)</p>
-                                    <p>Taihu Lake is one of the largest fresh water lakes in China with several small islands. There are many neat buildings and pagodas around the lake as well as several teahouses.</p>
-                                    <h4>3) Suzhou Museum</h4>
-                                    <p>(Map location: C)</p>
-                                    <p>One of Suzhou's most popular tourist destinations, the Suzhou Museum is located near the Humble Administrator's Garden and Pingjiang Road. You can see incredible ancient ceramics and woodcarvings here.</p>
-                                    <h4>4) Silk Factory</h4>
-                                    <p>(Map location: D)</p>
-                                    <p>Suzhou is also famous for their silk production. Tour the silk factories to learn the process of silk making, hand weaving, and silkworm raising- something that once was so important that it was punishable by death to know the secrets.</p>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Nature
-                                    </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                    <h4>1) Humble Administrator's Garden</h4>
-                                    <p>(Map location: E)</p>
-                                    <p>The Humble Administrator's Garden is the largest and most renound garden and is listed as a World Cultural Herritage site. It is one of China's four most famous gardens. This garden was initially built in 1509 and was a private garden. It is said that a government servant was frustrated in his career, so he intended to build a garden for his retirement. He thought this was a good simple life led by a humble man. That is how this magnificent garden came to have its name.</p>
-                                    <h4>2) Tiger Hill Garden</h4>
-                                    <p>(Map location: F)</p>
-                                    <p>Tiger hill has a number of historical sights that can be traced back over two thousand years ago. The pagoda at Tiger Hill stands on the summet of the hill and is located in the garden. This octagonal pagoda has a slight lean and can be seen from many of the other famous Suzhou gardens.</p>
-                                    <h4>3) The Lingering Garden</h4>
-                                    <p>(Map location: G)</p>
-                                    <p>The Lingering Garden is another one of the four most famous gardens in China. This garden is well known for its exquisite halls and buildings. The Lingering Garden was first built around four hundred years ago and has had several owners who did their best to perfect and maintain it.</p>
-                                    <h4>4) Ouyuan</h4>
-                                    <p>(Map location: H)</p>
-                                    <p>The Ouyuan Garden was built by a couple in the late 19th century. In this garden, everything you see from buildings to trees come in pairs, showing how this couple loved each other.</p>
-                                    <h4>5) Master of Nets Garden</h4>
-                                    <p>(Map location: I)</p>
-                                    <p>Master of Nets Garden is the smallest garden in Suzhou, but the way it is designed creates an illusion that the area is actually much larger than it is.</p>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Family
-                                    </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                    <h3>Traveling with kids? Here are a few extra fun things the whole family can enjoy together.</h3>
-                                    <h4>1) Take a boat ride on Suzhou's canals</h4>
-                                    <p>Take a boat ride during the day or even at night! Boating through the waterways of Suzhou gives you the full experience of "the Venice of the East".</p>
-                                    <h4>2) Suzhou Ferris Wheel</h4>
-                                    <p>On the east side of Jinji Lake is the Suzhou Ferris wheel. It is said to be one of the largest in China. This sight has other attractions in addition to the Ferris Wheel, including a roller coaster for brave souls!</p>
-                                </div>
-                                </div>
-                            </div>
-
-                                <div class="card">
-                                    <div class="card-header" id="headingFour">
-                                        <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Food
-                                        </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <h3>Not only does Suzhou have enchanting scenery, it also has some delicious traditional dishes. Like Shanghai style food, Suzhou cuisine tends to be a bit sweater. There are so many varieties! Here are some of our favorites:</h3>
-                                           <ul>
-                                           <li>Sweet and Sour Mandarin Fish</li>
-                                           <li>Suzhou style fresh meat moon cake</li>
-                                           <li>Jiuniang Cake</li>
-                                           <li>Taihu Three Whites</li>
-                                           </ul>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                       </div>
-
-                       <div class="column column col-md-5 .offset-md-5 extraPics">
-                            <img src="img/suzhouThree.JPG" class="destPic img-responsive">
-                            <img src="img/gardenOne.jpg" class="destPic img-responsive">
-                       </div>
-                </div>
-            </section>
-      
-         <section>
-             <div class="row moreInfo">
-             <div class="column col-sm-12">
-                 <h4>Where to Stay</h4>
-                 <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one of our favorite search engines for locating the best deals on hotels. The best areas to stay in Suzhou:</p>
-                 <ul>
-                     <li>Suzhou Old Town: The best area to stay for historic sightseeing and culture</li>
-                     <li>Suzhou Industrial Park: Where to stay for shopping and luxury travel</li>
-                     <li>Suzhou New District: This area offers a mix of everything and is the best area for families</li>
-                 </ul>
-             </div>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+      <script type="text/javascript" src="assets/js/script.js"></script>
+      <script type="text/javascript" src="assets/js/bar_chart.js"></script>
+      <title>Suzhou</title>
+   </head>
+   <body>
+      <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
+            <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.JPG" width="70" height="70" alt="logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
+                        <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
+                        <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
+                        <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
+                        <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
+                        <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link uppercase" href="contact.html">Contact Us</a>
+                  </li>
+               </ul>
             </div>
-
-                <div class="row whenVisit">
-                    <div class="column col-sm-8">
-                        <h4>When to Visit</h4>
-                        <p>Suzhou's weather is mild and quite nice most of the year. It is best to visit this city from January to April since the weather is not too cold and the flowers are in full bloom. There are a number of festivals in Suzhou throughout the year: </p>
-                        <ul>
-                            <li>Plum Blossom Festival: March 1-10</li>
-                            <li>Tiger Hill Flower Festival: March-May</li>
-                            <li>Tianping Hill Red Maple Festival: November</li>
-                        </ul>
-                    </div>
-                    <!--Chart will take up col-sm-4-->
-                    <div id="chartdiv"></div>
-                </div>
-         </section>
-
-         <section>
-             <div class="questions">
-                 <h3>Questions?</h3>
-                 <h5>Contact Us Today!</h5>
-                 <button type="submit" class="btn btn-secondary contactButton" href="contact.html">See More...</button>
-             </div>
-         </section>
-
-         <!--Footer-->
-         <footer class="container">
-            <button onclick="topFunction()" id="toTopBtn" title="Go to top"><ion-icon name="arrow-up"></ion-icon></button>
-
-                <!-- Social buttons -->
-                <div class="contact-follow">
-                    <ul class="list-inline social-links">
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://www.facebook.com/">
-                              <ion-icon name="logo-facebook"></ion-icon>
-                                <span class="sr-only">Facebook</span>
-                            </a>
-                        </li>
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://twitter.com/">
-                                <ion-icon name="logo-twitter"></ion-icon>
-                                <span class="sr-only">Twitter</span>
-                            </a>
-                        </li>
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://www.google.com/">
-                              <ion-icon name="logo-googleplus"></ion-icon>
-                                <span class="sr-only">Google Plus</span>
-                            </a>
-                        </li>
-                        <li class="footer-nav-item list-inline-item">
-                            <a target="_blank" href="https://www.instagram.com/">
-                              <ion-icon name="logo-instagram"></ion-icon>
-                                <span class="sr-only">Instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Copyright -->
-                  <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
-        </footer>
-
-<!--Map-->
-<script>
-    function initMap() {
-
-var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 9,
-  center: {lat: 31.2990, lng: 120.5853}
-});
-
-var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-// Add some markers to the map. Several popular tourist locations in Suzhou
-var markers = locations.map(function(location, i) {
-  return new google.maps.Marker({
-    position: location,
-    label: labels[i % labels.length]
-  });
-});
-
-// Add a marker clusterer to manage the markers.
-var markerCluster = new MarkerClusterer(map, markers,
-    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-}
-var locations = [
-                {lat: 31.3127, lng: 120.6340},//Pingjiang Road
-                {lat: 31.2580, lng: 120.2051},//Taihu Lake
-                {lat: 31.3229, lng: 120.6278},//Suzhou Museum
-                {lat: 31.2762, lng: 120.6269},//Silk Factory
-                {lat: 31.3242, lng: 120.6300},//Humble Administrator's Garden
-                {lat: 31.30408, lng: 120.59538},//Tiger Hill Garden
-                {lat: 31.3171820646, lng: 120.586197655},//The Lingering Garden
-                {lat: 31.3161, lng: 120.6388},//Ouyuan
-                {lat: 31.2978, lng: 120.6342},//Master of Nets Garden
-]
-</script>
-     
-     
-    
-     <!--References-->
-     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-     <script async defer
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap">
-     </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="Javascript/script.js"></script>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    </body>
+         </nav>
+      </header>
+      <section class="jumbotron" id="suzhou-view">
+         <div class="container-fluid">
+            <div>
+               <h1 class="cityTitle">Suzhou</h1>
+            </div>
+         </div>
+      </section>
+      <!--Brief Intro-->
+      <section>
+         <div class="container-fluid">
+            <div class="row aboutRow">
+               <div class="col col-sm-12 col-md-6">
+                  <h3>About</h3>
+                  <p>Affectionately called "the Venice of the East", Suzhou is known for its ancient gardens, pagodas, and water canals. Located just half an hour by train from Shanghai, Suzhou is a must visit while in China. See the ancient charm of old China in Suzhou!
+                  </p>
+                  <div class="row">
+                     <div class="col col-sm-6 text-center">
+                        <a href="tourTwo.html">
+                        <img src="assets/img/suzhouTwo.jpg" class="circleTour" alt="Garden Pool">
+                        </a>
+                        <h4>Nature Tour</h4>
+                     </div>
+                     <div class="col col-sm-6 text-center">
+                        <a href="tourThree.html">
+                        <img src="assets/img/historicTwo.JPG" class="circleTour" alt="Suzhou Gate">
+                        </a>
+                        <h4>Historic China</h4>
+                     </div>
+                  </div>
+               </div>
+               <!--Maps API-->
+               <div class="col col-sm-12 col-md-6 no-gutters pl-0 pr-0">
+                  <div id="map" class="mapsuzhou"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="destinations-card">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col col-md-7">
+                  <div class="explore-name">
+                     <h4 class="accordion-header">Explore Suzhou</h4>
+                  </div>
+                  <div class="accordion" id="accordionExample">
+                     <div class="card">
+                        <div class="card-header" id="headingOne">
+                           <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                 data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Culture & History
+                              </button>
+                           </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                           data-parent="#accordionExample">
+                           <div class="card-body" id="card-body-suzhou">
+                              <h4>1) Pingjiang Road</h4>
+                              <p>(Map location: A)</p>
+                              <p>Pingjiang Road is the perfect place to meander along the canals, enjoying the scenery, traditional music, and boutique shops.
+                              </p>
+                              <h4>2) Dongshan & Taihu Lake</h4>
+                              <p>(Map location: B)</p>
+                              <p>Taihu Lake is one of the largest fresh water lakes in China with several small islands. There are many neat buildings and pagodas around the lake as well as several teahouses.
+                              </p>
+                              <h4>3) Suzhou Museum</h4>
+                              <p>(Map location: C)</p>
+                              <p>One of Suzhou's most popular tourist destinations, the Suzhou Museum is located near the Humble Administrator's Garden and Pingjiang Road. You can see incredible ancient ceramics and woodcarvings here.
+                              </p>
+                              <h4>4) Silk Factory</h4>
+                              <p>(Map location: D)</p>
+                              <p>Suzhou is also famous for their silk production. Tour the silk factories to learn the process of silk making, hand weaving, and silkworm raising- something that once was so important that it was punishable by death to know the secrets.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" id="headingTwo">
+                           <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                 data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Nature
+                              </button>
+                           </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                           data-parent="#accordionExample">
+                           <div class="card-body" id="card-body-suzhou">
+                              <h4>1) Humble Administrator's Garden</h4>
+                              <p>(Map location: E)</p>
+                              <p>The Humble Administrator's Garden is the largest and most renound garden and is listed as a World Cultural Herritage site. It is one of China's four most famous gardens. This garden was initially built in 1509 and was a private garden. It is said that a government servant was frustrated in his career, so he intended to build a garden for his retirement. He thought this was a good simple life led by a humble man. That is how this magnificent garden came to have its name.
+                              </p>
+                              <h4>2) Tiger Hill Garden</h4>
+                              <p>(Map location: F)</p>
+                              <p>Tiger hill has a number of historical sights that can be traced back over two thousand years ago. The pagoda at Tiger Hill stands on the summet of the hill and is located in the garden. This octagonal pagoda has a slight lean and can be seen from many of the other famous Suzhou gardens.
+                              </p>
+                              <h4>3) The Lingering Garden</h4>
+                              <p>(Map location: G)</p>
+                              <p>The Lingering Garden is another one of the four most famous gardens in China. This garden is well known for its exquisite halls and buildings. The Lingering Garden was first built around four hundred years ago and has had several owners who did their best to perfect and maintain it.
+                              </p>
+                              <h4>4) Ouyuan</h4>
+                              <p>(Map location: H)</p>
+                              <p>The Ouyuan Garden was built by a couple in the late 19th century. In this garden, everything you see from buildings to trees come in pairs, showing how this couple loved each other.
+                              </p>
+                              <h4>5) Master of Nets Garden</h4>
+                              <p>(Map location: I)</p>
+                              <p>Master of Nets Garden is the smallest garden in Suzhou, but the way it is designed creates an illusion that the area is actually much larger than it is.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" id="headingThree">
+                           <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                 data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Family
+                              </button>
+                           </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                           data-parent="#accordionExample">
+                           <div class="card-body" id="card-body-suzhou">
+                              <h3>Traveling with kids? Here are a few extra fun things the whole family can enjoy
+                                 together.
+                              </h3>
+                              <h4>1) Take a boat ride on Suzhou's canals</h4>
+                              <p>Take a boat ride during the day or even at night! Boating through the waterways of Suzhou gives you the full experience of "the Venice of the East".
+                              </p>
+                              <h4>2) Suzhou Ferris Wheel</h4>
+                              <p>On the east side of Jinji Lake is the Suzhou Ferris wheel. It is said to be one of the largest in China. This sight has other attractions in addition to the Ferris Wheel, including a roller coaster for brave souls!
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" id="headingFour">
+                           <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                 data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Food
+                              </button>
+                           </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                           data-parent="#accordionExample">
+                           <div class="card-body" id="card-body-suzhou">
+                              <h3>Not only does Suzhou have enchanting scenery, it also has some delicious traditional dishes. Like Shanghai style food, Suzhou cuisine tends to be a bit sweater. There are so many varieties! Here are some of our favorites:
+                              </h3>
+                              <ul>
+                                 <li>Sweet and Sour Mandarin Fish</li>
+                                 <li>Suzhou style fresh meat moon cake</li>
+                                 <li>Jiuniang Cake</li>
+                                 <li>Taihu Three Whites</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col col-md-5 .offset-md-5 extraPics">
+                  <img src="assets/img/suzhouThree.JPG" class="destPic img-responsive" alt="Canal">
+                  <img src="assets/img/gardenOne.jpg" class="destPic img-responsive" alt="Tiger Hill Garden">
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container-fluid">
+            <div class="row moreInfo">
+               <div class="col col-sm-12">
+                  <h4>Where to Stay</h4>
+                  <p>You can book your hotel with <a href="https://www.booking.com/">booking.com</a>. This website is one
+                     of our favorite search engines for locating the best deals on hotels. The best areas to stay in
+                     Suzhou
+                  </p>
+                  <ul>
+                     <li>Suzhou Old Town: The best area to stay for historic sightseeing and culture
+                     </li>
+                     <li>Suzhou Industrial Park: Where to stay for shopping and luxury travel
+                     </li>
+                     <li>Suzhou New District: This area offers a mix of everything and is the best area for families
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container-fluid">
+            <div class="row whenVisit">
+               <div class="col col-sm-8">
+                  <h4>When to Visit</h4>
+                  <p>Suzhou's weather is mild and quite nice most of the year. It is best to visit this city from January to April since the weather is not too cold and the flowers are in full bloom. There are a number of festivals in Suzhou throughout the year: 
+                  </p>
+                  <ul>
+                     <li>Plum Blossom Festival: March 1-10</li>
+                     <li>Tiger Hill Flower Festival: March-May</li>
+                     <li>Tianping Hill Red Maple Festival: November</li>
+                  </ul>
+               </div>
+               <!--Chart-->
+               <div class="col col-sm-4">
+                  <div id="suzhouTemp"></div>
+                  <div id="bar"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="questions">
+            <h3>Questions?</h3>
+            <h5>Contact Us Today!</h5>
+            <a class="btn btn-secondary contactButton" role="button" href="contact.html">See More...</a>
+         </div>
+      </section>
+      <!--Footer-->
+      <footer class="container">
+         <button onclick="topFunction()" id="toTopBtn" title="Go to top">
+            <ion-icon name="arrow-up"></ion-icon>
+         </button>
+         <!-- Social buttons -->
+         <div class="contact-follow">
+            <ul class="list-inline social-links">
+               <li class="footer-nav-item list-inline-item">
+                  <a target="_blank" href="https://www.facebook.com/">
+                     <ion-icon name="logo-facebook"></ion-icon>
+                     <span class="sr-only">Facebook</span>
+                  </a>
+               </li>
+               <li class="footer-nav-item list-inline-item">
+                  <a target="_blank" href="https://twitter.com/">
+                     <ion-icon name="logo-twitter"></ion-icon>
+                     <span class="sr-only">Twitter</span>
+                  </a>
+               </li>
+               <li class="footer-nav-item list-inline-item">
+                  <a target="_blank" href="https://www.google.com/">
+                     <ion-icon name="logo-googleplus"></ion-icon>
+                     <span class="sr-only">Google Plus</span>
+                  </a>
+               </li>
+               <li class="footer-nav-item list-inline-item">
+                  <a target="_blank" href="https://www.instagram.com/">
+                     <ion-icon name="logo-instagram"></ion-icon>
+                     <span class="sr-only">Instagram</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
+      </footer>
+      <!--Map-->
+      <script>
+             function initMap() {
+         
+         var map = new google.maps.Map(document.getElementById('map'), {
+           zoom: 9,
+           center: {lat: 31.2990, lng: 120.5853}
+         });
+         
+         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+         
+         // Add some markers to the map. Several popular tourist locations in Suzhou
+         var markers = locations.map(function(location, i) {
+           return new google.maps.Marker({
+             position: location,
+             label: labels[i % labels.length]
+           });
+         });
+         
+         // Add a marker clusterer to manage the markers.
+         var markerCluster = new MarkerClusterer(map, markers,
+             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+         }
+         var locations = [
+                         {lat: 31.3127, lng: 120.6340},//Pingjiang Road
+                         {lat: 31.2580, lng: 120.2051},//Taihu Lake
+                         {lat: 31.3229, lng: 120.6278},//Suzhou Museum
+                         {lat: 31.2762, lng: 120.6269},//Silk Factory
+                         {lat: 31.3242, lng: 120.6300},//Humble Administrator's Garden
+                         {lat: 31.30408, lng: 120.59538},//Tiger Hill Garden
+                         {lat: 31.3171820646, lng: 120.586197655},//The Lingering Garden
+                         {lat: 31.3161, lng: 120.6388},//Ouyuan
+                         {lat: 31.2978, lng: 120.6342},//Master of Nets Garden
+         ]
+             
+      </script>
+      <!-- Script Libraries & Files-->
+      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+      <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKxlMGYqhVTCQE3ek77jA5N46u3IlSOH8&callback=initMap"></script>
+   </body>
 </html>

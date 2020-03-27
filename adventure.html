@@ -1,139 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <title>Book an Adventure</title>
-</head>
-<body>
-    <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
-        <header>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
-                   <a class="navbar-brand" href="index.html">
-                   <img src="img/logo.JPG" width="70" height="70" alt="logo" class="logo">
-                   </a>
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
-                   </button>
-                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                      <ul class="navbar-nav ml-auto">
-                            <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                       <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
-                                       <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
-                                       <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
-                                       <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
-                                       <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
-                                       <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
-                                    </div>
-                                 </li>
-                         <li class="nav-item">
-                            <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
-                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link uppercase" href="contact.html">Contact Us</a>
-                         </li>
-                      </ul>
-                   </div>
-                </nav>
-             </header>
-    
-             <!--Main section-->
-             <section class="jumbotron" id="adventure-view">
-   <div class="row">
-      <div class="col">
-         <section class="callout">
-            <h2 class="adventureTitle">Book an Adventure</h2>
-         </section>
-      </div>
-   </div>
-</section>
-
-<!--3 Top selling tours-->
-<section>
-   <!--3 pics-->
-   <div class="row">
-      <div class="column col-sm-12 col-md-4 tourColumn">
-         <a href="tourOne.html">
-        <img src="img/beijingOne.jpg" href="tourOne.html" class="adventureTour img-hover-zoom">
-        <h4 class="centered bookTour">Cities Tour</h4>
-      </a>
-      </div>
-      <div class="column col-sm-12 col-md-4 tourColumn">
-         <a href="tourTwo.html">
-        <img src="img/chengduOne.jpg" href="tour2.html" class="adventureTour img-hover-zoom">
-        <h4 class="centered bookTour">Nature Tour</h4>
-      </a>
-        </div>
-      <div class="column col-sm-12 col-md-4 tourColumn">
-         <a href="tourThree.html">
-        <img src="img/historicOne.JPG" href="tour3.html" class="adventureTour img-hover-zoom">
-        <h4 class="centered bookTour">Historic China Tour</h4>
-      </a>
-       </div>
-       </div>
-
-<!--Section to contact the team so the user can build their own tour-->
-   <div class="personalize">
-<h3>Don't see a tour that fits your wants and needs?</h3>
-   <h4>That's OK!</h4>
-   <h5>Work with our team to build your dream trip</h5>
-   <button type="button" class="btn btn-dark questionButton" href="contact.html">Click here</button>
-</div>
-</section>
-
-<!--Footer-->
-<footer class="container">
-   
-
-       <!-- Social buttons -->
-       <div class="contact-follow">
-           <ul class="list-inline social-links">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <title>Book an Adventure</title>
+   </head>
+   <body>
+      <!--Navbar...contains (1)logo where when clicked will take the user back to the home page, (2)a dropdown menu with six links to other pages on the website, (3) a link to the booking page, and (4) a link to the contact page -->
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top">
+            <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.JPG" width="70" height="70" alt="logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle uppercase" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item uppercase" href="beijing.html">Beijing</a>
+                        <a class="dropdown-item uppercase" href="shanghai.html">Shanghai</a>
+                        <a class="dropdown-item uppercase" href="chengdu.html">Chengdu</a>
+                        <a class="dropdown-item uppercase" href="qingdao.html">Qingdao</a>
+                        <a class="dropdown-item uppercase" href="suzhou.html">Suzhou</a>
+                        <a class="dropdown-item uppercase" href="guilin.html">Guilin</a>
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link uppercase" href="adventure.html">Book an Adventure</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link uppercase" href="contact.html">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <!--Main section-->
+      <section class="jumbotron" id="adventure-view">
+         <div class="row">
+            <div class="col">
+               <section class="callout">
+                  <h2 class="adventureTitle">Book an Adventure</h2>
+               </section>
+            </div>
+         </div>
+      </section>
+      <!--3 Top selling tours-->
+      <section>
+         <div class="container-fluid">
+            <!--3 pics-->
+            <div class="row">
+               <div class="col col-sm-12 col-md-4 tourColumn">
+                  <a href="tourOne.html">
+                     <img src="assets/img/beijingOne.jpg" class="adventureTour img-hover-zoom" alt="City">
+                     <h4 class="centered bookTour">Cities Tour</h4>
+                  </a>
+               </div>
+               <div class="col col-sm-12 col-md-4 tourColumn">
+                  <a href="tourTwo.html">
+                     <img src="assets/img/chengduOne.jpg" class="adventureTour img-hover-zoom" alt="Nature">
+                     <h4 class="centered bookTour">Nature Tour</h4>
+                  </a>
+               </div>
+               <div class="col col-sm-12 col-md-4 tourColumn">
+                  <a href="tourThree.html">
+                     <img src="assets/img/historicOne.JPG" class="adventureTour img-hover-zoom" alt="Histoic China">
+                     <h4 class="centered bookTour">Historic China Tour</h4>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <!--Section to contact the team so the user can build their own tour-->
+         <div class="personalize">
+            <h3>Don't see a tour that fits your wants and needs?</h3>
+            <h4>That's OK!</h4>
+            <h5>Work with our team to build your dream trip</h5>
+            <a class="btn btn-secondary contactButton" role="button" href="contact.html">Click here</a>
+         </div>
+      </section>
+      <!--Footer-->
+      <footer class="container">
+         <!-- Social buttons -->
+         <div class="contact-follow">
+            <ul class="list-inline social-links">
                <li class="footer-nav-item list-inline-item">
-                   <a target="_blank" href="https://www.facebook.com/">
+                  <a target="_blank" href="https://www.facebook.com/">
                      <ion-icon name="logo-facebook"></ion-icon>
-                       <span class="sr-only">Facebook</span>
-                   </a>
+                     <span class="sr-only">Facebook</span>
+                  </a>
                </li>
                <li class="footer-nav-item list-inline-item">
-                   <a target="_blank" href="https://twitter.com/">
-                       <ion-icon name="logo-twitter"></ion-icon>
-                       <span class="sr-only">Twitter</span>
-                   </a>
+                  <a target="_blank" href="https://twitter.com/">
+                     <ion-icon name="logo-twitter"></ion-icon>
+                     <span class="sr-only">Twitter</span>
+                  </a>
                </li>
                <li class="footer-nav-item list-inline-item">
-                   <a target="_blank" href="https://www.google.com/">
+                  <a target="_blank" href="https://www.google.com/">
                      <ion-icon name="logo-googleplus"></ion-icon>
-                       <span class="sr-only">Google Plus</span>
-                   </a>
+                     <span class="sr-only">Google Plus</span>
+                  </a>
                </li>
                <li class="footer-nav-item list-inline-item">
-                   <a target="_blank" href="https://www.instagram.com/">
+                  <a target="_blank" href="https://www.instagram.com/">
                      <ion-icon name="logo-instagram"></ion-icon>
-                       <span class="sr-only">Instagram</span>
-                   </a>
+                     <span class="sr-only">Instagram</span>
+                  </a>
                </li>
-           </ul>
-       </div>
-       <!-- Copyright -->
+            </ul>
+         </div>
+         <!-- Copyright -->
          <div class="footer-copyright text-center">2020 Copyright: China Travel</div>
-  
-</footer>
-
-  <!--References-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>   
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>   
    </body>
 </html>
-
-
-
-
