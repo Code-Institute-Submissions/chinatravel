@@ -1,26 +1,9 @@
-$ ( document ).ready(function() {
+$( document ).ready(function() {
 var barChartData = {
 			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 			datasets: [{
-				label: 'High Temperatures',
-				backgroundColor: ['#c80000'],
-				data: [
-					36,
-				    41,
-					54,
-					68,
-					79,
-					86,
-                    88,
-                    86,
-                    79,
-                    66,
-                    50,
-                    39
-				]
-			}, {
 				label: 'Low Temperatures',
-				backgroundColor: ['#0100C7'],
+				backgroundColor: '#0100C7',
 				data: [
                     18,
                     21,
@@ -34,6 +17,23 @@ var barChartData = {
                     46,
                     32,
                     21
+				]
+			}, {
+                label: 'High Temperatures',
+				backgroundColor: '#c80000',
+				data: [
+					36,
+				    41,
+					54,
+					68,
+					79,
+					86,
+                    88,
+                    86,
+                    79,
+                    66,
+                    50,
+                    39
 				]
 			}] 
 		};
