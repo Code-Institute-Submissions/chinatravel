@@ -8,6 +8,7 @@ Travel to China has become increasingly popular in recent years with Travel and 
 The site has been designed to present information about the top tourist destinations, present interactive maps that are in English, and place to view and book a tour to several of the cities.
 
 The deployed site can be found here: 
+https://amybru.github.io/chinatravel/
 
 ## User Experience
 
