@@ -47,6 +47,7 @@ Mobile:
 The color palate chosen was based on colors that are found to be auspicious in the Chinese culture. The color palate below was found on Pinterest and looks to belong to Sarah Renae Clarks. 
 ![](assets/colorPalate.JPG)
 
+
 ## Main Features
 A navigation bar that is fixed to the top of the screen for easy access. 
 

@@ -1,3 +1,4 @@
+
 //Form Validation to make sure inputs are correctly filled out
 function validateForm (){
   
@@ -30,6 +31,7 @@ function validateForm (){
     "comment": message
 
 };
+ 
 
 emailjs.send('gmail', 'inquiry', templateParams)
     .then(function(response) {
@@ -57,8 +59,8 @@ emailjs.send('gmail', 'inquiry', templateParams)
          alert('Oops... ' + JSON.stringify(error));
      });
  });
-}
 
+}
 
 //If the email has been send with no errors then create and
       //display modal with message.
@@ -82,4 +84,4 @@ emailjs.send('gmail', 'inquiry', templateParams)
           modal.style.display = "none";
         }
       };
-    
+
