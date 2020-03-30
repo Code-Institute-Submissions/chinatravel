@@ -30,22 +30,34 @@ As the site owner, I would like users to be able to choose a tour package that b
 #### Wireframes
 All wireframes were created on the website https://balsamiq.com.
 
+Desktop:
+![](assets/wireframes/index.png)
+![](assets/wireframes/Destinations.png)
+![](assets/wireframes/BookAnAdventure.png)
+![](assets/wireframes/Tour.png)
+![](assets/wireframes/Contact.png)
+
+Mobile:
+![](assets/wireframes/index.mobile.png)
+![](assets/wireframes/destinations.mobile.png)
+![](assets/wireframes/adventure.mobile.png)
+![](assets/wireframes/tour.mobile.png)
+![](/assets/wireframes/contact.mobile.png)
+
+The color palate chosen was based on colors that are found to be auspicious in the Chinese culture. The color palate below was found on Pinterest and looks to belong to Sarah Renae Clarks. 
+![](assets/colorPalate.JPG)
 
 
-## Features
+## Main Features
 A navigation bar that is fixed to the top of the screen for easy access. 
 
 The navigation bar can be toggled on and off on both Mobile and Tablet screen sizes.
-
-The Skyscanner API will help the user to search for a flight to the respective city.
 
 An interractive map powered by the GoogleMaps API along with an accordion filled with top activities in each city will allow the user to browse activities based on their preferences.
 
 A chart located at the bottom of the destination page that contains a visual representation of the average temperatures of that city
 
 Three tours each with their own suggested itinerary and a map showing the route.
-
-An inquiry form is located on each of the three tour pages to allow the user to purchase a package.
 
 A main contact page to allow any user to send in questions or inquire about purchasing a tour package.
 
@@ -57,13 +69,15 @@ I would also like to add more tours that the user could book, making it more pro
 
 I think it would also be beneficial to add a page explaining useful travel tips and how to apply for a visa.
 
+It would be nice to impliment the skyscanner API to make booking a trip to the city of their choice even more convenient.
+
 ## Technologies
 #### HTML5:
 HTML5 was used to provide the content of the site.
 https://en.wikipedia.org/wiki/HTML
 
 #### CSS3:
-CSS3 was used to apply styles to the site.
+css3 was used to apply styles to the site.
 https://en.wikipedia.org/wiki/Cascading_Style_Sheets
 
 #### Bootstrap 4:
@@ -71,8 +85,12 @@ This site uses Bootstrap 4 to add extra features and allow the HTML to be more r
 https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)
 
 #### Javascript
-This site uses some Javascript to help thr website become more interactive for the user.
+This site uses some js to help the website become more interactive for the user.
 https://en.wikipedia.org/wiki/JavaScript
+
+#### jQuery
+The site also uses jQuery to add responsiveness.
+https://jquery.com/
 
 #### Git & Git Hub
 Git and Git Hub were used for version control.
@@ -84,9 +102,9 @@ The GoogleMaps API was used in two different ways on this website:
 2) The three tour pages use the map with a polyline to show the suggested itinerary.
 https://developers.google.com/maps/documentation
 
-#### Skyscanner API
-This API was used on the destination pages to allow the user to search for a flight to the respective city.
-https://rapidapi.com/skyscanner/api/skyscanner-flight-search
+#### Chart JS
+The Chart JS library was used to build the charts on each of the six destination pages.
+https://www.chartjs.org/
 
 #### Google Fonts
 The fonts Dosis and Permanent Marker were used throughout the website.
@@ -104,7 +122,7 @@ Free Formatter (www.freeformatter.com/html-formatter.html) was used to make sure
 
 HTML was validated at https://validator.w3.org 
 
-CSS was validated at https://jigsaw.w3.org/css-validator/ 
+css was validated at https://jigsaw.w3.org/css-validator/ 
 
 JS code was validated at https://jshint.com
 
@@ -121,8 +139,6 @@ The following tests were performed to test usibility and functionality. At the t
 an appropriate PDF in a seperate window.
 * Clicking all links on the home page will help the user navigate to the correct page.
 * Hovering over the images on the adventuregrid located on the home page will cause the image to zoom in
-* On each of the six destination pages, the Skyscanner API will allow the user to search for a flight to the respective city
-* Located below the Skyscanner API on the desktop, the user can navigate through the accordion to read about top activities in that city
 * Located to the left of the accordion on the desktop, the user can interract with the GoogleMaps API to see where the top activities are located
 * Markers are located in the correct postition with the correct geolocations
 * On the destinations pages, the user can interact with the cart about the average temperatures in that city throughout the year- This function works best for desktop users. However, mobile users can also view the chart
@@ -140,19 +156,19 @@ an appropriate PDF in a seperate window.
 
 
 ## Bugs
-The following bugs were found when performing the  tests. 
+The following bugs were found when performing the tests. 
 
 A formating issue existed on the home page where the adventuregrid images were located. The images were meant to zoom in, without increasing in size. Additional styles were applied to correct this.
 
-There was a margin-right that caused a white gap on mobile and tablet screens. This was removed from the CSS to eliminate this issue.
+There was a margin-right that caused a white gap on mobile and tablet screens. This was removed from the css to eliminate this issue.
 
 An issue existed with the GoogleMaps API on the tour pages where the route zig-zagged to many different cites, instead of forming a simple polyline shape. Coordinates were adjusted to create a more simple route.
 
-EMAIL JS PROBLEM
+There was an issue with the Email JS, causing an error message. The libraries were listed out of order and this caused the error message.
 
-SKYSCANNER PROBLEM
+A problem also existed with the modal attached to the contact form causing it to display when the page was refreshed. Additonal style and javascript were added to prevent this from happening.
 
-CHARTS PROBLEM
+The ChartJS javascript had an issue in displaying the colors of the stacked bar chart. Only one of the bars showed color. The code in the dataset was changed slightly. Instead of using an array, it was changed to a string.
 
 
 
@@ -182,6 +198,8 @@ To accomplish the publishing of the website, the following steps were carried ou
 * The community at Slack 
 
 * The videos in the Code Institue course for helping me to understand what each of the elements do
+
+* The Code Institute tutors for helping me to find why the bugs were happening
 
 * Photos of the cities Shanghai (with the exeption of the night picture of the Shanghai Skyline), Qingdao, Suzhou, and those labled as "Garden" were taken myself in 2019. 
 

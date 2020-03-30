@@ -52,32 +52,35 @@
      transition-timing-function: ease-in-out;
 }
  @media screen and (max-width: 580px) {
-     #navbar {
+     .navbar {
          padding: 20px 10px;
     }
-     #navbar a {
+     .navbar a {
          float: none;
          display: block;
          text-align: left;
     }
-     #navbar-right {
+     .navbar-right {
          float: none;
     }
 }
  .logo {
      border-radius: 50px;
 }
+
+
 /* ----------------------------------------home page styles*/
- .carousel-inner {
-     max-height: 470px;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
+
+.carousel-item img {
+  width:100%;
+  height:30em;
+  object-fit: cover;
 }
  .carousel-caption{
-     text-align: center;
+     text-align: center bottom;
      position: absolute;
-     margin-bottom: 30%;
+     margin-bottom: 10%;
+     margin-top: 5em;
      color: white;
      text-shadow: 0 1px 2px rgba(0,0,0,.6);
      font-family: 'Permanent Marker', cursive;
@@ -177,14 +180,14 @@
      background-size: cover;
 }
  #suzhou-view {
-     background-image: url("/asssets/img/suzhouOne.jpg");
+     background-image: url("/assets/img/suzhouOne.jpg");
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
 }
  #qingdao-view {
      background-image: url("/assets/img/qingdaoThree.JPG");
-     background-position: center;
+     background-position: center bottom;
      background-repeat: no-repeat;
      background-size: cover;
 }
@@ -245,7 +248,7 @@
  .whenVisit {
      padding-top: 30px;
      padding-left: 50px;
-     margin-right: 50%;
+     padding-right: 50px;
      background-color: #ffce7f;
 }
  .questions {
@@ -353,7 +356,7 @@
      color: #ffffff;
      padding-top: 60px;
      font-family: 'Permanent Marker', cursive;
-     font-size: 40px;
+     font-size: 8vw;
 }
  .adventureTour {
      width: 270px;
@@ -392,8 +395,15 @@
      max-height: 6em !important;
 }
  .highlights {
-     padding: 10px 25px;
+    padding: 10px 25px;
+    background-color: #c80000;
 }
+
+.highlights-container {
+ background-color: #fff;
+ margin: 0px, 32px;
+}
+
  .tourPictures {
      position: relative;
      text-align: center;
@@ -405,23 +415,30 @@
      padding: 1em;
      object-fit: cover;
 }
+
+#itineraryPicture-suzhou {
+    width: 200px;
+    position: bottom right;
+}
+
+#itineraryPicture-garden {
+    width: 200px;
+}
+
  .inquiry-link {
      margin-top: 40px;
      padding: 20px;
-     background-image: url("/assets/img/inquiryButton.jpg");
+     background-image: url("/assets/img/inquiryButton.jpg"), #79081c;
      background-repeat: no-repeat;
-     border: 3px #fff solid;
      height: 80%;
 }
  .inquiry-link h4 {
      font-family: 'Permanent Marker', cursive;
      font-size: 2.5em;
      padding-bottom: 10px;
-     color: #fff;
      text-align: center;
 }
  .inquiry-link p {
-     color: #fff;
      font-size: 2em;
      text-align: center;
 }
@@ -429,11 +446,9 @@
      font-family: 'Permanent Marker', cursive;
      font-size: 2em;
      margin-top: 20px;
-     color: #fff;
 }
  .btn-inquiry:hover {
      background-color: #79081c;
-     color: #fff;
 }
  .itinerary {
      background-color: #c80000;
