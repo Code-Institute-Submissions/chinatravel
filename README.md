@@ -30,22 +30,7 @@ As the site owner, I would like users to be able to choose a tour package that b
 #### Wireframes
 All wireframes were created on the website https://balsamiq.com.
 
-Desktop:
-![](Assets/Wireframes/index.png)
-![](Assets/Wireframes/Destinations.png)
-![](Assets/Wireframes/BookAnAdventure.png)
-![](Assets/Wireframes/Tour.png)
-![](Assets/Wireframes/Contact.png)
 
-Mobile:
-![](Assets/Wireframes/index.mobile.png)
-![](Assets/Wireframes/destinations.mobile.png)
-![](Assets/Wireframes/adventure.mobile.png)
-![](Assets/Wireframes/tour.mobile.png)
-![](/Assets/Wireframes/contact.mobile.png)
-
-The color palate chosen was based on colors that are found to be auspicious in the Chinese culture. The color palate below was found on Pinterest and looks to belong to Sarah Renae Clarks. 
-![](Assets/colorPalate.JPG)
 
 ## Features
 A navigation bar that is fixed to the top of the screen for easy access. 
