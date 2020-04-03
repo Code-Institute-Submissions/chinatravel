@@ -426,7 +426,7 @@
 }
 
  .inquiry-link {
-     background-image: url("../img/inquiryButton.jpg");
+     background-image: url("/assets/img/inquiryButton.jpg");
      height: 4em;
      width: 2em;
      margin-top: 40px;
