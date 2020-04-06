@@ -458,7 +458,7 @@
      color: #fff;
 }
  #itinerary-tour-one {
-     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("/assets/img/beijingSeven.jpg");
+     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/beijingSeven.jpg");
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center bottom;
@@ -466,7 +466,7 @@
 }
 
 #itinerary-tour-two {
-     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("/assets/img/suzhouOne.jpg");
+     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/suzhouOne.jpg");
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center;
@@ -474,7 +474,7 @@
 }
 
 #itinerary-tour-three {
-     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("/assets/img/qingdaoTwo.JPG");
+     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../img/qingdaoTwo.JPG");
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center bottom;
