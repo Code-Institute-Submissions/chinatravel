@@ -425,13 +425,17 @@
     width: 200px;
 }
 
- .inquiry-link {
-     background-image: url("../img/inquiryButton.jpg");
-     height: 4em;
-     width: 2em;
-     margin-top: 40px;
-     padding: 20px;
+.inquiry-link {
+    background-image: url(../img/inquiryButton.jpg);
+    background-position: center;
+    object-fit: cover;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding-bottom: 15em;
+
 }
+
  .inquiry-link h4 {
      font-family: 'Permanent Marker', cursive;
      font-size: 2.5em;
