@@ -71,6 +71,8 @@ I think it would also be beneficial to add a page explaining useful travel tips 
 
 It would be nice to impliment the skyscanner API to make booking a trip to the city of their choice even more convenient.
 
+During my research of Javascript features, I found out about the DRY method (Dont Repeat Yourself). Using this theory of coding, I should be able to make my functions a bit more general purpose. By doing so, I will repeat my javacript code less. I think it would be great to impliment this into my bar charts and have just one file to create the chart, importing the data seperately. In the end, I decided to add this feature later as I don't have all of the knowledge of Javascript to make a final working element. 
+
 ## Technologies
 #### HTML5:
 HTML5 was used to provide the content of the site.
