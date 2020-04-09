@@ -14,6 +14,7 @@
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
       <script type="text/javascript" src="assets/js/script.js"></script>
       <script type="text/javascript" src="assets/js/bar_chart_beijing.js"></script>
+      <script type="text/javascript" src="assets/js/charting.js"></script>
       <title>Beijing</title>
    </head>
    <body>
@@ -56,7 +57,7 @@
             </div>
          </div>
       </section>
-      <!--Brief Intro-->
+      <!--Brief Intro to the city and pictures-->
       <section>
          <div class="container-fluid">
             <div class="row aboutRow">
@@ -90,6 +91,7 @@
             </div>
          </div>
       </section>
+      <!--Accordion of top destinations in the city for the user to browse-->
       <section class="destinations-card">
          <div class="container-fluid">
             <div class="row">
@@ -235,6 +237,7 @@
                      </div>
                   </div>
                </div>
+               <!--Extra Pictures that showcase the city-->
                <div class="col-12 col-md-5 .offset-md-5 extraPics">
                   <img src="assets/img/beijingSix.jpg" class="destPic img-responsive" alt="New City View">
                   <img src="assets/img/beijingFive.jpg" class="destPic img-responsive" alt="Beijing Cuisine">
@@ -243,6 +246,7 @@
          </div>
       </section>
       <section>
+      <!--How to pick where to stay in the city-->
          <div class="container-fluid no-gutters">
             <div class="row moreInfo">
                <div class="col-12">
@@ -268,6 +272,7 @@
          </div>
       </section>
       <section>
+      <!--When would be a good time to visit the city-->
          <div class="container-fluid no-gutters">
             <div class="row whenVisit">
                <div class="col-12 col-lg-6">
@@ -278,10 +283,10 @@
                      Winter/Early spring) and National Week (The first week in October.) 
                   </p>
                </div>
-               <!--Chart-->
+               <!--Chart using Chart JS to show the average highs and lows-->
                <div class="col-12 col-lg-6">
                   <div id="beijingTemp">
-                    <canvas id="bar_chart_beijing" width="200" height="200"></canvas>
+                    <canvas class="bar_chart" width="200" height="200"></canvas>
                   </div>
                </div>
             </div>
