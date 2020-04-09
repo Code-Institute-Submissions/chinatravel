@@ -1,3 +1,7 @@
+//Stacked Bar Chart using ChartJS library to appear on shanghai.html page
+//Average high and low temperatures of Shanghai 
+//data from https://www.climatestotravel.com/
+
 $ ( document ).ready(function() {
 var barChartData = {
 			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],

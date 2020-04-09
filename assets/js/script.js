@@ -1,8 +1,6 @@
 $(document).ready(function() {
-//For navbar toggler icon
    
-
-//For scroll to top 
+//For scroll to top button located in the footer
   mybutton = document.getElementById("toTopBtn");
 
 window.onscroll = function() {scrollFunction()};

@@ -1,3 +1,7 @@
+//Stacked Bar Chart using ChartJS library to appear on qingdao.html page
+//Average high and low temperatures of Qingdao 
+//data from https://www.climatestotravel.com/
+
 $ ( document ).ready(function() {
 var barChartData = {
 			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -6,34 +10,34 @@ var barChartData = {
 				backgroundColor: '#0100C7',
 				data: [
                     27,
-                    28,
-                    36,
-                    46,
-                    55,
-                    64,
-                    72,
-                    73,
-                    66,
-                    55,
-                    43,
-                    32
+                    28,
+                    36,
+                    46,
+                    55,
+                    64,
+                    72,
+                    73,
+                    66,
+                    55,
+                    43,
+                    32
 				]
 			}, {
                 label: 'High Temperatures',
 				backgroundColor: '#c80000',
 				data: [
-                    37,
-                    41,
-                    48,
-                    59,
-                    68,
-                    75,
-                    81,
-                    82,
-                    77,
-                    68,
-                    54,
-                    43
+                    37,
+                    41,
+                    48,
+                    59,
+                    68,
+                    75,
+                    81,
+                    82,
+                    77,
+                    68,
+                    54,
+                    43
 				]
 			}] 
 		};

@@ -1,3 +1,5 @@
+//EmailJS to send a form on the contact page (contact.html) to my own personal Gmail account
+
 $(document).ready(function () {
     
     $('#contact-form')[0].addEventListener('submit', function (event) {
