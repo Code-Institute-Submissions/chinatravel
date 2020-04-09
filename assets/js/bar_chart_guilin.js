@@ -1,3 +1,7 @@
+//Stacked Bar Chart using ChartJS library to appear on guilin.html page
+//Average high and low temperatures of Guilin 
+//data from https://www.climatestotravel.com/
+
 $ ( document ).ready(function() {
 var barChartData = {
 			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -5,35 +9,35 @@ var barChartData = {
 				label: 'Low Temperatures',
 				backgroundColor: '#0100C7',
 				data: [
-                    34,
-                    39,
-                    45,
-                    57,
-                    66,
-                    73,
-                    79,
-                    77,
-                    70,
-                    59,
-                    46,
-                    37
+                    34,
+                    39,
+                    45,
+                    57,
+                    66,
+                    73,
+                    79,
+                    77,
+                    70,
+                    59,
+                    46,
+                    37
 				]
 			}, {
                 label: 'High Temperatures',
 				backgroundColor: '#c80000',
 				data: [
-                    46,
-                    52,
-                    59,
-                    72,
-                    81,
-                    86,
-                    91,
-                    90,
-                    82,
-                    73,
-                    63,
-                    52
+                    46,
+                    52,
+                    59,
+                    72,
+                    81,
+                    86,
+                    91,
+                    90,
+                    82,
+                    73,
+                    63,
+                    52
 
 				]
 			}] 
