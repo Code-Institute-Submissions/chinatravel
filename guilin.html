@@ -13,7 +13,6 @@
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
       <script type="text/javascript" src="assets/js/script.js"></script>
-      <script type="text/javascript" src="assets/js/charting.js"></script>
       <script type="text/javascript" src="assets/js/bar_chart_guilin.js"></script>
       <title>Guilin</title>
    </head>
@@ -57,7 +56,7 @@
             </div>
          </div>
       </section>
-      <!--Brief Intro-->
+      <!--Brief Intro paragraph to the city-->
       <section>
          <div class="container-fluid">
             <div class="row aboutRow">
@@ -65,6 +64,7 @@
                   <h3>About</h3>
                   <p>The Chinese claim that Guilin has the finest landscape under heaven. There is a famous phrase that means "East or west, Guilin's scenery is best". This beautiful city has inspired centuries of Chinese poems and landscape pantings. There are several towns that make up the area called Guilin: Guilin City, Yangshuo Town, Xingping Old Town, and Longsheng Town. Guilin's main features are karst landforms, a mirror like river, and caves filled with stunning stalagmites. Guilin is also home to many ethnic minorities, so it is a great chance to see unique customs of the local people.
                   </p>
+                  <!--Links to respective tours-->
                   <div class="row">
                      <div class="col-12 col-sm-6 text-center">
                         <a href="tourOne.html">
@@ -81,6 +81,7 @@
             </div>
          </div>
       </section>
+      <!--Accordion of top destinations in the city for the user to browse-->
       <section class="destinations-card">
          <div class="container-fluid">
             <div class="row">
@@ -174,6 +175,7 @@
                      </div>
                   </div>
                </div>
+               <!--Extra Pictures that showcase the city-->
                <div class="col-12 col-md-5 .offset-md-5 extraPics">
                   <img src="assets/img/guilinThree.jpg" class="destPic img-responsive" alt="Li River">
                   <img src="assets/img/guilinFour.jpg" class="destPic img-responsive" alt="Guilin Cave">
@@ -182,6 +184,7 @@
          </div>
       </section>
       <section>
+      <!--How to pick where to stay in the city, a paragraph-->
          <div class="container-fluid">
             <div class="row moreInfo">
                <div class="col-12">
@@ -203,6 +206,7 @@
          </div>
       </section>
       <section>
+      <!--When would be a good time to visit the city, a paragraph-->
          <div class="container-fluid">
             <div class="row whenVisit">
                <div class="col-12 col-lg-6">
@@ -210,10 +214,10 @@
                   <p>The Guangxi Zhuang Autonomous Region, where Guilin is located has a subtropical climate. Temperatures in winter are mild and rarely go below freezing. The best time to visit Guilin are March-May and September-November when the weather is mild and the days are sunny.
                   </p>
                </div>
-               <!--Chart-->
+               <!--Chart using Chart JS to show the average highs and lows-->
                <div class="col-12 col-lg-6">
                   <div id="guilinTemp">
-                    <canvas class="bar_chart" width="200" height="200"></canvas>
+                    <canvas class="bar_chart_guilin" width="200" height="200"></canvas>
                   </div>
                </div>
             </div>

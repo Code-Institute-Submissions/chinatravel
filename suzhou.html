@@ -13,7 +13,6 @@
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
       <script type="text/javascript" src="assets/js/script.js"></script>
-      <script type="text/javascript" src="assets/js/charting.js"></script>
       <script type="text/javascript" src="assets/js/bar_chart_suzhou.js"></script>
       <title>Suzhou</title>
    </head>
@@ -57,7 +56,7 @@
             </div>
          </div>
       </section>
-      <!--Brief Intro-->
+      <!--Brief Intro paragraph to the city-->
       <section>
          <div class="container-fluid">
             <div class="row aboutRow">
@@ -65,6 +64,7 @@
                   <h3>About</h3>
                   <p>Affectionately called "the Venice of the East", Suzhou is known for its ancient gardens, pagodas, and water canals. Located just half an hour by train from Shanghai, Suzhou is a must visit while in China. See the ancient charm of old China in Suzhou!
                   </p>
+                  <!--Links to respective tours-->
                   <div class="row">
                      <div class="col-12 col-sm-6 text-center">
                         <a href="tourTwo.html">
@@ -87,6 +87,7 @@
             </div>
          </div>
       </section>
+      <!--Accordion of top destinations in the city for the user to browse-->
       <section class="destinations-card">
          <div class="container-fluid">
             <div class="row">
@@ -210,6 +211,7 @@
                      </div>
                   </div>
                </div>
+               <!--Extra Pictures that showcase the city-->
                <div class="col-12 col-md-5 .offset-md-5 extraPics">
                   <img src="assets/img/suzhouThree.JPG" class="destPic img-responsive" alt="Canal">
                   <img src="assets/img/gardenOne.jpg" class="destPic img-responsive" alt="Tiger Hill Garden">
@@ -218,6 +220,7 @@
          </div>
       </section>
       <section>
+      <!--How to pick where to stay in the city, a paragraph-->
          <div class="container-fluid">
             <div class="row moreInfo">
                <div class="col-12">
@@ -239,6 +242,7 @@
          </div>
       </section>
       <section>
+      <!--When would be a good time to visit the city, a paragraph-->
          <div class="container-fluid">
             <div class="row whenVisit">
                <div class="col-12 col-lg-6">
@@ -251,10 +255,10 @@
                      <li>Tianping Hill Red Maple Festival: November</li>
                   </ul>
                </div>
-               <!--Chart-->
+               <!--Chart using Chart JS to show the average highs and lows-->
                <div class="col-12 col-lg-6">
                   <div id="suzhouTemp">
-                    <canvas class="bar_chart" width="200" height="200"></canvas>
+                    <canvas class="bar_chart_suzhou" width="200" height="200"></canvas>
                   </div>
                </div>
             </div>
