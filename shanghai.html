@@ -13,7 +13,6 @@
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
       <script type="text/javascript" src="assets/js/script.js"></script>
-      <script type="text/javascript" src="assets/js/charting.js"></script>
       <script type="text/javascript" src="assets/js/bar_chart_shanghai.js"></script>
       <title>Shanghai</title>
    </head>
@@ -57,7 +56,7 @@
             </div>
          </div>
       </section>
-      <!--Brief Intro-->
+      <!--Brief Intro paragraph to the city-->
       <section>
          <div class="container-fluid">
             <div class="row aboutRow">
@@ -65,6 +64,7 @@
                   <h3>About</h3>
                   <p>Welcome to China's largest city, Shanghai. Shanghai offers many sightseeing destinations for any kind of traveler. This city has many famous gardens and museums as well as innovative architecture. Some visitors come to Shanghai for the food, as Shanghai cuisine is considered to be one of China's top cuisines.
                   </p>
+                  <!--Links to respective tours-->
                   <div class="row">
                      <div class="col-12 col-sm-6 text-center">
                         <a href="tourOne.html">
@@ -87,6 +87,7 @@
             </div>
          </div>
       </section>
+      <!--Accordion of top destinations in the city for the user to browse-->
       <section class="destinations-card">
          <div class="container-fluid">
             <div class="row">
@@ -232,6 +233,7 @@
                      </div>
                   </div>
                </div>
+               <!--Extra Pictures that showcase the city-->
                <div class="col-12 col-md-5 .offset-md-5 extraPics">
                   <img src="assets/img/shanghaiTwo.jpg" class="destPic img-responsive" alt="Shanghai skyline">
                   <img src="assets/img/shanghaiThree.JPG" class="destPic img-responsive" alt="Nanjing Road">
@@ -240,6 +242,7 @@
          </div>
       </section>
       <section>
+      <!--How to pick where to stay in the city, a paragraph-->
          <div class="container-fluid">
             <div class="row moreInfo">
                <div class="col-12">
@@ -263,6 +266,7 @@
          </div>
       </section>
       <section>
+      <!--When would be a good time to visit the city, a paragraph-->
          <div class="container-fluid">
             <div class="row whenVisit">
                <div class="col-12 col-lg-6">
@@ -270,10 +274,10 @@
                   <p>Shanghai has a humid tropical climate and winters are cold, sometimes dropping below zero. Summer temperatures can reach as high as 32°C (90°F) in the month of July. Winter temperatures have an average low around 1°C (34°F). To avoid the hotest and coldest temperatures, the best time to visit would be in the spring (March-May) or in the fall (September-November).
                   </p>
                </div>
-               <!--Chart-->
+               <!--Chart using Chart JS to show the average highs and lows-->
                <div class="col-12 col-lg-6">
                   <div id="shanghaiTemp">
-                    <canvas class="bar_chart" width="200" height="200"></canvas>
+                    <canvas class="bar_chart_shanghai" width="200" height="200"></canvas>
                   </div>
                </div>
             </div>
